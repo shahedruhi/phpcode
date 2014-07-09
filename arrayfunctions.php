@@ -188,10 +188,17 @@ var_dump(array_intersect_ukey($array1, $array2, 'key_compare_func'));
 */
 
 //19. array_intersect
-$array1 = array("a" => "green", "red", "blue");
+/*$array1 = array("a" => "green", "red", "blue");
 $array2 = array("b" => "green", "yellow", "red");
 $result = array_intersect($array1, $array2);
 print_r($result);
+*/
+
+//20. array_key_exists
+$search_array = array('first' => 1, 'second' => 4);
+if (array_key_exists('first', $search_array)) {
+    echo "The 'first' element is in the array";
+}
 
 ?>
 
