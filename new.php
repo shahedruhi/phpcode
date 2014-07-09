@@ -1,5 +1,6 @@
 
 <?php
+/*
 //echo "Hello FTFL";
 
 //Syntax, Exercise
@@ -63,6 +64,6 @@ for($x=0;$x<$l;$x++)
    //echo $tr[$x], "<br>";
    }
 
-
+*/
 ?>
 

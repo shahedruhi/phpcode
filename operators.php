@@ -76,8 +76,30 @@ echo $z."<br />";
 echo $a."<br />";
 echo $b."<br />";
 
+echo "<br />------------------------------<br />";
+//Unary operators 
+//increment/decrement
+//pre/post 
+$a = 2;
 
-//
+echo $a++."<br />";
+echo $a--."<br />";
+echo ++$a."<br />";
+echo --$a."<br />";
+echo $a."<br />";
+
+echo "<br />------------------------------<br />";
+echo $a.PHP_EOL;
+echo ++$a;
+echo "<br />------------------------------<br />";
+
+$a=4;
+$b=2;
+echo ++$a * ($a++ + --$b);
+
+
+
+ 
 
 ?>
 
