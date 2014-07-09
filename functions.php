@@ -3,6 +3,9 @@
 
 function getgrade($mark)
 {
+
+$grade = '';
+
 if($mark  >= 0 && $mark  <= 100)
 {
 if($mark  >= 80)
@@ -26,7 +29,7 @@ else
 return $grade;
 }
 
-$finalgrade = getgrade(59);
+$finalgrade = getgrade(6);
 
 echo $finalgrade;
 
