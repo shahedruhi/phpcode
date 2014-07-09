@@ -228,7 +228,7 @@ print_r($b);*/
 
 print_r(array_map($func, range(1, 5)));
 */
-function show_Spanish($n, $m)
+/*function show_Spanish($n, $m)
 {
     return("The number $n is called $m in Spanish");
 }
@@ -246,7 +246,13 @@ print_r($c);
 
 $d = array_map("map_Spanish", $a , $b);
 print_r($d);
+*/
 
+//23. array_merge_recursive
+$ar1 = array("color" => array("favorite" => "red"), 5);
+$ar2 = array(10, "color" => array("favorite" => "green", "blue"));
+$result = array_merge_recursive($ar1, $ar2);
+print_r($result);
 
 ?>
 
