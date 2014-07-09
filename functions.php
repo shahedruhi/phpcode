@@ -1,8 +1,39 @@
 
 <?php
-$mark = -56;
+
+function getgrade($mark)
+{
+if($mark  >= 0 && $mark  <= 100)
+{
+if($mark  >= 80)
+    $grade = 'A+';
+elseif ($mark  >= 70)
+    $grade = 'A';
+elseif ($mark  >= 60)
+    $grade = 'A-';
+elseif ($mark  >= 50)
+    $grade = 'B';
+elseif ($mark  >= 40)
+    $grade = 'C';
+elseif ($mark  >= 33)
+    $grade = 'D';
+else
+    $grade = 'F';
+}
+else
+	$grade = 'put the right number';
+	
+return $grade;
+}
+
+$finalgrade = getgrade(1);
+
+echo $finalgrade;
 
 
+
+
+/*
 if($mark  >= 0 && $mark  <= 100)
 
 {
@@ -24,5 +55,6 @@ else
 
 else
 	echo "put the right number   <br />";
+*/	
 ?>
 
