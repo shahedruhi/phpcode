@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-<body>
 
 <?php
-echo "Hello World to git hub!";
-echo "try 3rd change";
+echo "Hello FTFL";
+$a = 1;
+
 ?>
 
-</body>
-</html> 
