@@ -275,7 +275,7 @@ var_dump($ar2);
 */
 
 //26. array_pad
-$input = array(12, 10, 9);
+/*$input = array(12, 10, 9);
 
 $result = array_pad($input, 5, 0);
 // result is array(12, 10, 9, 0, 0)
@@ -287,7 +287,12 @@ print_r($result);
 $result = array_pad($input, 2, "noop");
 // not padded
 print_r($result);
+*/
 
+//27. array_pop
+$stack = array("orange", "banana", "apple", "raspberry");
+$fruit = array_pop($stack);
+print_r($stack);
 
 
 
