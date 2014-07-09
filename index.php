@@ -39,7 +39,7 @@ $_aNumber = 1234;
 $aFlotedNumber = 12.12;
 echo gettype($aFlotedNumber);
 
-
+$_abool = true;
 
 
 
