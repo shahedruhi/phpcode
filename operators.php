@@ -106,10 +106,17 @@ echo (bool) $a;
 $a = 3;
 $b = 5;
 
-if ( 3 = $a){
+if ( 3 == $a){
 echo "Hello";
 }
 
+echo "<br />------------------------------<br />";
+
+//value & type true
+
+if ( 3 === $a){
+echo "Hello";
+}
 
 
 
