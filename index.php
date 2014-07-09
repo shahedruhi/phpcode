@@ -1,6 +1,6 @@
 
 <?php
-echo "Hello FTFL";
+//echo "Hello FTFL";
 
 //Syntax, Exercise
 
@@ -15,6 +15,26 @@ $a = 1;
 	{
 	}
 }
+
+//Data Type
+
+$_aNumber = 1234;
+echo gettype($_aNumber);
+echo "<br>";
+echo settype($_aNumber, 'String');
+echo "<br>";
+echo gettype($_aNumber);
+
+//$_aString = abcd; 
+
+
+
+
+
+
+
+
+
 
 ?>
 
