@@ -171,7 +171,7 @@ print_r(array_filter($entry));
 //print_r(array_intersect_uassoc($array1, $array2, "strcasecmp"));
 
 //18. array_intersect_ukey
-function key_compare_func($key1, $key2)
+/*function key_compare_func($key1, $key2)
 {
     if ($key1 == $key2)
         return 0;
@@ -185,6 +185,13 @@ $array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
 $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
 
 var_dump(array_intersect_ukey($array1, $array2, 'key_compare_func'));
+*/
+
+//19. array_intersect
+$array1 = array("a" => "green", "red", "blue");
+$array2 = array("b" => "green", "yellow", "red");
+$result = array_intersect($array1, $array2);
+print_r($result);
 
 ?>
 
