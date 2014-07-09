@@ -47,15 +47,22 @@ print_r($first_names);
 
 //print_r($c);
 
-//array_count_values
+//5. array_count_values
 //$array = array(1, "hello", 1, "world", "hello");
 //print_r(array_count_values($array));
 
-//5. array_diff_assoc
-$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
-$array2 = array("a" => "green", "yellow", "red");
-$result = array_diff_assoc($array1, $array2);
-print_r($result);
+//6. array_diff_assoc
+//$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+//$array2 = array("a" => "green", "yellow", "red");
+//$result = array_diff_assoc($array1, $array2);
+//print_r($result);
+
+//7. array_diff_key
+$array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
+
+var_dump(array_diff_key($array1, $array2));
+
 
 
 ?>
