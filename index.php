@@ -50,8 +50,8 @@ $a = 2*3+5;
 $name = 'S.M. Shahed Ruhi'; 
 for ($i=1; $i<=5; $i++)
 {
-echo $name;
-echo "<br>";
+echo $name, "<br>";
+//echo "<br>";
 }
 
 
