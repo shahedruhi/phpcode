@@ -78,7 +78,7 @@ $result = array_diff_uassoc($array1, $array2, "key_compare_func");
 print_r($result);*/
 
 //9. array_diff_ukey
-function key_compare_func($key1, $key2)
+/*function key_compare_func($key1, $key2)
 {
     if ($key1 == $key2)
         return 0;
@@ -92,6 +92,15 @@ $array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
 $array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
 
 var_dump(array_diff_ukey($array1, $array2, 'key_compare_func'));
+*/
+
+//10. array_diff
+$array1 = array("a" => "green", "red", "blue", "red");
+$array2 = array("b" => "green", "yellow", "red");
+$result = array_diff($array1, $array2);
+
+print_r($result);
+
 
 
 ?>
