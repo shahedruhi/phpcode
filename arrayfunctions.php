@@ -2,17 +2,17 @@
 
 <?php
 
-/*array_change_key_case
+/*1. array_change_key_case
 $input_array = array("FirSt" => 1, "SecOnd" => 4);
 print_r(array_change_key_case($input_array, CASE_UPPER));
 */
 
-//array_chunk
+//2. array_chunk
 //$input_array = array('a', 'b', 'c', 'd', 'e');
 //print_r(array_chunk($input_array, 2));
 //print_r(array_chunk($input_array, 2, true));
 
-//array_column
+//3. array_column
 // Array representing a possible record set returned from a database
 /*$records = array(
     array(
@@ -40,7 +40,7 @@ print_r(array_change_key_case($input_array, CASE_UPPER));
 $first_names = array_column($records, 'first_name');
 print_r($first_names); 
 */
-//array_combine
+//4. array_combine
 //$a = array('green', 'red', 'yellow');
 //$b = array('avocado', 'apple', 'banana');
 //$c = array_combine($a, $b);
@@ -48,8 +48,14 @@ print_r($first_names);
 //print_r($c);
 
 //array_count_values
-$array = array(1, "hello", 1, "world", "hello");
-print_r(array_count_values($array));
+//$array = array(1, "hello", 1, "world", "hello");
+//print_r(array_count_values($array));
+
+//5. array_diff_assoc
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "yellow", "red");
+$result = array_diff_assoc($array1, $array2);
+print_r($result);
 
 
 ?>
