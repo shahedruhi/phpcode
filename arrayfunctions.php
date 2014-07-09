@@ -113,7 +113,7 @@ var_dump(array_diff_ukey($array1, $array2, 'key_compare_func'));
 //print_r($b);
 
 //13. array_filter 1
-function odd($var)
+/*function odd($var)
 {
     // returns whether the input integer is odd
     return($var & 1);
@@ -132,6 +132,21 @@ echo "Odd :\n";
 print_r(array_filter($array1, "odd"));
 echo "Even:\n";
 print_r(array_filter($array2, "even"));
+*/
+
+//13. array_filter 2
+$entry = array(
+             0 => 'foo',
+             1 => false,
+             2 => -1,
+             3 => null,
+             4 => ''
+          );
+
+print_r(array_filter($entry));
+
+
+
 
 ?>
 
