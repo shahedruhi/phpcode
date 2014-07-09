@@ -95,12 +95,16 @@ var_dump(array_diff_ukey($array1, $array2, 'key_compare_func'));
 */
 
 //10. array_diff
-$array1 = array("a" => "green", "red", "blue", "red");
-$array2 = array("b" => "green", "yellow", "red");
-$result = array_diff($array1, $array2);
+//$array1 = array("a" => "green", "red", "blue", "red");
+//$array2 = array("b" => "green", "yellow", "red");
+//$result = array_diff($array1, $array2);
 
-print_r($result);
+//print_r($result);
 
+//11. array_fill_keys
+$keys = array('foo', 5, 10, 'bar');
+$a = array_fill_keys($keys, 'banana');
+print_r($a);
 
 
 ?>
