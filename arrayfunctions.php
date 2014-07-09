@@ -14,7 +14,7 @@ print_r(array_change_key_case($input_array, CASE_UPPER));
 
 //array_column
 // Array representing a possible record set returned from a database
-$records = array(
+/*$records = array(
     array(
         'id' => 2135,
         'first_name' => 'John',
@@ -39,6 +39,13 @@ $records = array(
  
 $first_names = array_column($records, 'first_name');
 print_r($first_names); 
+*/
+//array_combine
+$a = array('green', 'red', 'yellow');
+$b = array('avocado', 'apple', 'banana');
+$c = array_combine($a, $b);
+
+print_r($c);
 
 ?>
 
