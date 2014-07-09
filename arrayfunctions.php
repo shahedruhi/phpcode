@@ -300,11 +300,15 @@ print_r($result);
 //echo "product(array()) = " . array_product(array()) . "\n";
 
 //29. array_push
-$stack = array("orange", "banana");
-array_push($stack, "apple", "raspberry");
-print_r($stack);
+//$stack = array("orange", "banana");
+//array_push($stack, "apple", "raspberry");
+//print_r($stack);
 
-
+//30. array_rand
+$input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
+$rand_keys = array_rand($input, 2);
+echo $input[$rand_keys[0]] . "\n";
+echo $input[$rand_keys[1]] . "\n";
 
 ?>
 
