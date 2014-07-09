@@ -102,10 +102,15 @@ var_dump(array_diff_ukey($array1, $array2, 'key_compare_func'));
 //print_r($result);
 
 //11. array_fill_keys
-$keys = array('foo', 5, 10, 'bar');
-$a = array_fill_keys($keys, 'banana');
-print_r($a);
+//$keys = array('foo', 5, 10, 'bar');
+//$a = array_fill_keys($keys, 'banana');
+//print_r($a);
 
+//12. array_fill
+$a = array_fill(5, 6, 'banana');
+$b = array_fill(-2, 4, 'pear');
+print_r($a);
+print_r($b);
 
 ?>
 
