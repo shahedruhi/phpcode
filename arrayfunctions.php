@@ -195,10 +195,21 @@ print_r($result);
 */
 
 //20. array_key_exists
-$search_array = array('first' => 1, 'second' => 4);
-if (array_key_exists('first', $search_array)) {
-    echo "The 'first' element is in the array";
-}
+//$search_array = array('first' => 1, 'second' => 4);
+//if (array_key_exists('first', $search_array)) {
+//    echo "The 'first' element is in the array";
+//}
+
+//21. array_keys
+$array = array(0 => 100, "color" => "red");
+print_r(array_keys($array));
+
+$array = array("blue", "red", "green", "blue", "blue");
+print_r(array_keys($array, "blue"));
+
+$array = array("color" => array("blue", "red", "green"),
+               "size"  => array("small", "medium", "large"));
+print_r(array_keys($array));
 
 ?>
 
