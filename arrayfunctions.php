@@ -295,10 +295,14 @@ print_r($result);
 //print_r($stack);
 
 //28. array_product
-$a = array(2, 4, 6, 8);
-echo "product(a) = " . array_product($a) . "\n";
-echo "product(array()) = " . array_product(array()) . "\n";
+//$a = array(2, 4, 6, 8);
+//echo "product(a) = " . array_product($a) . "\n";
+//echo "product(array()) = " . array_product(array()) . "\n";
 
+//29. array_push
+$stack = array("orange", "banana");
+array_push($stack, "apple", "raspberry");
+print_r($stack);
 
 
 
