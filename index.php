@@ -37,11 +37,20 @@ $_aNumber = 1234;
 //echo "<br>";
 
 $aFlotedNumber = 12.12;
-echo gettype($aFlotedNumber);
+//echo gettype($aFlotedNumber);
 
-$_abool = true;
+$_aBool = true;
+$x=true;
+$y=false;
+ 
+$a = 2*3+5;
+//echo $a."<br />".$a;
+echo nl2br($a."\n".$a);
 
-
+$name = 'S.M. shahed Ruhi'; 
+for ($i=1; $i<=5; $i++)
+{
+}
 
 
 
