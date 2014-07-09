@@ -50,13 +50,18 @@ $a = 2*3+5;
 $name = 'S.M. Shahed Ruhi'; 
 for ($i=1; $i<=5; $i++)
 {
-echo $name, "<br>";
+//echo $name, "<br>";
 //echo "<br>";
 }
 
+$tr = array("1","2","3");
+sort($tr);
 
-
-
+$l=count($tr);
+for($x=0;$x<$l;$x++)
+   {
+   echo $tr[$x], "<br>";
+   }
 
 
 ?>
