@@ -153,10 +153,19 @@ print_r(array_filter($entry));
 //print_r($trans);
 
 //15. array_intersect_assoc
-$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
-$array2 = array("a" => "green", "b" => "yellow", "blue", "red");
-$result_array = array_intersect_assoc($array1, $array2);
-print_r($result_array);
+//$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+//$array2 = array("a" => "green", "b" => "yellow", "blue", "red");
+//$result_array = array_intersect_assoc($array1, $array2);
+//print_r($result_array);
+
+//16. array_intersect_key
+$array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
+
+var_dump(array_intersect_key($array1, $array2));
+
+
+
 
 
 ?>
