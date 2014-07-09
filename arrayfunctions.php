@@ -266,12 +266,28 @@ print_r($result);
 //print_r($result);
 
 //25. array_multisort
-$ar1 = array(10, 100, 100, 0);
+/*$ar1 = array(10, 100, 100, 0);
 $ar2 = array(1, 3, 2, 4);
 array_multisort($ar1, $ar2);
 
 var_dump($ar1);
 var_dump($ar2);
+*/
+
+//26. array_pad
+$input = array(12, 10, 9);
+
+$result = array_pad($input, 5, 0);
+// result is array(12, 10, 9, 0, 0)
+print_r($result);
+
+$result = array_pad($input, -7, -1);
+// result is array(-1, -1, -1, -1, 12, 10, 9)
+print_r($result);
+$result = array_pad($input, 2, "noop");
+// not padded
+print_r($result);
+
 
 
 
