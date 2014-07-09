@@ -148,10 +148,15 @@ print_r(array_filter($entry));
 
 //14. array_flip
 
-$trans = array("a" => 1, "b" => 1, "c" => 2);
-$trans = array_flip($trans);
-print_r($trans);
+//$trans = array("a" => 1, "b" => 1, "c" => 2);
+//$trans = array_flip($trans);
+//print_r($trans);
 
+//15. array_intersect_assoc
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "green", "b" => "yellow", "blue", "red");
+$result_array = array_intersect_assoc($array1, $array2);
+print_r($result_array);
 
 
 ?>
