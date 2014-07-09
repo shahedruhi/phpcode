@@ -290,10 +290,14 @@ print_r($result);
 */
 
 //27. array_pop
-$stack = array("orange", "banana", "apple", "raspberry");
-$fruit = array_pop($stack);
-print_r($stack);
+//$stack = array("orange", "banana", "apple", "raspberry");
+//$fruit = array_pop($stack);
+//print_r($stack);
 
+//28. array_product
+$a = array(2, 4, 6, 8);
+echo "product(a) = " . array_product($a) . "\n";
+echo "product(array()) = " . array_product(array()) . "\n";
 
 
 
