@@ -18,7 +18,7 @@ $a = 1;
 
 //Data Type | type casting
 
-$_aNumber = 1234;
+//$_aNumber = 1234;
 //echo gettype($_aNumber);
 //echo "<br>";
 //echo settype($_aNumber, 'String');
@@ -36,7 +36,7 @@ $_aNumber = 1234;
 //echo $_anotherString;
 //echo "<br>";
 
-$aFlotedNumber = 12.12;
+/*$aFlotedNumber = 12.12;
 //echo gettype($aFlotedNumber);
 
 $_aBool = true;
@@ -62,6 +62,17 @@ for($x=0;$x<$l;$x++)
    {
    //echo $tr[$x], "<br>";
    }
+
+*/
+$x = 100 / (2*5);
+$y = 100 % (2*5);
+$z = 100 / 2 * 5;
+
+echo $x."<br />";
+echo $y."<br />";
+echo $z."<br />";
+
+
 
 
 ?>
