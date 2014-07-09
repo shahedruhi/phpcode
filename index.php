@@ -45,11 +45,12 @@ $y=false;
  
 $a = 2*3+5;
 //echo $a."<br />".$a;
-echo nl2br($a."\n".$a);
+//echo nl2br($a."\n".$a);
 
-$name = 'S.M. shahed Ruhi'; 
+$name = 'ShahedRuhi'; 
 for ($i=1; $i<=5; $i++)
 {
+echo $name, "<br>";
 }
 
 
