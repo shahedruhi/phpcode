@@ -26,7 +26,7 @@ else
 return $grade;
 }
 
-$finalgrade = getgrade(1);
+$finalgrade = getgrade(59);
 
 echo $finalgrade;
 
