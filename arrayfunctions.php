@@ -165,12 +165,26 @@ print_r(array_filter($entry));
 //var_dump(array_intersect_key($array1, $array2));
 
 //17. array_intersect_uassoc
-$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
-$array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
+//$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+//$array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
 
-print_r(array_intersect_uassoc($array1, $array2, "strcasecmp"));
+//print_r(array_intersect_uassoc($array1, $array2, "strcasecmp"));
 
+//18. array_intersect_ukey
+function key_compare_func($key1, $key2)
+{
+    if ($key1 == $key2)
+        return 0;
+    else if ($key1 > $key2)
+        return 1;
+    else
+        return -1;
+}
 
+$array1 = array('blue'  => 1, 'red'  => 2, 'green'  => 3, 'purple' => 4);
+$array2 = array('green' => 5, 'blue' => 6, 'yellow' => 7, 'cyan'   => 8);
+
+var_dump(array_intersect_ukey($array1, $array2, 'key_compare_func'));
 
 ?>
 
