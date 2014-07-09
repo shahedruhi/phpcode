@@ -135,7 +135,7 @@ print_r(array_filter($array2, "even"));
 */
 
 //13. array_filter 2
-$entry = array(
+/*$entry = array(
              0 => 'foo',
              1 => false,
              2 => -1,
@@ -144,7 +144,13 @@ $entry = array(
           );
 
 print_r(array_filter($entry));
+*/
 
+//14. array_flip
+
+$trans = array("a" => 1, "b" => 1, "c" => 2);
+$trans = array_flip($trans);
+print_r($trans);
 
 
 
