@@ -201,7 +201,7 @@ print_r($result);
 //}
 
 //21. array_keys
-$array = array(0 => 100, "color" => "red");
+/*$array = array(0 => 100, "color" => "red");
 print_r(array_keys($array));
 
 $array = array("blue", "red", "green", "blue", "blue");
@@ -210,6 +210,43 @@ print_r(array_keys($array, "blue"));
 $array = array("color" => array("blue", "red", "green"),
                "size"  => array("small", "medium", "large"));
 print_r(array_keys($array));
+*/
+
+//22. array_map
+/*function cube($n)
+{
+    return($n * $n * $n);
+}
+
+$a = array(1, 2, 3, 4, 5);
+$b = array_map("cube", $a);
+print_r($b);*/
+
+/*$func = function($value) {
+    return $value * 2;
+};
+
+print_r(array_map($func, range(1, 5)));
+*/
+function show_Spanish($n, $m)
+{
+    return("The number $n is called $m in Spanish");
+}
+
+function map_Spanish($n, $m)
+{
+    return(array($n => $m));
+}
+
+$a = array(1, 2, 3, 4, 5);
+$b = array("uno", "dos", "tres", "cuatro", "cinco");
+
+$c = array_map("show_Spanish", $a, $b);
+print_r($c);
+
+$d = array_map("map_Spanish", $a , $b);
+print_r($d);
+
 
 ?>
 
