@@ -249,10 +249,22 @@ print_r($d);
 */
 
 //23. array_merge_recursive
-$ar1 = array("color" => array("favorite" => "red"), 5);
+/*$ar1 = array("color" => array("favorite" => "red"), 5);
 $ar2 = array(10, "color" => array("favorite" => "green", "blue"));
 $result = array_merge_recursive($ar1, $ar2);
 print_r($result);
+*/
+
+//24. array_merge
+//$beginning = 'foo';
+//$end = array(1 => 'bar');
+//$result = array_merge((array)$beginning, (array)$end);
+//print_r($result);
+$array1 = array("color" => "red", 2, 4);
+$array2 = array("a", "b", "color" => "green", "shape" => "trapezoid", 4);
+$result = array_merge($array1, $array2);
+print_r($result);
+
 
 ?>
 
