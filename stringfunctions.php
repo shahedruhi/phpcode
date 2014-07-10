@@ -37,12 +37,20 @@ $data = "foo:*:1023:1000::/home/foo:/bin/sh";
 list($user, $pass, $uid, $gid, $gecos, $home, $shell) = explode(":", $data);
 echo $user; // foo
 echo $pass; // 
-*/
+
  
 $input1 = "hello";
 $input2 = "hello,there";
 var_dump( explode( ',', $input1 ) );
 var_dump( explode( ',', $input2 ) );
+*/
 
+$array = array('lastname', 'email', 'phone');
+$comma_separated = implode(",", $array);
+
+echo $comma_separated; // lastname,email,phone
+
+// Empty string when using an empty array:
+var_dump(implode('hello', array())); // string(0) ""
 ?>
 
