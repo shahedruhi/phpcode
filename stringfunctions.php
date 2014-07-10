@@ -11,10 +11,15 @@
 
 //2. addslashes
 
-$str = "Is your name O'reilly?";
+//$str = "Is your name O'reilly?";
 
 // Outputs: Is your name O\'reilly?
-echo addslashes($str);
+//echo addslashes($str);
+
+//3.   convert_uuencode
+$some_string = "test\ntext text\r\n";
+
+echo convert_uuencode($some_string);
 
 ?>
 
