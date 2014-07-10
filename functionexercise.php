@@ -4,23 +4,24 @@
 function find_Filmtitle_Star($film, $genere)
 {
 
-//$film_title = '';
-//$film_star = '';
-$film_details = '';
+$film_title = '';
+$film_star = '';
+//$film_details = '';
 
 foreach($film as $key=>$value)
 {	
 	if ($genere == $film[$key])
 	{
-	//$film_title = $film[film_titles][$value];
-	//$film_star = $film[stars][$value];
-	$film_details = array("$film[film_titles][$value]", "$film[stars][$value]");
+	$film_title = $film[film_titles][$value];
+	$film_star = $film[stars][$value];
+	//$film_details = array("$film[film_titles][$value]", "$film[stars][$value]");
 	
 	}
 }	
-	
+
+echo $film_title.$film_star;	
 //return $film_title, $film_star;
-return $film_details;
+//return $film_details;
 
 
 }
