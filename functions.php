@@ -33,7 +33,15 @@ $finalgrade = getgrade(6);
 
 echo $finalgrade;
 
-
+$cards = array
+		(
+			'red' => array(1,2,3,4),
+			'blue' => array(1,2,3,4),
+			
+		
+		
+		
+		);
 
 
 /*
