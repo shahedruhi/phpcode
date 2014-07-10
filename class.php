@@ -1,13 +1,20 @@
 <?php
 
  //declaring a class
- class User{}
+ class User
+ {
+ var $name = 'FTFL';
+ var $email = '';
  
- //initaing a object
- $user1 = new User();
- var_dump( $user1);
  
+
  
+ //initiating a object
+ $user = new User();
+ 
+ //var_dump($user);
+ 
+ echo $user->name;
  
  
 
