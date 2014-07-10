@@ -17,9 +17,14 @@
 //echo addslashes($str);
 
 //3.   convert_uuencode
-$some_string = "test\ntext text\r\n";
+//$some_string = "test\ntext text\r\n";
 
-echo convert_uuencode($some_string);
+//echo convert_uuencode($some_string);
+
+//4. crc32
+$checksum = crc32("The quick brown fox jumped over the lazy dog.");
+printf("%u\n", $checksum);
+
 
 ?>
 
