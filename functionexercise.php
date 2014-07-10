@@ -25,6 +25,7 @@ return $film_details;
 
 }
 
+$input_genere = "comedy";
 $film = array
 		(
 			"genre" => array("comedy", "tragedy", "action", "romantic"),
@@ -32,7 +33,7 @@ $film = array
 			"stars" => array("Bill Murray", "Mark Hammell", "Leonardo Dicaptio", "Cate Blanechett"),
 		);		
 		
-$result = find_Filmtitle_Star($film, $genere);
+$result = find_Filmtitle_Star($film, $input_genere);
 print_r($result); 
 
 
