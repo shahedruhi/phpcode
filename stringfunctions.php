@@ -455,7 +455,7 @@ if (strcmp($var1, $var2) !== 0) {
 }
 */
 //42. strcspn
-$a = strcspn('abcd',  'apple');
+/*$a = strcspn('abcd',  'apple');
 $b = strcspn('abcd',  'banana');
 $c = strcspn('hello', 'l');
 $d = strcspn('hello', 'world');
@@ -464,6 +464,15 @@ var_dump($a);
 var_dump($b);
 var_dump($c);
 var_dump($d);
+*/
+//43. strip_tags
+$text = '<p>Test paragraph.</p><!-- Comment --> <a href="#fragment">Other text</a>';
+echo strip_tags($text);
+echo "\n";
+
+// Allow <p> and <a>
+echo strip_tags($text, '<p><a>');
+
 
 ?>
 
