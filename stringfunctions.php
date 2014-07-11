@@ -493,10 +493,15 @@ if ($pos2 !== false) {
 }
 */
 //45. stripslashes
-$str = "Is your name O\'reilly?";
+//$str = "Is your name O\'reilly?";
 
 // Outputs: Is your name O'reilly?
-echo stripslashes($str);
+//echo stripslashes($str);
+
+//46. stristr
+$email = 'USER@EXAMPLE.com';
+  echo stristr($email, 'e'); // outputs ER@EXAMPLE.com
+  echo stristr($email, 'e', true); // As of PHP 5.3.0, outputs US
 
 ?>
 
