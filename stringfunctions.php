@@ -412,13 +412,23 @@ echo $shuffled;
 */
 //37. str_split
 
-$str = "Hello Friend";
+/*$str = "Hello Friend";
 
 $arr1 = str_split($str);
 $arr2 = str_split($str, 3);
 
 print_r($arr1);
 print_r($arr2);
+*/
+//38. str_word_count
+$str = "Hello fri3nd, you're
+       looking          good today!";
+
+print_r(str_word_count($str, 1));
+print_r(str_word_count($str, 2));
+print_r(str_word_count($str, 1, 'àáãç3'));
+
+echo str_word_count($str);
 
 ?>
 
