@@ -499,9 +499,17 @@ if ($pos2 !== false) {
 //echo stripslashes($str);
 
 //46. stristr
-$email = 'USER@EXAMPLE.com';
+/*$email = 'USER@EXAMPLE.com';
   echo stristr($email, 'e'); // outputs ER@EXAMPLE.com
   echo stristr($email, 'e', true); // As of PHP 5.3.0, outputs US
+*/
+//47. strlen
+  $str = 'abcdef';
+echo strlen($str); // 6
+
+$str = ' ab cd ';
+echo strlen($str); // 7
+
 
 ?>
 
