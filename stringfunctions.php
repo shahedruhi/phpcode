@@ -337,7 +337,7 @@ if (sha1($str) === 'd0be2dc421be4fcd0172e5afceea3970e2f3d940') {
 }*/
 
 //29. similar_text
-$var_1 = 'PHP IS GREAT';
+/*$var_1 = 'PHP IS GREAT';
 $var_2 = 'WITH MYSQL';
 
 similar_text($var_1, $var_2, $percent);
@@ -348,8 +348,23 @@ echo $percent;
 similar_text($var_2, $var_1, $percent);
 
 echo $percent;
+*/
 // 18.181818181818 
+//30. sprintf
+/*$num = 5;
+$location = 'tree';
 
+$format = 'There are %d monkeys in the %s';
+echo sprintf($format, $num, $location);
+*/
+
+//31. sscanf
+// getting the serial number
+list($serial) = sscanf("SN/2350001", "SN/%d");
+// and the date of manufacturing
+$mandate = "January 01 2000";
+list($month, $day, $year) = sscanf($mandate, "%s %d %d");
+echo "Item $serial was manufactured on: $year-" . substr($month, 0, 3) . "-$day\n";
 
 ?>
 
