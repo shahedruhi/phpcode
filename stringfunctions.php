@@ -421,14 +421,21 @@ print_r($arr1);
 print_r($arr2);
 */
 //38. str_word_count
-$str = "Hello fri3nd, you're
-       looking          good today!";
+/*       looking          good today!";
 
 print_r(str_word_count($str, 1));
 print_r(str_word_count($str, 2));
 print_r(str_word_count($str, 1, 'àáãç3'));
 
 echo str_word_count($str);
+*/
+
+//39. strcasecmp
+$var1 = "Hello";
+$var2 = "hello";
+if (strcasecmp($var1, $var2) == 0) {
+    echo '$var1 is equal to $var2 in a case-insensitive string comparison';
+}
 
 ?>
 
