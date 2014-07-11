@@ -450,7 +450,7 @@ $result = array_udiff_assoc($a, $b, array("cr", "comp_func_cr"));
 print_r($result);
 */
 //41. array_udiff_uassoc
-
+/*
 class cr {
     private $priv_member;
     function cr($val)
@@ -475,5 +475,42 @@ $b = array("0.2" => new cr(9), "0.5" => new cr(22), 0 => new cr(3), 1=> new cr(4
 
 $result = array_udiff_uassoc($a, $b, array("cr", "comp_func_cr"), array("cr", "comp_func_key"));
 print_r($result);
+*/
+
+//42.array_udiff
+
+// Arrays to compare
+$array1 = array(new stdclass, new stdclass,
+                new stdclass, new stdclass,
+               );
+
+$array2 = array(
+                new stdclass, new stdclass,
+               );
+
+// Set some properties for each object
+$array1[0]->width = 11; $array1[0]->height = 3;
+$array1[1]->width = 7;  $array1[1]->height = 1;
+$array1[2]->width = 2;  $array1[2]->height = 9;
+$array1[3]->width = 5;  $array1[3]->height = 7;
+
+$array2[0]->width = 7;  $array2[0]->height = 5;
+$array2[1]->width = 9;  $array2[1]->height = 2;
+
+function compare_by_area($a, $b) {
+    $areaA = $a->width * $a->height;
+    $areaB = $b->width * $b->height;
+    
+    if ($areaA < $areaB) {
+        return -1;
+    } elseif ($areaA > $areaB) {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+print_r(array_udiff($array1, $array2, 'compare_by_area'));
+
 ?>
 
