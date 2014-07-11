@@ -546,7 +546,7 @@ print_r($queue);
 //$array = array("size" => "XL", "color" => "gold");
 //print_r(array_values($array));
 //49. array_walk_recursive
-$sweet = array('a' => 'apple', 'b' => 'banana');
+/*$sweet = array('a' => 'apple', 'b' => 'banana');
 $fruits = array('sweet' => $sweet, 'sour' => 'lemon');
 
 function test_print($item, $key)
@@ -555,6 +555,27 @@ function test_print($item, $key)
 }
 
 array_walk_recursive($fruits, 'test_print');
+*/
+//50. array_walk
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+
+function test_alter(&$item1, $key, $prefix)
+{
+    $item1 = "$prefix: $item1";
+}
+
+function test_print($item2, $key)
+{
+    echo "$key. $item2<br />\n";
+}
+
+echo "Before ...:\n";
+array_walk($fruits, 'test_print');
+
+array_walk($fruits, 'test_alter', 'fruit');
+echo "... and after:\n";
+
+array_walk($fruits, 'test_print');
 
 
 ?>
