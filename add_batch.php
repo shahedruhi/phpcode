@@ -1,7 +1,7 @@
 <?php
 
 //echo $_POST['batch_name'];
-$batch = $_POST['batch_name'];
+/*$batch = $_POST['batch_name'];
 if (strlen($batch) < 4)
 {
 	header('location:add_batch.php?len=short');
