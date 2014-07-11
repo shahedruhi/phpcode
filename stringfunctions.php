@@ -548,12 +548,15 @@ if ($pos === false) {
 
 //51. strrchr
 // get last directory in $PATH
-$PATH = "asd";
+/*$PATH = "asd";
 $dir = substr(strrchr($PATH, ":"), 1);
 
 // get everything after last newline
 $text = "Line 1\nLine 2\nLine 3";
 $last = substr(strrchr($text, 10), 1 );
+*/
+//52. strrev
+echo strrev("Hello world!"); // outputs "!dlrow olleH"
 
 ?>
 
