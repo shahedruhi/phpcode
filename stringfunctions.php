@@ -224,10 +224,22 @@ $english_format_number = number_format($number, 2, '.', '');
 echo $english_format_number;
 */
 //20. ord
-$str = "\n";
+/*$str = "\n";
 if (ord($str) == 10) {
     echo "The first character of \$str is a line feed.\n";
 }
+*/
+//21. parse_str
+$str = "first=value&arr[]=foo+bar&arr[]=baz";
+parse_str($str);
+echo $first."<br />";  // value
+echo $arr[0]."<br />"; // foo bar
+echo $arr[1]."<br />"; // baz
+
+parse_str($str, $output);
+echo $output['first']."<br />";  // value
+echo $output['arr'][0]."<br />"; // foo bar
+echo $output['arr'][1]."<br />"; // baz
 
 ?>
 
