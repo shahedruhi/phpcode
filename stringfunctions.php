@@ -367,11 +367,15 @@ echo sprintf($format, $num, $location);
 //echo "Item $serial was manufactured on: $year-" . substr($month, 0, 3) . "-$day\n";
 
 //32. str_pad
-$input = "Alien";
+/*$input = "Alien";
 echo str_pad($input, 10);                      // produces "Alien     "
 echo str_pad($input, 10, "-=", STR_PAD_LEFT);  // produces "-=-=-Alien"
 echo str_pad($input, 10, "_", STR_PAD_BOTH);   // produces "__Alien___"
 echo str_pad($input, 6 , "___");               // produces "Alien_"
+*/
+//33. str_repeat
+echo str_repeat("-=", 10);
+
 
 ?>
 
