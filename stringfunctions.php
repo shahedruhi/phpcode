@@ -360,11 +360,18 @@ echo sprintf($format, $num, $location);
 
 //31. sscanf
 // getting the serial number
-list($serial) = sscanf("SN/2350001", "SN/%d");
+//list($serial) = sscanf("SN/2350001", "SN/%d");
 // and the date of manufacturing
-$mandate = "January 01 2000";
-list($month, $day, $year) = sscanf($mandate, "%s %d %d");
-echo "Item $serial was manufactured on: $year-" . substr($month, 0, 3) . "-$day\n";
+//$mandate = "January 01 2000";
+//list($month, $day, $year) = sscanf($mandate, "%s %d %d");
+//echo "Item $serial was manufactured on: $year-" . substr($month, 0, 3) . "-$day\n";
+
+//32. str_pad
+$input = "Alien";
+echo str_pad($input, 10);                      // produces "Alien     "
+echo str_pad($input, 10, "-=", STR_PAD_LEFT);  // produces "-=-=-Alien"
+echo str_pad($input, 10, "_", STR_PAD_BOTH);   // produces "__Alien___"
+echo str_pad($input, 6 , "___");               // produces "Alien_"
 
 ?>
 
