@@ -504,11 +504,20 @@ if ($pos2 !== false) {
   echo stristr($email, 'e', true); // As of PHP 5.3.0, outputs US
 */
 //47. strlen
-  $str = 'abcdef';
+/*  $str = 'abcdef';
 echo strlen($str); // 6
 
 $str = ' ab cd ';
 echo strlen($str); // 7
+*/
+//48. strnatcmp
+$arr1 = $arr2 = array("img12.png", "img10.png", "img2.png", "img1.png");
+echo "Standard string comparison\n";
+usort($arr1, "strcmp");
+print_r($arr1);
+echo "\nNatural order string comparison\n";
+usort($arr2, "strnatcmp");
+print_r($arr2);
 
 
 ?>
