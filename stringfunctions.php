@@ -377,7 +377,7 @@ echo str_pad($input, 6 , "___");               // produces "Alien_"
 //echo str_repeat("-=", 10);
 //34. str_replace
 // Provides: <body text='black'>
-$bodytag = str_replace("%body%", "black", "<body text='%body%'>");
+/*$bodytag = str_replace("%body%", "black", "<body text='%body%'>");
 
 // Provides: Hll Wrld f PHP
 $vowels = array("a", "e", "i", "o", "u", "A", "E", "I", "O", "U");
@@ -393,7 +393,12 @@ $newphrase = str_replace($healthy, $yummy, $phrase);
 // Provides: 2
 $str = str_replace("ll", "", "good golly miss molly!", $count);
 echo $count;
-
+*/
+$input = "Alien";
+echo str_pad($input, 10)."<br />";                      // produces "Alien     "
+echo str_pad($input, 10, "*", STR_PAD_LEFT)."<br />";  // produces "-=-=-Alien"
+echo str_pad($input, 10, "*", STR_PAD_BOTH)."<br />";   // produces "__Alien___"
+echo str_pad($input, 6 , "*")."<br />";               // produces "Alien_"
 
 ?>
 
