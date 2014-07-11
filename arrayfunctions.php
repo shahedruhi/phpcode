@@ -526,10 +526,16 @@ print_r(array_uintersect_uassoc($array1, $array2, "strcasecmp", "strcasecmp"));
 */
 
 //45. array_uintersect
+/*
 $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
 $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
 
 print_r(array_uintersect($array1, $array2, "strcasecmp"));
+*/
+//46. array_unique
+$input = array("a" => "green", "red", "b" => "green", "blue", "red");
+$result = array_unique($input);
+print_r($result);
 
 ?>
 
