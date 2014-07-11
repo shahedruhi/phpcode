@@ -242,7 +242,7 @@ echo $output['arr'][0]."<br />"; // foo bar
 echo $output['arr'][1]."<br />"; // baz
 */
 //22. print
-print("Hello World");
+/*print("Hello World");
 
 print "print() also works without parentheses.";
 
@@ -277,7 +277,11 @@ multiple lines with $variable interpolation. Note
 that the here document terminator must appear on a
 line with just a semicolon no extra whitespace!
 END;
-
+*/
+//23. printf
+$format = 'The %2$s contains %1$d monkeys.
+         That is a nice %2$s full of %1$d monkeys.';
+printf($format, $num, $location); 
 
 ?>
 
