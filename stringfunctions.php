@@ -160,7 +160,7 @@ if (md5($str) === '1f3870be274f6c49b3e31a0c6728957f') {
 //var_dump(metaphone('programmer'));
 
 //17. money_format
-$number = 1234.56;
+/*$number = 1234.56;
 
 // let's print the international format for the en_US locale
 setlocale(LC_MONETARY, 'en_US');
@@ -198,6 +198,12 @@ setlocale(LC_MONETARY, 'en_GB');
 $fmt = 'The final value is %i (after a 10%% discount)';
 echo money_format($fmt, 1234.56) . "\n";
 // The final value is  GBP 1,234.56 (after a 10% discount)
+*/
+//18. nl2br
+
+echo nl2br("foo isn't\n bar");
+$string = "This\r\nis\n\ra\nstring\r";
+echo nl2br($string);
 
 ?>
 
