@@ -2,7 +2,6 @@
 
 $end_number_series = 100; //put last number of the series
 
-
 for ($i = 0; $i <= $end_number_series; $i++)
 {
 	if ($i % 2 == 0) //for finding even numbers.
