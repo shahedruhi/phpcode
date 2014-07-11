@@ -578,8 +578,16 @@ echo "... and after:\n";
 array_walk($fruits, 'test_print');
 */
 //51. array
-$array = array(1, 1, 1, 1,  1, 8 => 1,  4 => 1, 19, 3 => 13);
-print_r($array);
+//$array = array(1, 1, 1, 1,  1, 8 => 1,  4 => 1, 19, 3 => 13);
+//print_r($array);
+
+//52. arsort
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+arsort($fruits);
+foreach ($fruits as $key => $val) {
+    echo "$key = $val\n";
+}
+
 
 ?>
 
