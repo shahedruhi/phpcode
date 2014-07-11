@@ -533,9 +533,18 @@ $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
 print_r(array_uintersect($array1, $array2, "strcasecmp"));
 */
 //46. array_unique
-$input = array("a" => "green", "red", "b" => "green", "blue", "red");
+/*$input = array("a" => "green", "red", "b" => "green", "blue", "red");
 $result = array_unique($input);
 print_r($result);
+*/
+//47. array_unshift
+/*$queue = array("orange", "banana");
+array_unshift($queue, "apple", "raspberry");
+print_r($queue);
+*/
+//48. array_values
+$array = array("size" => "XL", "color" => "gold");
+print_r(array_values($array));
 
 ?>
 
