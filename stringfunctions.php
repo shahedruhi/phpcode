@@ -401,7 +401,14 @@ echo str_pad($input, 10, "*", STR_PAD_BOTH)."<br />";   // produces "__Alien___"
 echo str_pad($input, 6 , "*")."<br />";               // produces "Alien_"
 */
 //35. str_rot13
-echo str_rot13('PHP 4.3.0'); // CUC 4.3.0
+//echo str_rot13('PHP 4.3.0'); // CUC 4.3.0
+
+//36. str_shuffle
+$str = 'abcdef';
+$shuffled = str_shuffle($str);
+
+// This will echo something like: bfdaec
+echo $shuffled;
 
 ?>
 
