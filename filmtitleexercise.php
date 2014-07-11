@@ -1,85 +1,6 @@
 
 <?php
 
-/*function getTitle ($genree="")
-{
-    $keyValue = 0;
-    
-$films = array(
-   "genres" => array("comedy", "tragedy", "romance", "action"),
-    "film_titles" => array("Big", "Star War", "French Key", "Titanic",),
-    "stars" => array("Bill Murry", "Mark Hammels", "Cate Blanchett", "Leonard Deaprio"),
-    
-);
-
-foreach ($films as $fkey => $firstValue) {
-    
-    if($fkey=="genres")
-    {
-        foreach ($firstValue as $key => $secondValue)
-        {
-            if($secondValue==$genree)
-            {
-               $keyValue=$key;
-               
-            }
-            
-        }
-    }
-  
-}
-$filmTitle = $films['film_titles'][$keyValue];
- return $filmTitle;
-
-}
-
-
-function getStar ($genree="")
-{
-    $keyValue = 0;
-    
-$films = array(
-   "genres" => array("comedy", "tragedy", "romance", "action"),
-    "film_titles" => array("Big", "Star War", "French Key", "Titanic",),
-    "stars" => array("Bill Murry", "Mark Hammels", "Cate Blanchett", "Leonard Deaprio"),
-    
-    
-);
-
-foreach ($films as $fkey => $firstValue) {
-    
-    if($fkey=="genres")
-    {
-        foreach ($firstValue as $key => $secondValue)
-        {
-            if($secondValue==$genree)
-            {
-               $keyValue=$key;
-               
-            }
-            
-        }
-    }
-  
-}
-  $starWithSpace = strtolower ( $films['stars'][$keyValue]);
-  $star = str_replace(' ',"-",$starWithSpace);
- return $star;
-
-}
-
-
-function printTitleAndStar()
-{
-  echo "Film Title is : ".getTitle ("action");
-  echo "<br/>";
-  echo "The Star Name is : ".getStar ("action");
-}
-
-printTitleAndStar();
-*/
-
-
 function find_Film_Title($function_films, $function_genere = "")
 {
 
@@ -139,6 +60,16 @@ return $film_star;
 
 }
 
+function change_Star_Name($star_name = "")
+{
+
+$changed_name = "";    
+$Replace_Space = strtolower ($star_name);
+$changed_name = str_replace(' ',"-",$Replace_Space);
+return $changed_name;
+
+}
+
 
 $films = array
 		(
@@ -147,7 +78,7 @@ $films = array
 			"stars" => array("Bill Murray", "Mark Hammell", "Leonardo Dicaptio", "Cate Blanechett"),
 		);
 
-$input_genere = "comedy";
+$input_genere = "romantic";
 
 /*foreach ($function_films as $key_1 => $Value_1) {
     
@@ -170,15 +101,13 @@ $input_genere = "comedy";
 
 $Film_Title = find_Film_Title($films, $input_genere);
 $Film_Star = find_Film_Star($films, $input_genere);
+$Changed_Star_Name = change_Star_Name($Film_Star);
 
 echo "Film Title is : ".$Film_Title;
 echo "<br/>";
 echo "The Star Name is : ".$Film_Star;
-
-
-//print_r($film); 
-
-
+echo "<br/>";
+echo "The Changed Star Name is : ".$Changed_Star_Name;
 
 ?>
 
