@@ -285,7 +285,7 @@ printf($format, $num, $location);
 */
 //24. quoted_printable_decode
 //25. rtrim
-$text = "\t\tThese are a few words :) ...  ";
+/*$text = "\t\tThese are a few words :) ...  ";
 $binary = "\x09Example string\x0A";
 $hello  = "Hello World";
 var_dump($text, $binary, $hello);
@@ -305,7 +305,17 @@ var_dump($trimmed);
 // (from 0 to 31 inclusive)
 $clean = rtrim($binary, "\x00..\x1F");
 var_dump($clean);
+*/
+//26. setlocale
+/* Set locale to Dutch */
+setlocale(LC_ALL, 'nl_NL');
 
+/* Output: vrijdag 22 december 1978 */
+echo strftime("%A %e %B %Y", mktime(0, 0, 0, 12, 22, 1978));
+
+/* try different possible locale names for german as of PHP 4.3.0 */
+$loc_de = setlocale(LC_ALL, 'de_DE@euro', 'de_DE', 'de', 'ge');
+echo "Preferred locale for german on this system is '$loc_de'";
 
 
 
