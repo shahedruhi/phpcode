@@ -357,12 +357,17 @@ print_r($input);
 print_r($reversed);
 print_r($preserved);
 */
-//35. array_search
+/*35. array_search
 $array = array(0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red');
 
 $key1 = array_search('green', $array); // $key = 2;
 $key2 = array_search('red', $array);   // $key = 1;
 echo $key1.$key2;
+*/
+//36. array_shift
+$stack = array("orange", "banana", "apple", "raspberry");
+$fruit = array_shift($stack);
+print_r($stack);
 
 ?>
 
