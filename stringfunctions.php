@@ -67,7 +67,7 @@ $bar = lcfirst(strtoupper($bar)); // hELLO WORLD!
 echo $bar;
 */
 //11. levenshtein
-
+/*
 // input misspelled word
 $input = 'carrrot';
 
@@ -111,5 +111,13 @@ if ($shortest == 0) {
 } else {
     echo "Did you mean: $closest?\n";
 }
+*/
+//12. localeconv
+/*if (false !== setlocale(LC_ALL, 'nl_NL.UTF-8@euro')) {
+    $locale_info = localeconv();
+    print_r($locale_info);
+}
+*/
+
 ?>
 
