@@ -448,12 +448,22 @@ $user = strstr($email, '@', true); // As of PHP 5.3.0
 echo $user; // prints name
 */
 // 41. strcmp
-$var1 = "Hello";
+/*$var1 = "Hello";
 $var2 = "hello";
 if (strcmp($var1, $var2) !== 0) {
     echo '$var1 is not equal to $var2 in a case sensitive string comparison';
 }
+*/
+//42. strcspn
+$a = strcspn('abcd',  'apple');
+$b = strcspn('abcd',  'banana');
+$c = strcspn('hello', 'l');
+$d = strcspn('hello', 'world');
 
+var_dump($a);
+var_dump($b);
+var_dump($c);
+var_dump($d);
 
 ?>
 
