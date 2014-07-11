@@ -279,9 +279,35 @@ line with just a semicolon no extra whitespace!
 END;
 */
 //23. printf
-$format = 'The %2$s contains %1$d monkeys.
+/*$format = 'The %2$s contains %1$d monkeys.
          That is a nice %2$s full of %1$d monkeys.';
 printf($format, $num, $location); 
+*/
+//24. quoted_printable_decode
+//25. rtrim
+$text = "\t\tThese are a few words :) ...  ";
+$binary = "\x09Example string\x0A";
+$hello  = "Hello World";
+var_dump($text, $binary, $hello);
+
+print "\n";
+
+$trimmed = rtrim($text);
+var_dump($trimmed);
+
+$trimmed = rtrim($text, " \t.");
+var_dump($trimmed);
+
+$trimmed = rtrim($hello, "Hdle");
+var_dump($trimmed);
+
+// trim the ASCII control characters at the end of $binary
+// (from 0 to 31 inclusive)
+$clean = rtrim($binary, "\x00..\x1F");
+var_dump($clean);
+
+
+
 
 ?>
 
