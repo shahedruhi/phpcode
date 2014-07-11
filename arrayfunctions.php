@@ -310,7 +310,7 @@ print_r($result);
 //echo $input[$rand_keys[0]] . "\n";
 //echo $input[$rand_keys[1]] . "\n";
 
-//31. array_reduce
+/*31. array_reduce
 function sum($carry, $item)
 {
     $carry += $item;
@@ -329,5 +329,17 @@ $x = array();
 var_dump(array_reduce($a, "sum")); // int(15)
 var_dump(array_reduce($a, "multiplication", 10)); // int(1200), because: 10*1*2*3*4*5
 var_dump(array_reduce($x, "sum", "No data to reduce")); // string(17) "No data to reduce"
+*/
+//32. array_replace_recursive
+$base = array('citrus' => array( "orange") , 'berries' => array("blackberry", "raspberry"), );
+$replacements = array('citrus' => array('pineapple'), 'berries' => array('blueberry'));
+
+$basket = array_replace_recursive($base, $replacements);
+print_r($basket);
+
+$basket = array_replace($base, $replacements);
+print_r($basket);
+
+
 ?>
 
