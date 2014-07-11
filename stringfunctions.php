@@ -143,9 +143,22 @@ var_dump($clean);
 */
 
 //14. md5_file
-$file = 'php-5.3.0alpha2-Win32-VC9-x64.zip';
+//$file = 'php-5.3.0alpha2-Win32-VC9-x64.zip';
 
-echo 'MD5 file hash of ' . $file . ': ' . md5_file($file);
+//
+
+//15. md5
+/*$str = 'apple';
+
+if (md5($str) === '1f3870be274f6c49b3e31a0c6728957f') {
+    echo "Would you like a green or red apple?";
+}
+*/
+
+//16. metaphone
+var_dump(metaphone('programming'));
+var_dump(metaphone('programmer'));
+
 
 
 ?>
