@@ -330,7 +330,7 @@ var_dump(array_reduce($a, "sum")); // int(15)
 var_dump(array_reduce($a, "multiplication", 10)); // int(1200), because: 10*1*2*3*4*5
 var_dump(array_reduce($x, "sum", "No data to reduce")); // string(17) "No data to reduce"
 */
-//32. array_replace_recursive
+/*32. array_replace_recursive
 $base = array('citrus' => array( "orange") , 'berries' => array("blackberry", "raspberry"), );
 $replacements = array('citrus' => array('pineapple'), 'berries' => array('blueberry'));
 
@@ -339,7 +339,14 @@ print_r($basket);
 
 $basket = array_replace($base, $replacements);
 print_r($basket);
+*/
+//33. array_replace
+$base = array("orange", "banana", "apple", "raspberry");
+$replacements = array(0 => "pineapple", 4 => "cherry");
+$replacements2 = array(0 => "grape");
 
+$basket = array_replace($base, $replacements, $replacements2);
+print_r($basket);
 
 ?>
 
