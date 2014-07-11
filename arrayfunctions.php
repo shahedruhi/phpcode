@@ -543,8 +543,19 @@ array_unshift($queue, "apple", "raspberry");
 print_r($queue);
 */
 //48. array_values
-$array = array("size" => "XL", "color" => "gold");
-print_r(array_values($array));
+//$array = array("size" => "XL", "color" => "gold");
+//print_r(array_values($array));
+//49. array_walk_recursive
+$sweet = array('a' => 'apple', 'b' => 'banana');
+$fruits = array('sweet' => $sweet, 'sour' => 'lemon');
+
+function test_print($item, $key)
+{
+    echo "$key holds $item\n";
+}
+
+array_walk_recursive($fruits, 'test_print');
+
 
 ?>
 
