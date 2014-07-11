@@ -201,9 +201,29 @@ echo money_format($fmt, 1234.56) . "\n";
 */
 //18. nl2br
 
-echo nl2br("foo isn't\n bar");
+/*echo nl2br("foo isn't\n bar");
 $string = "This\r\nis\n\ra\nstring\r";
 echo nl2br($string);
+*/
+//19. number_format
+$number = 1234.56;
+
+// english notation (default)
+$english_format_number = number_format($number);
+// 1,235
+
+// French notation
+$nombre_format_francais = number_format($number, 2, ',', ' ');
+// 1 234,56
+
+$number = 1234.5678;
+
+// english notation without thousands separator
+$english_format_number = number_format($number, 2, '.', '');
+// 1234.57
+echo $english_format_number;
+
+
 
 ?>
 
