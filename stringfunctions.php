@@ -511,6 +511,7 @@ $str = ' ab cd ';
 echo strlen($str); // 7
 */
 //48. strnatcmp
+/*
 $arr1 = $arr2 = array("img12.png", "img10.png", "img2.png", "img1.png");
 echo "Standard string comparison\n";
 usort($arr1, "strcmp");
@@ -518,6 +519,15 @@ print_r($arr1);
 echo "\nNatural order string comparison\n";
 usort($arr2, "strnatcmp");
 print_r($arr2);
+*/
+//49. strpbrk
+$text = 'This is a Simple text.';
+
+// this echoes "is is a Simple text." because 'i' is matched first
+echo strpbrk($text, 'mi');
+
+// this echoes "Simple text." because chars are case sensitive
+echo strpbrk($text, 'S');
 
 
 ?>
