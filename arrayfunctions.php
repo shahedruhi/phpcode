@@ -365,9 +365,28 @@ $key2 = array_search('red', $array);   // $key = 1;
 echo $key1.$key2;
 */
 //36. array_shift
-$stack = array("orange", "banana", "apple", "raspberry");
-$fruit = array_shift($stack);
-print_r($stack);
+//$stack = array("orange", "banana", "apple", "raspberry");
+//$fruit = array_shift($stack);
+//print_r($stack);
+
+//37. array_slice
+$input = array("a", "b", "c", "d", "e");
+
+$output = array_slice($input, 2);      // returns "c", "d", and "e"
+print_r($output);
+echo "<br >";
+$output = array_slice($input, -2, 1);  // returns "d"
+print_r($output);
+echo "<br >";
+$output = array_slice($input, 0, 3);   // returns "a", "b", and "c"
+print_r($output);
+echo "<br >";
+
+
+// note the differences in the array keys
+print_r(array_slice($input, 2, -1));
+print_r(array_slice($input, 2, -1, true));
+
 
 ?>
 
