@@ -474,7 +474,7 @@ echo "\n";
 echo strip_tags($text, '<p><a>');
 */
 //44. stripos
-$findme    = 'a';
+/*$findme    = 'a';
 $mystring1 = 'xyz';
 $mystring2 = 'ABC';
 
@@ -491,6 +491,12 @@ if ($pos1 === false) {
 if ($pos2 !== false) {
     echo "We found '$findme' in '$mystring2' at position $pos2";
 }
+*/
+//45. stripslashes
+$str = "Is your name O\'reilly?";
+
+// Outputs: Is your name O'reilly?
+echo stripslashes($str);
 
 ?>
 
