@@ -388,7 +388,7 @@ print_r(array_slice($input, 2, -1));
 print_r(array_slice($input, 2, -1, true));
 */
 //38. array_splice
-$input = array("red", "green", "blue", "yellow");
+/*$input = array("red", "green", "blue", "yellow");
 array_splice($input, 2);
 // $input is now array("red", "green")
 print_r($input);
@@ -420,7 +420,13 @@ array_splice($input, 3, 0, "purple");
 //          "blue", "purple", "yellow");
 print_r($input);
 echo "<br >";
+*/
+//39. array_sum
+$a = array(2, 4, 6, 8);
+echo "sum(a) = " . array_sum($a) . "\n";
 
+$b = array("a" => 1.2, "b" => 2.3, "c" => 3.4);
+echo "sum(b) = " . array_sum($b) . "\n";
 
 
 ?>
