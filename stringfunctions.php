@@ -45,12 +45,28 @@ var_dump( explode( ',', $input1 ) );
 var_dump( explode( ',', $input2 ) );
 */
 
-$array = array('lastname', 'email', 'phone');
+/*$array = array('lastname', 'email', 'phone');
 $comma_separated = implode(",", $array);
 
 echo $comma_separated; // lastname,email,phone
 
 // Empty string when using an empty array:
 var_dump(implode('hello', array())); // string(0) ""
+*/
+//10. lcfirst
+
+$foo = 'HelloWorld';
+$foo = lcfirst($foo);             // helloWorld
+
+echo $foo;
+
+$bar = 'HELLO WORLD!';
+$bar = lcfirst($bar);             // hELLO WORLD!
+$bar = lcfirst(strtoupper($bar)); // hELLO WORLD!
+
+echo $bar;
+
+
+
 ?>
 
