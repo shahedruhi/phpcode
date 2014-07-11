@@ -370,7 +370,7 @@ echo $key1.$key2;
 //print_r($stack);
 
 //37. array_slice
-$input = array("a", "b", "c", "d", "e");
+/*$input = array("a", "b", "c", "d", "e");
 
 $output = array_slice($input, 2);      // returns "c", "d", and "e"
 print_r($output);
@@ -386,6 +386,41 @@ echo "<br >";
 // note the differences in the array keys
 print_r(array_slice($input, 2, -1));
 print_r(array_slice($input, 2, -1, true));
+*/
+//38. array_splice
+$input = array("red", "green", "blue", "yellow");
+array_splice($input, 2);
+// $input is now array("red", "green")
+print_r($input);
+echo "<br >";
+
+$input = array("red", "green", "blue", "yellow");
+array_splice($input, 1, -1);
+// $input is now array("red", "yellow")
+print_r($input);
+echo "<br >";
+
+
+$input = array("red", "green", "blue", "yellow");
+array_splice($input, 1, count($input), "orange");
+// $input is now array("red", "orange")
+print_r($input);
+echo "<br >";
+
+$input = array("red", "green", "blue", "yellow");
+array_splice($input, -1, 1, array("black", "maroon"));
+// $input is now array("red", "green",
+//          "blue", "black", "maroon")
+print_r($input);
+echo "<br >";
+
+$input = array("red", "green", "blue", "yellow");
+array_splice($input, 3, 0, "purple");
+// $input is now array("red", "green",
+//          "blue", "purple", "yellow");
+print_r($input);
+echo "<br >";
+
 
 
 ?>
