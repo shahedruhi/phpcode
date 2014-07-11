@@ -393,12 +393,15 @@ $newphrase = str_replace($healthy, $yummy, $phrase);
 // Provides: 2
 $str = str_replace("ll", "", "good golly miss molly!", $count);
 echo $count;
-*/
+
 $input = "Alien";
 echo str_pad($input, 10)."<br />";                      // produces "Alien     "
 echo str_pad($input, 10, "*", STR_PAD_LEFT)."<br />";  // produces "-=-=-Alien"
 echo str_pad($input, 10, "*", STR_PAD_BOTH)."<br />";   // produces "__Alien___"
 echo str_pad($input, 6 , "*")."<br />";               // produces "Alien_"
+*/
+//35. str_rot13
+echo str_rot13('PHP 4.3.0'); // CUC 4.3.0
 
 ?>
 
