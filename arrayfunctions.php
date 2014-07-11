@@ -480,7 +480,7 @@ print_r($result);
 //42.array_udiff
 
 // Arrays to compare
-$array1 = array(new stdclass, new stdclass,
+/*$array1 = array(new stdclass, new stdclass,
                 new stdclass, new stdclass,
                );
 
@@ -511,6 +511,12 @@ function compare_by_area($a, $b) {
 }
 
 print_r(array_udiff($array1, $array2, 'compare_by_area'));
+*/
+//43. array_uintersect_assoc
+$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+$array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
+
+print_r(array_uintersect_assoc($array1, $array2, "strcasecmp"));
 
 ?>
 
