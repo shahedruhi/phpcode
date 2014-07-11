@@ -557,7 +557,7 @@ function test_print($item, $key)
 array_walk_recursive($fruits, 'test_print');
 */
 //50. array_walk
-$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+/*$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
 
 function test_alter(&$item1, $key, $prefix)
 {
@@ -576,7 +576,10 @@ array_walk($fruits, 'test_alter', 'fruit');
 echo "... and after:\n";
 
 array_walk($fruits, 'test_print');
-
+*/
+//51. array
+$array = array(1, 1, 1, 1,  1, 8 => 1,  4 => 1, 19, 3 => 13);
+print_r($array);
 
 ?>
 
