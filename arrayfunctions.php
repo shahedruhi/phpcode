@@ -513,10 +513,17 @@ function compare_by_area($a, $b) {
 print_r(array_udiff($array1, $array2, 'compare_by_area'));
 */
 //43. array_uintersect_assoc
+//$array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
+//$array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
+
+//print_r(array_uintersect_assoc($array1, $array2, "strcasecmp"));
+
+//44. array_uintersect_uassoc
 $array1 = array("a" => "green", "b" => "brown", "c" => "blue", "red");
 $array2 = array("a" => "GREEN", "B" => "brown", "yellow", "red");
 
-print_r(array_uintersect_assoc($array1, $array2, "strcasecmp"));
+print_r(array_uintersect_uassoc($array1, $array2, "strcasecmp", "strcasecmp"));
+
 
 ?>
 
