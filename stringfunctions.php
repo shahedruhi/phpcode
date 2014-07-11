@@ -308,15 +308,47 @@ var_dump($clean);
 */
 //26. setlocale
 /* Set locale to Dutch */
-setlocale(LC_ALL, 'nl_NL');
+//setlocale(LC_ALL, 'nl_NL');
 
 /* Output: vrijdag 22 december 1978 */
-echo strftime("%A %e %B %Y", mktime(0, 0, 0, 12, 22, 1978));
+//echo strftime("%A %e %B %Y", mktime(0, 0, 0, 12, 22, 1978));
 
 /* try different possible locale names for german as of PHP 4.3.0 */
-$loc_de = setlocale(LC_ALL, 'de_DE@euro', 'de_DE', 'de', 'ge');
-echo "Preferred locale for german on this system is '$loc_de'";
+//$loc_de = setlocale(LC_ALL, 'de_DE@euro', 'de_DE', 'de', 'ge');
+//echo "Preferred locale for german on this system is '$loc_de'";
 
+//27. sha1_file
+/*foreach(glob('/home/Kalle/myproject/*.php') as $ent)
+{
+    if(is_dir($ent))
+    {
+        continue;
+    }
+
+    echo $ent . ' (SHA1: ' . sha1_file($ent) . ')', PHP_EOL;
+}*/
+
+//28. sha1
+
+/*$str = 'apple';
+
+if (sha1($str) === 'd0be2dc421be4fcd0172e5afceea3970e2f3d940') {
+    echo "Would you like a green or red apple?";
+}*/
+
+//29. similar_text
+$var_1 = 'PHP IS GREAT';
+$var_2 = 'WITH MYSQL';
+
+similar_text($var_1, $var_2, $percent);
+
+echo $percent;
+// 27.272727272727
+
+similar_text($var_2, $var_1, $percent);
+
+echo $percent;
+// 18.181818181818 
 
 
 ?>
