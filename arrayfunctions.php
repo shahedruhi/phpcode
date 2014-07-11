@@ -582,12 +582,18 @@ array_walk($fruits, 'test_print');
 //print_r($array);
 
 //52. arsort
-$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+/* $fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
 arsort($fruits);
+foreach ($fruits as $key => $val) {
+    echo "$key = $val\n";
+}*/
+// 53. asort
+$fruits = array("d" => "lemon", "a" => "orange", "b" => "banana", "c" => "apple");
+asort($fruits);
 foreach ($fruits as $key => $val) {
     echo "$key = $val\n";
 }
 
 
-?>
 
+?>
