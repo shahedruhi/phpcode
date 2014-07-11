@@ -531,7 +531,7 @@ echo strpbrk($text, 'S');
 */
 
 //50. strpos
-
+/*
 $mystring = 'abc';
 $findme   = 'a';
 $pos = strpos($mystring, $findme);
@@ -544,5 +544,16 @@ if ($pos === false) {
     echo "The string '$findme' was found in the string '$mystring'";
     echo " and exists at position $pos";
 }
+*/
+
+//51. strrchr
+// get last directory in $PATH
+$PATH = "asd";
+$dir = substr(strrchr($PATH, ":"), 1);
+
+// get everything after last newline
+$text = "Line 1\nLine 2\nLine 3";
+$last = substr(strrchr($text, 10), 1 );
+
 ?>
 
