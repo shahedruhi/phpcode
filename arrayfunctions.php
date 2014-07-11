@@ -340,13 +340,22 @@ print_r($basket);
 $basket = array_replace($base, $replacements);
 print_r($basket);
 */
-//33. array_replace
+/*33. array_replace
 $base = array("orange", "banana", "apple", "raspberry");
 $replacements = array(0 => "pineapple", 4 => "cherry");
 $replacements2 = array(0 => "grape");
 
 $basket = array_replace($base, $replacements, $replacements2);
 print_r($basket);
+*/
+//34. array_reverse
+$input  = array("php", 4.0, array("green", "red"));
+$reversed = array_reverse($input);
+$preserved = array_reverse($input, true);
+
+print_r($input);
+print_r($reversed);
+print_r($preserved);
 
 ?>
 
