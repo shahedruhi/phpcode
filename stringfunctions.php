@@ -118,8 +118,8 @@ if ($shortest == 0) {
     print_r($locale_info);
 }
 */
-//13. ltrim]
-$text = "\t\tThese are a few words :) ...  ";
+//13. ltrim
+/*$text = "\t\tThese are a few words :) ...  ";
 $binary = "\x09Example string\x0A";
 $hello  = "Hello World";
 var_dump($text, $binary, $hello);
@@ -140,7 +140,12 @@ var_dump($trimmed);
 // (from 0 to 31 inclusive)
 $clean = ltrim($binary, "\x00..\x1F");
 var_dump($clean);
+*/
 
+//14. md5_file
+$file = 'php-5.3.0alpha2-Win32-VC9-x64.zip';
+
+echo 'MD5 file hash of ' . $file . ': ' . md5_file($file);
 
 
 ?>
