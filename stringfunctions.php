@@ -431,11 +431,20 @@ echo str_word_count($str);
 */
 
 //39. strcasecmp
-$var1 = "Hello";
+/*$var1 = "Hello";
 $var2 = "hello";
 if (strcasecmp($var1, $var2) == 0) {
     echo '$var1 is equal to $var2 in a case-insensitive string comparison';
 }
+*/
 
+//40. strstr
+
+$email  = 'name@example.com';
+$domain = strstr($email, '@');
+echo $domain; // prints @example.com
+
+$user = strstr($email, '@', true); // As of PHP 5.3.0
+echo $user; // prints name
 ?>
 
