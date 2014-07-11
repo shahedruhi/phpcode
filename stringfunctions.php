@@ -206,7 +206,7 @@ $string = "This\r\nis\n\ra\nstring\r";
 echo nl2br($string);
 */
 //19. number_format
-$number = 1234.56;
+/*$number = 1234.56;
 
 // english notation (default)
 $english_format_number = number_format($number);
@@ -222,8 +222,12 @@ $number = 1234.5678;
 $english_format_number = number_format($number, 2, '.', '');
 // 1234.57
 echo $english_format_number;
-
-
+*/
+//20. ord
+$str = "\n";
+if (ord($str) == 10) {
+    echo "The first character of \$str is a line feed.\n";
+}
 
 ?>
 
