@@ -558,7 +558,7 @@ $last = substr(strrchr($text, 10), 1 );
 //52. strrev
 //echo strrev("Hello world!"); // outputs "!dlrow olleH"
 //53. strripos
-
+/*
 $haystack = 'ababcd';
 $needle   = 'aB';
 
@@ -570,6 +570,18 @@ if ($pos === false) {
     echo "Congratulations!\n";
     echo "We found the last ($needle) in ($haystack) at position ($pos)";
 }
+*/
+//54. strrpos
+
+$foo = "0123456789a123456789b123456789c";
+
+var_dump(strrpos($foo, '7', -5));  // Starts looking backwards five positions
+                                   // from the end. Result: int(17)
+
+var_dump(strrpos($foo, '7', 20));  // Starts searching 20 positions into the
+                                   // string. Result: int(27)
+
+var_dump(strrpos($foo, '7', 28));  // Result: bool(false)
 
 ?>
 
