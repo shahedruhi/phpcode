@@ -689,7 +689,7 @@ $rest = substr("abcdef", -3, 1); // returns "d"
 echo $rest."<br />";
 */
 // 65. trim
-$text   = "\t\tThese are a few words :) ...  ";
+/*$text   = "\t\tThese are a few words :) ...  ";
 $binary = "\x09Example string\x0A";
 $hello  = "Hello World";
 var_dump($text, $binary, $hello);
@@ -711,7 +711,17 @@ var_dump($trimmed);
 // trim the ASCII control characters at the beginning and end of $binary
 // (from 0 to 31 inclusive)
 $clean = trim($binary, "\x00..\x1F");
-var_dump($clean);
+var_dump($clean);*/
+//66. ucfirst
+$foo = 'hello world!';
+$foo = ucfirst($foo);             // Hello world!
+echo $foo."<br />";
+
+$bar = 'HELLO WORLD!';
+$bar = ucfirst($bar);             // HELLO WORLD!
+echo $bar."<br />";
+$bar = ucfirst(strtolower($bar)); // Hello world!
+echo $bar."<br />";
 
 ?>
 
