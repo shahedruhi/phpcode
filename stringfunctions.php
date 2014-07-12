@@ -713,7 +713,7 @@ var_dump($trimmed);
 $clean = trim($binary, "\x00..\x1F");
 var_dump($clean);*/
 //66. ucfirst
-$foo = 'hello world!';
+/*$foo = 'hello world!';
 $foo = ucfirst($foo);             // Hello world!
 echo $foo."<br />";
 
@@ -722,6 +722,19 @@ $bar = ucfirst($bar);             // HELLO WORLD!
 echo $bar."<br />";
 $bar = ucfirst(strtolower($bar)); // Hello world!
 echo $bar."<br />";
+*/
+//67. ucwords
+$foo = 'hello world!';
+$foo = ucwords($foo);             // Hello World!
+echo $foo."<br />";
+
+$bar = 'HELLO WORLD!';
+$bar = ucwords($bar);             // HELLO WORLD!
+echo $bar."<br />";
+$bar = ucwords(strtolower($bar)); // Hello World!
+echo $bar."<br />";
+
+
 
 ?>
 
