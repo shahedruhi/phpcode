@@ -662,22 +662,30 @@ $text2 = 'gcdgcdgcd';
 echo substr_count($text2, 'gcdgcd');
 */
 //63. substr_replace
-$var = 'ABCDEFGH:/MNRPQR/';
+/*$var = 'ABCDEFGH:/MNRPQR/';
 echo "Original: $var<hr />\n";
 
 /* These two examples replace all of $var with 'bob'. */
-echo substr_replace($var, 'bob', 0) . "<br />\n";
-echo substr_replace($var, 'bob', 0, strlen($var)) . "<br />\n";
+//echo substr_replace($var, 'bob', 0) . "<br />\n";
+//echo substr_replace($var, 'bob', 0, strlen($var)) . "<br />\n";
 
 /* Insert 'bob' right at the beginning of $var. */
-echo substr_replace($var, 'bob', 0, 0) . "<br />\n";
+///echo substr_replace($var, 'bob', 0, 0) . "<br />\n";
 
 /* These next two replace 'MNRPQR' in $var with 'bob'. */
-echo substr_replace($var, 'bob', 10, -1) . "<br />\n";
-echo substr_replace($var, 'bob', -7, -1) . "<br />\n";
+//echo substr_replace($var, 'bob', 10, -1) . "<br />\n";
+//echo substr_replace($var, 'bob', -7, -1) . "<br />\n";
 
 /* Delete 'MNRPQR' from $var. */
-echo substr_replace($var, '', 10, -1) . "<br />\n";
+//echo substr_replace($var, '', 10, -1) . "<br />\n";
 
+
+//64. substr
+$rest = substr("abcdef", -1);    // returns "f"
+echo $rest."<br />";
+$rest = substr("abcdef", -2);    // returns "ef"
+echo $rest."<br />";
+$rest = substr("abcdef", -3, 1); // returns "d"
+echo $rest."<br />";
 ?>
 
