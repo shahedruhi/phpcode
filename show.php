@@ -31,9 +31,15 @@ $qury = mysql_query("SELECT * from student_info");
 
 echo "<table border='1'>";
 while ($data = mysql_fetch_object($qury)) {
-	echo "<tr><td>";
-	echo $data->batch;
-	echo "</tr></td>";
+	//echo "<tr><td>";
+	//echo $data->batch;
+	//echo "</tr></td>";
+	echo "<tr>";
+	echo "<td>".$data->batch."</td>";
+	echo "<td><a href='view.php?id=".$data->id."'>View</a></td>";
+	echo "<td><a href='edit.php?id=".$data->id."'>Edit</a></td>";
+	echo "<td><a href='delete.php?id=".$data->id."'>Delete</a></td>";
+	echo "</tr>";
 }
 echo "</table>";
 
