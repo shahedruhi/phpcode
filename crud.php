@@ -9,4 +9,7 @@
 			<input type="submit" value="Submit"/>
 		</label>
 	</fieldset>	
+<?php
+echo "<td><a href='data.php'>View the data Page</a></td>";
+?>	
 </form>

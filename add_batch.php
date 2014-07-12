@@ -20,5 +20,5 @@
 		<label>
 			<input type="submit" value="Submit"/>
 		</label>
-	</fieldset>	
+	</fieldset>		
 </form>
