@@ -585,13 +585,21 @@ var_dump(strrpos($foo, '7', 28));  // Result: bool(false)
 */
 //55. strspn
 // subject does not start with any characters from mask
-var_dump(strspn("foo", "o"));
+/*var_dump(strspn("foo", "o"));
 
 // examine two characters from subject starting at offset 1
 var_dump(strspn("foo", "o", 1, 2));
 
 // examine one character from subject starting at offset 1
 var_dump(strspn("foo", "o", 1, 1));
+*/
 
+//56. strstr
+$email  = 'name@example.com';
+$domain = strstr($email, '@');
+echo $domain; // prints @example.com
+
+$user = strstr($email, '@', true); // As of PHP 5.3.0
+echo $user; // prints name
 ?>
 
