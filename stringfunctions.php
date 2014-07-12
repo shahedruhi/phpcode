@@ -573,7 +573,7 @@ if ($pos === false) {
 */
 //54. strrpos
 
-$foo = "0123456789a123456789b123456789c";
+/*$foo = "0123456789a123456789b123456789c";
 
 var_dump(strrpos($foo, '7', -5));  // Starts looking backwards five positions
                                    // from the end. Result: int(17)
@@ -582,6 +582,16 @@ var_dump(strrpos($foo, '7', 20));  // Starts searching 20 positions into the
                                    // string. Result: int(27)
 
 var_dump(strrpos($foo, '7', 28));  // Result: bool(false)
+*/
+//55. strspn
+// subject does not start with any characters from mask
+var_dump(strspn("foo", "o"));
+
+// examine two characters from subject starting at offset 1
+var_dump(strspn("foo", "o", 1, 2));
+
+// examine one character from subject starting at offset 1
+var_dump(strspn("foo", "o", 1, 1));
 
 ?>
 
