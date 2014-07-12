@@ -43,4 +43,7 @@ while ($data = mysql_fetch_object($qury)) {
 }
 echo "</table>";
 
+echo "<td><a href='crud.php'>Back to Insert Page</a></td>";
+
+
 ?>
