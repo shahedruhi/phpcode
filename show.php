@@ -2,6 +2,11 @@
 
 //echo $_POST['batch_name'];
 $batch = $_POST['batch_name'];
+
+if(strlen($batch) == 0){
+	trigger_error("Your Batch can not be empty", E_USER_ERROR);
+}
+
 if (strlen($batch) < 4)
 {
 	header('location:add_batch.php?len=short');
@@ -11,8 +16,11 @@ elseif (strlen($batch) > 6)
 	header('location:add_batch.php?len=long');
 }
 
-echo str_replace(array('(',')','{','}','[',']'), '', $batch);
+//echo str_replace(array('(',')','{','}','[',']'), '', $batch);
 /*echo $batch;
+
+
+
 mysql_connect('localhost','root','');
 
 mysql_select_db('ftfl_info');
