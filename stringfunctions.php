@@ -724,7 +724,7 @@ $bar = ucfirst(strtolower($bar)); // Hello world!
 echo $bar."<br />";
 */
 //67. ucwords
-$foo = 'hello world!';
+/*$foo = 'hello world!';
 $foo = ucwords($foo);             // Hello World!
 echo $foo."<br />";
 
@@ -733,6 +733,12 @@ $bar = ucwords($bar);             // HELLO WORLD!
 echo $bar."<br />";
 $bar = ucwords(strtolower($bar)); // Hello World!
 echo $bar."<br />";
+*/
+//68. vprintf
+vprintf("%04d-%02d-%02d", explode('-', '1988-8-1')); // 1988-08-01
+
+
+
 
 
 
