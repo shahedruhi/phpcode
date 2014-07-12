@@ -595,11 +595,22 @@ var_dump(strspn("foo", "o", 1, 1));
 */
 
 //56. strstr
-$email  = 'name@example.com';
+/*$email  = 'name@example.com';
 $domain = strstr($email, '@');
 echo $domain; // prints @example.com
 
 $user = strstr($email, '@', true); // As of PHP 5.3.0
 echo $user; // prints name
+*/
+//57. strtok
+$string = "This is\tan example\nstring";
+/* Use tab and newline as tokenizing characters as well  */
+$tok = strtok($string, " \n\t");
+
+while ($tok !== false) {
+    echo "Word=$tok<br />";
+    $tok = strtok(" \n\t");
+}
+
 ?>
 
