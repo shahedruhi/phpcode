@@ -738,9 +738,13 @@ echo $bar."<br />";
 //vprintf("%04d-%02d-%02d", explode('-', '1988-8-1')); // 1988-08-01
 
 //69. vsprintf
-print vsprintf("%04d-%02d-%02d", explode('-', '1988-8-1')); // 1988-08-01
+//print vsprintf("%04d-%02d-%02d", explode('-', '1988-8-1')); // 1988-08-01
 
+//70. wordwrap
+$text = "The quick brown fox jumped over the lazy dog.";
+$newtext = wordwrap($text, 20, "<br />\n");
 
+echo $newtext;
 
 
 
