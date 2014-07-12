@@ -614,10 +614,14 @@ while ($tok !== false) {
 */
 
 //58. strtolower
-$str = "Mary Had A Little Lamb and She LOVED It So";
+/*$str = "Mary Had A Little Lamb and She LOVED It So";
 $str = strtolower($str);
 echo $str; // Prints mary had a little lamb and she loved it so
-
+*/
+//59. strtoupper
+$str = "Mary Had A Little Lamb and She LOVED It So";
+$str = strtoupper($str);
+echo $str; // Prints MARY HAD A LITTLE LAMB AND SHE LOVED IT SO
 
 ?>
 
