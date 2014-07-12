@@ -603,14 +603,21 @@ $user = strstr($email, '@', true); // As of PHP 5.3.0
 echo $user; // prints name
 */
 //57. strtok
-$string = "This is\tan example\nstring";
-/* Use tab and newline as tokenizing characters as well  */
+/*$string = "This is\tan example\nstring";
+// Use tab and newline as tokenizing characters as well 
 $tok = strtok($string, " \n\t");
 
 while ($tok !== false) {
     echo "Word=$tok<br />";
     $tok = strtok(" \n\t");
 }
+*/
+
+//58. strtolower
+$str = "Mary Had A Little Lamb and She LOVED It So";
+$str = strtolower($str);
+echo $str; // Prints mary had a little lamb and she loved it so
+
 
 ?>
 
