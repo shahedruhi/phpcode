@@ -642,7 +642,7 @@ echo substr_compare("abcde", "cd", 1, 2); // -1
 echo substr_compare("abcde", "abc", 5, 1); // warning
 */
 //62. substr_count
-$text = 'This is a test';
+/*$text = 'This is a test';
 echo strlen($text); // 14
 
 echo substr_count($text, 'is'); // 2
@@ -660,7 +660,24 @@ echo substr_count($text, 'is', 5, 10);
 // prints only 1, because it doesn't count overlapped substrings
 $text2 = 'gcdgcdgcd';
 echo substr_count($text2, 'gcdgcd');
+*/
+//63. substr_replace
+$var = 'ABCDEFGH:/MNRPQR/';
+echo "Original: $var<hr />\n";
 
+/* These two examples replace all of $var with 'bob'. */
+echo substr_replace($var, 'bob', 0) . "<br />\n";
+echo substr_replace($var, 'bob', 0, strlen($var)) . "<br />\n";
+
+/* Insert 'bob' right at the beginning of $var. */
+echo substr_replace($var, 'bob', 0, 0) . "<br />\n";
+
+/* These next two replace 'MNRPQR' in $var with 'bob'. */
+echo substr_replace($var, 'bob', 10, -1) . "<br />\n";
+echo substr_replace($var, 'bob', -7, -1) . "<br />\n";
+
+/* Delete 'MNRPQR' from $var. */
+echo substr_replace($var, '', 10, -1) . "<br />\n";
 
 ?>
 
