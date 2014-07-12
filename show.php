@@ -11,6 +11,7 @@ elseif (strlen($batch) > 6)
 	header('location:add_batch.php?len=long');
 }
 
+echo str_replace(array('(',')','{','}','[',']'), '', $batch);
 /*echo $batch;
 mysql_connect('localhost','root','');
 
