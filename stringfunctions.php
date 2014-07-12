@@ -624,13 +624,22 @@ $str = strtoupper($str);
 echo $str; // Prints MARY HAD A LITTLE LAMB AND SHE LOVED IT SO
 */
 //60. strtr
-$trans = array("h" => "-", "hello" => "hi", "hi" => "hello");
+/*$trans = array("h" => "-", "hello" => "hi", "hi" => "hello");
 echo strtr("hi all, I said hello", $trans);
 echo strtr("baab", "ab", "01"),"\n";
 
 $trans = array("ab" => "01");
 echo strtr("baab", $trans);
+*/
 
+//61. substr_compare
+echo substr_compare("abcde", "bc", 1, 2); // 0
+echo substr_compare("abcde", "de", -2, 2); // 0
+echo substr_compare("abcde", "bcg", 1, 2); // 0
+echo substr_compare("abcde", "BC", 1, 2, true); // 0
+echo substr_compare("abcde", "bc", 1, 3); // 1
+echo substr_compare("abcde", "cd", 1, 2); // -1
+echo substr_compare("abcde", "abc", 5, 1); // warning
 
 ?>
 
