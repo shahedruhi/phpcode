@@ -556,7 +556,20 @@ $text = "Line 1\nLine 2\nLine 3";
 $last = substr(strrchr($text, 10), 1 );
 */
 //52. strrev
-echo strrev("Hello world!"); // outputs "!dlrow olleH"
+//echo strrev("Hello world!"); // outputs "!dlrow olleH"
+//53. strripos
+
+$haystack = 'ababcd';
+$needle   = 'aB';
+
+$pos      = strripos($haystack, $needle);
+
+if ($pos === false) {
+    echo "Sorry, we did not find ($needle) in ($haystack)";
+} else {
+    echo "Congratulations!\n";
+    echo "We found the last ($needle) in ($haystack) at position ($pos)";
+}
 
 ?>
 
