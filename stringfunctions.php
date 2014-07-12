@@ -619,9 +619,18 @@ $str = strtolower($str);
 echo $str; // Prints mary had a little lamb and she loved it so
 */
 //59. strtoupper
-$str = "Mary Had A Little Lamb and She LOVED It So";
+/*$str = "Mary Had A Little Lamb and She LOVED It So";
 $str = strtoupper($str);
 echo $str; // Prints MARY HAD A LITTLE LAMB AND SHE LOVED IT SO
+*/
+//60. strtr
+$trans = array("h" => "-", "hello" => "hi", "hi" => "hello");
+echo strtr("hi all, I said hello", $trans);
+echo strtr("baab", "ab", "01"),"\n";
+
+$trans = array("ab" => "01");
+echo strtr("baab", $trans);
+
 
 ?>
 
