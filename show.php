@@ -4,7 +4,7 @@
 $batch = $_POST['batch_name'];
 
 if(strlen($batch) == 0){
-	trigger_error("Your Batch can not be empty", E_USER_ERROR);
+	error_log("Someone try to input empty on batch",3, "temp/error.log");
 }
 
 if (strlen($batch) < 4)
@@ -17,8 +17,8 @@ elseif (strlen($batch) > 6)
 }
 
 //echo str_replace(array('(',')','{','}','[',']'), '', $batch);
-/*echo $batch;
-
+echo "O".$batch;
+/*
 
 
 mysql_connect('localhost','root','');
