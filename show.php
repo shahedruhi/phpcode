@@ -27,4 +27,14 @@ mysql_select_db('ftfl_info');
 
 mysql_query("INSERT into student_info (batch) values ('$n_batch')");
 
+$qury = mysql_query("SELECT * from student_info");
+
+echo "<table border='1'>";
+while ($data = mysql_fetch_object($qury)) {
+	echo "<tr><td>";
+	echo $data->batch;
+	echo "</tr></td>";
+}
+echo "</table>";
+
 ?>
