@@ -1,10 +1,10 @@
 
 <html>
 <head>
-	<title>Hotel Bill Calculator</title>
+	<title>Lunch Bill Calculator</title>
 </head>
 <body>
-	<form action = "hotelbillcalculator.php" method = "GET">
+	<form action = "lunchbillcalculator.php" method = "GET">
 		<table border="1" style="width:300px">
 			<tr>
 				<td>You have taken</td>
@@ -45,17 +45,17 @@
 		if(isset($_GET['submitButtion']))
 		{
 			$a_customer = new BillCalculator ();
-			$a_customer->$rice_Unit = $_GET['riceunitText'];
-			$a_customer->$vegetable_Unit = $_GET['vegetableunitText'];
-			$a_customer->$fish_Unit = $_GET['fishunitText'];
-			$a_customer->$meat_Unit = $_GET['meatunitText'];
-			$a_customer->$bill_Vat = $_GET['vatText'];
+			$a_customer->rice_Unit = $_GET['riceunitText'];
+			$a_customer->vegetable_Unit = $_GET['vegetableunitText'];
+			$a_customer->fish_Unit = $_GET['fishunitText'];
+			$a_customer->meat_Unit = $_GET['meatunitText'];
+			$a_customer->bill_Vat = $_GET['vatText'];
 
 			$gross_total = $a_customer->get_gross_total(); 
 
-			$payable_amount = $a_customer->get_payable_amount(); 
+			//$payable_amount = $a_customer->get_payable_amount($gross_total); 
 
-			echo 'Result'.' '. $total_amount;
+			echo 'Gross Total: '. $gross_total;
 		}
 	?>
 
