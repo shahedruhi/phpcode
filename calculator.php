@@ -5,10 +5,24 @@
 </head>
 <body>
 	<form action = "calculator.php" method = "GET">
-		Pricipal Amount      <input type = 'text' name = 'pricipalAmountText'> <br />
-		Annual Interest Rate <input type = 'text' name = 'annualInterestText'> <br />
-		Time Period          <input type = 'text' name = 'timePeriodText'> <br />
-		<input type = "submit" name = 'submitButtion'> <br />
+		<table border="1" style="width:300px">
+			<tr>
+				<td>Pricipal Amount</td>
+				<td><input type = 'text' name = 'pricipalAmountText'> <br /></td>
+		    </tr>
+		    <tr>
+				<td>Annual Interest Rate</td>
+				<td><input type = 'text' name = 'annualInterestText'> <br /></td>
+		    </tr>
+		    <tr>
+				<td>Time Period</td>
+				<td><input type = 'text' name = 'timePeriodText'> <br /></td>
+		    </tr>
+		    <tr>
+		    	<td> </td>	
+				<td><input type = "submit" value = "Calculate" name = 'submitButtion'><br /></td>
+		    </tr>
+		</table>
 	</form>	
 	<?php
 		require 'interestcalculator.php'; 
