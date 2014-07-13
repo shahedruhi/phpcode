@@ -11,7 +11,7 @@ class BillCalculator {
 	public $meat_Unit;
 	private $meat_Unit_Price = 120;
 	public $bill_Vat;
-	//public $gross_total;
+	public $gross_total;
 	
 
 	public function get_gross_total()
@@ -24,7 +24,7 @@ class BillCalculator {
 		public function get_payable_amount()
 	{
 
-		return $this->principal_Amount + (($this->principal_Amount * ($this->annual_interest_rate / 100)) * $this->time_period);  
+		return $this->gross_total + ($this->gross_total * ($this->bill_Vat / 100));  
 		
 	}
 

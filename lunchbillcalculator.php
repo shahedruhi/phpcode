@@ -51,11 +51,15 @@
 			$a_customer->meat_Unit = $_GET['meatunitText'];
 			$a_customer->bill_Vat = $_GET['vatText'];
 
-			$gross_total = $a_customer->get_gross_total(); 
+			$gross_total = $a_customer->get_gross_total();
 
-			//$payable_amount = $a_customer->get_payable_amount($gross_total); 
+			$a_customer->gross_total = $gross_total;
 
-			echo 'Gross Total: '. $gross_total;
+			$payable_amount = $a_customer->get_payable_amount(); 
+
+			echo "Gross Total: ". $gross_total."<br/>";
+			echo "Payable Amount (Gross Total + VAT): ". $payable_amount;
+
 		}
 	?>
 
