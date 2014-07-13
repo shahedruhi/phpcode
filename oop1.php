@@ -11,15 +11,15 @@
 		<input type = "submit" name = 'submitButtion'> <br />
 	</form>	
 	<?php
-		require 'employee.php'; 
+		require 'officeemployee.php'; 
 		if(isset($_GET['submitButtion']))
 		{
-			$employeeObj = new Employee ();
-			$employeeObj->id = $_GET['idText'];
-			$employeeObj->name = $_GET['nameText'];
-			$employeeObj->salary = $_GET['salaryText'];
+			$an_employee = new OfficeEmployee ();
+			$an_employee->id = $_GET['idText'];
+			$an_employee->name = $_GET['nameText'];
+			$an_employee->salary = $_GET['salaryText'];
 
-			echo $employeeObj->id. ' '. $employeeObj->name. ' '. $employeeObj->salary;
+			echo $an_employee->id. ' '. $an_employee->name. ' '. $an_employee->salary;
 		}
 	?>
 

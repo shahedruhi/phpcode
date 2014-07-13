@@ -1,7 +1,7 @@
 <?php
 
  //declaring a class
-class Employee {
+class OfficeEmployee {
 	public $id;
 	public $name;
 	public $salary;
