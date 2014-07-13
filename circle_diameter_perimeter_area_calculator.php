@@ -4,7 +4,7 @@
 	<title>Circle Diameter Perimeter Area Calculator</title>
 </head>
 <body>
-	<form action = "circlr_diameter_perimeter_area_calculator.php" method = "GET">
+	<form action = "circle_diameter_perimeter_area_calculator.php" method = "GET">
 		<table border="1" style="width:300px">
 			<tr>
 				<td>Enter Radius</td>
