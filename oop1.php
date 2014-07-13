@@ -4,18 +4,18 @@
 	<title>OOP Learning</title>
 </head>
 <body>
-	<form action = "oop1.php" method = "POST">
+	<form action = "oop1.php" method = "GET">
 		<input type = 'text' name = 'idText'> <br />
 		<input type = 'text' name = 'nameText'> <br />
 		<input type = 'text' name = 'salaryText'> <br />
 		<input type = "submit" name = 'submitButtion'> <br />
 	</form>	
 	<?php
-		if(isset($_POST['submitButtion']))
+		if(isset($_GET['submitButtion']))
 		{
-			$id = $_POST['idText'];
-			$name = $_POST['nameText'];
-			$salary = $_POST['salaryText'];
+			$id = $_GET['idText'];
+			$name = $_GET['nameText'];
+			$salary = $_GET['salaryText'];
 			echo $id. ' '. $name. ' '. $salary;
 		}
 	?>
