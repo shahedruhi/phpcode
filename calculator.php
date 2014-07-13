@@ -5,9 +5,9 @@
 </head>
 <body>
 	<form action = "calculator.php" method = "GET">
-		<input type = 'text' name = 'pricipalAmountText'> <br />
-		<input type = 'text' name = 'annualInterestText'> <br />
-		<input type = 'text' name = 'timePeriodText'> <br />
+		Pricipal Amount      <input type = 'text' name = 'pricipalAmountText'> <br />
+		Annual Interest Rate <input type = 'text' name = 'annualInterestText'> <br />
+		Time Period          <input type = 'text' name = 'timePeriodText'> <br />
 		<input type = "submit" name = 'submitButtion'> <br />
 	</form>	
 	<?php
