@@ -17,12 +17,12 @@
 		    <tr>
 				<td>House Rent</td>
 				<td><input type = 'text' name = 'houseRentText'> <br /></td>
-				<td> % of Basic</td>
+				<td> % of Basic Amount</td>
 		    </tr>
 		    <tr>
 				<td>Medical Allowence</td>
 				<td><input type = 'text' name = 'medicalAllowenceText'> <br /></td>
-				<td> % of Basic</td>
+				<td> % of Basic Amount</td>
 		    </tr>
 		    <tr>
 		    	<td> </td>	
