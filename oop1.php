@@ -11,12 +11,15 @@
 		<input type = "submit" name = 'submitButtion'> <br />
 	</form>	
 	<?php
+		require 'employee.php'; 
 		if(isset($_GET['submitButtion']))
 		{
-			$id = $_GET['idText'];
-			$name = $_GET['nameText'];
-			$salary = $_GET['salaryText'];
-			echo $id. ' '. $name. ' '. $salary;
+			$employeeObj = new Employee ();
+			$employeeObj->id = $_GET['idText'];
+			$employeeObj->name = $_GET['nameText'];
+			$employeeObj->salary = $_GET['salaryText'];
+
+			echo $employeeObj->id. ' '. $employeeObj->name. ' '. $employeeObj->salary;
 		}
 	?>
 
