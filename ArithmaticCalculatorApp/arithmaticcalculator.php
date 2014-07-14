@@ -33,48 +33,39 @@
 		</table>
 	</form>	
 	<?php
-		require 'calculation.php'; 
-		$a_calculation = new Calculation();
-	
+		require 'calculator.php'; 
+		$a_calculation = new Calculator();
+		
 
+		if (isset($_GET['firstnoText']) && isset($_GET['secondnoText']))
+		{
+			$first_no = $_GET['firstnoText'];
+			$second_no = $_GET['secondnoText']; 	
+		}
+				
+			
 		if(isset($_GET['addButtion']))
 		{	
 			
-			$a_calculation->first_No = $_GET['firstnoText'];
-		    $a_calculation->second_No = $_GET['secondnoText'];
-			$addition_result = $a_calculation->get_adddition(); 
-
-			echo "Addition is: ". $addition_result;		
+			echo "Addition is: ". $a_calculation->do_add( $first_no, $second_no);		
 
 		}
 		else if(isset($_GET['subtractButtion']))
 		{
 			
-			$a_calculation->first_No = $_GET['firstnoText'];
-		    $a_calculation->second_No = $_GET['secondnoText'];	
-			$subtraction_result = $a_calculation->get_subtraction(); 
-
-			echo "Subtraction is: ". $subtraction_result;		
+			echo "Subtraction is: ". $a_calculation->do_subtract( $first_no, $second_no);		
 
 		}
 		else if(isset($_GET['multiplyButtion']))
 		{
-			
-			$a_calculation->first_No = $_GET['firstnoText'];
-		    $a_calculation->second_No = $_GET['secondnoText'];				
-			$multiplication_result = $a_calculation->get_multiplication(); 
 
-			echo "Multiplication is: ". $multiplication_result;		
+			echo "Multiplication is: ". $a_calculation->do_multiply( $first_no, $second_no);
 
 		}
 		else if(isset($_GET['divideButtion']))
 		{
 			
-			$a_calculation->first_No = $_GET['firstnoText'];
-		    $a_calculation->second_No = $_GET['secondnoText'];			
-			$division_result = $a_calculation->get_division(); 
-
-			echo "Division is: ". $division_result;		
+			echo "Division is: ". $a_calculation->do_divide( $first_no, $second_no);
 
 		}
 	?>
