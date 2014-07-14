@@ -4,7 +4,7 @@
 class Circle {
 	
 	public $circle_Radius;
-	private $pie = 3.14;
+	//public $pie = 3.14;
 	
 	
 
@@ -24,8 +24,8 @@ class Circle {
 
 	public function get_area()
 	{
-
-		return $this->circle_Radius * $this->circle_Radius * $this->pie; 
+		//$pie = pi();
+		return $this->circle_Radius * $this->circle_Radius * M_PI; 
 		
 	}
 
