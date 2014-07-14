@@ -22,15 +22,9 @@
 		{
 			$a_circle = new Circle();
 			$a_circle->circle_Radius = $_GET['radiusText'];
-			
-			//$circle_diameter = $a_circle->get_diameter();
-
-			//$circle_perimeter = $a_circle->get_perimeter();
 
 			$circle_area = $a_circle->get_area(); 
 
-			//echo "Diameter: ". $circle_diameter ."<br/>";
-			//echo "Perimeter: ". $circle_perimeter ."<br/>";
 			echo "Area: ". $circle_area;		
 
 		}

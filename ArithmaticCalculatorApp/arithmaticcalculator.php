@@ -34,13 +34,12 @@
 	</form>	
 	<?php
 		require 'calculation.php'; 
-		//$a_calculation = new Calculation();
-		//$a_calculation->first_No = $_GET['firstnoText'];
-		//$a_calculation->second_No = $_GET['secondtnoText'];
+		$a_calculation = new Calculation();
+	
 
 		if(isset($_GET['addButtion']))
 		{	
-			$a_calculation = new Calculation();
+			
 			$a_calculation->first_No = $_GET['firstnoText'];
 		    $a_calculation->second_No = $_GET['secondnoText'];
 			$addition_result = $a_calculation->get_adddition(); 
@@ -50,7 +49,7 @@
 		}
 		else if(isset($_GET['subtractButtion']))
 		{
-			$a_calculation = new Calculation();
+			
 			$a_calculation->first_No = $_GET['firstnoText'];
 		    $a_calculation->second_No = $_GET['secondnoText'];	
 			$subtraction_result = $a_calculation->get_subtraction(); 
@@ -61,7 +60,6 @@
 		else if(isset($_GET['multiplyButtion']))
 		{
 			
-			$a_calculation = new Calculation();
 			$a_calculation->first_No = $_GET['firstnoText'];
 		    $a_calculation->second_No = $_GET['secondnoText'];				
 			$multiplication_result = $a_calculation->get_multiplication(); 
@@ -72,7 +70,6 @@
 		else if(isset($_GET['divideButtion']))
 		{
 			
-			$a_calculation = new Calculation();
 			$a_calculation->first_No = $_GET['firstnoText'];
 		    $a_calculation->second_No = $_GET['secondnoText'];			
 			$division_result = $a_calculation->get_division(); 
