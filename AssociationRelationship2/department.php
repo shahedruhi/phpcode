@@ -11,10 +11,10 @@ class Department {
         $this->student_list = array();
     }
     
-    public function add_student($student)
+    public function add_student($a_student)
     {
         
-        $department = $_SESSION['department'];
+        /*$department = $_SESSION['department'];
         foreach ($department->get_all_students() as $a_student)
             {                
                 if($a_student->get_reg_no() == $student->get_reg_no())
@@ -22,11 +22,19 @@ class Department {
                     return 'Already Added';
                     break;            
                 }
-            }
+            }*/
         if (count($this->student_list) < $this->MAX_NO_OF_STUDENTS)
             {
-            
-                $this->student_list[] = $student;
+                
+                foreach ($this->student_list as $student)
+                {
+                    if($a_student->get_reg_no() == $student->get_reg_no())
+                    {
+                        return "Already Exists";
+                    }
+
+                }
+                $this->student_list[] = $a_student;
                 return 'Student added';
             }
         else
