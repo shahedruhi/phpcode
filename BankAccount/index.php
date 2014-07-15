@@ -4,16 +4,39 @@
 </head>
 <body>
 	<form>
-		Customer Name:<input type = "text" name = 'customerNameText'><br/>
-		Account No:<input type = "text" name = 'accountNumberText'><br/>
-		<input type = "submit" value = "Create" name = 'createButtion'><br/>
-		Amount:<input type = "text" name = 'amountText'><br/>
-		<input type = "submit" value = "Deposite" name = 'depositeButtion'><br/>
-		<input type = "submit" value = "Withdraw" name = 'withdrawButtion'><br/>
-		<input type = "submit" value = "Show Report" name = 'showreportButtion'><br/>
+		<table border="1" style="width:300px">
+			<tr>
+				<td>Customer Name: </td>
+				<td><input type = "text" name = 'customerNameText'> <br /></td>
+			</tr>
+			<tr>
+				<td>Account No: </td>
+				<td><input type = "text" name = 'accountNumberText'> <br /></td>
+			</tr>
+		    <tr>
+		    	<td> </td>	
+				<td><input type = "submit" value = "Create" name = 'createButtion'><br /></td>
+		    </tr>
+		     <tr>
+		    	<td> </td>	
+				<td>Amount: <input type = "text" name = 'amountText'><br /></td>
+		    </tr>
+		     <tr>
+		    	<td> </td>	
+				<td><input type = "submit" value = "Deposite" name = 'depositeButtion'><br /></td>
+		    </tr>
+		     <tr>
+		    	<td> </td>	
+				<td><input type = "submit" value = "Withdraw" name = 'withdrawButtion'><br /></td>
+		    </tr>
+		    <tr>
+		    	<td> </td>	
+				<td><input type = "submit" value = "Show Report" name = 'showreportButtion'><br /></td>
+		    </tr>
+		</table>		
 	</form>	
 	<?php
-		require 'account.php';
+		require_once 'account.php';
 		session_start();
 
 		if (isset($_GET['createButtion']))
