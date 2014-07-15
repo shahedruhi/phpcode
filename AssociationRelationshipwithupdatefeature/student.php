@@ -10,8 +10,19 @@ class Student {
         $this->reg_no = $reg_no;
         $this->email = $email;
     }
-    
-    function get_name()
+    public function set_reg_no($reg_no) {
+        $this->reg_no = $reg_no;
+    }
+
+    public function set_email($email) {
+        $this->email = $email;
+    }
+
+    public function set_name($name) {
+        $this->name = $name;
+    }
+
+        function get_name()
     {
         return $this->name;
     }

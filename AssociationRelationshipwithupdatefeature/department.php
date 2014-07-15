@@ -40,7 +40,11 @@ class Department {
                 {
                     if($a_student->get_reg_no() == $student->get_reg_no())
                     {
-                        return "Already Exists";
+                        //echo $student->update_student($a_student);
+                        $student->set_reg_no($a_student->get_reg_no());
+                        $student->set_email($a_student->get_email());
+                        $student->set_name($a_student->get_name());
+                        return "Data Updated";  
                     }
 
                 }
@@ -53,6 +57,19 @@ class Department {
         }
             
     }
+    
+    public function update_student($a_student)
+    {
+        foreach ($this->student_list as $student)
+        {
+            $student->reg_no = $a_student->reg_no;
+            $student->email = $a_student->email;
+            $student->name = $a_student->name;
+            
+        }
+        return "Data Updated";         
+    }
+
 
 
 
