@@ -6,6 +6,7 @@ class Department {
     private $name;
     private $student_list;
     private $MAX_NO_OF_STUDENTS = 5;
+    private $update_status;        
     
     function __construct($code, $name) {
         $this->code = $code;
@@ -33,43 +34,33 @@ class Department {
     public function add_student($a_student)
     {
         
-        if (count($this->student_list) < $this->MAX_NO_OF_STUDENTS)
-            {
-                
-                foreach ($this->student_list as $student)
+        foreach ($this->student_list as $student)
                 {
                     if($a_student->get_reg_no() == $student->get_reg_no())
                     {
-                        //echo $student->update_student($a_student);
-                        $student->set_reg_no($a_student->get_reg_no());
-                        $student->set_email($a_student->get_email());
-                        $student->set_name($a_student->get_name());
-                        return "Data Updated";  
+                        echo $student->update_student($a_student);
+                        $this->update_status = 1;
                     }
 
                 }
+        
+        if (count($this->student_list) < $this->MAX_NO_OF_STUDENTS)
+        {
+            if ($this->update_status == 0)
+            {                                
                 $this->student_list[] = $a_student;
                 return 'Student added';
             }
-        else
+                        
+        }        
+        else 
         {
             return 'No vacancy';
         }
+      
             
     }
     
-    public function update_student($a_student)
-    {
-        foreach ($this->student_list as $student)
-        {
-            $student->reg_no = $a_student->reg_no;
-            $student->email = $a_student->email;
-            $student->name = $a_student->name;
-            
-        }
-        return "Data Updated";         
-    }
-
 
 
 

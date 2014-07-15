@@ -35,7 +35,15 @@ class Student {
     function get_reg_no()
     {
         return $this->reg_no;
-    } 
+    }
+    
+    public function update_student($a_student)
+    {
+        $this->set_reg_no($a_student->get_reg_no());
+        $this->set_email($a_student->get_email());
+        $this->set_name($a_student->get_name());
+        return "Data Updated ";         
+    }
 }
 
 ?>
