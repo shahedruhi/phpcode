@@ -11,7 +11,7 @@ class Department {
         $this->student_list = array();
     }
     
-    /*public function add_student($a_student)
+    public function add_student($a_student)
     {
         
         /*$department = $_SESSION['department'];
@@ -22,7 +22,7 @@ class Department {
                     return 'Already Added';
                     break;            
                 }
-            }
+            }*/
         if (count($this->student_list) < $this->MAX_NO_OF_STUDENTS)
             {
                 
@@ -42,7 +42,7 @@ class Department {
             return 'No vacancy';
         }
             
-    }*/
+    }
             
     function get_name()
     {
