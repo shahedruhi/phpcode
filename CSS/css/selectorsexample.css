@@ -17,9 +17,19 @@ li:nth-child(2){
 /* exercise */
 
 a:nth-child(2n+1) {
-	background-color: green;
+	background-color: ;
 }
 
 a:nth-child(2n) {
 	background-color: blue;
+}
+
+/* select  all the a that are child of footer */
+
+footer a{
+	background-color: green;
+}
+
+b~i{
+	background-color: green;
 }
