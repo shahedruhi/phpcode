@@ -35,5 +35,11 @@ b~i{
 }
 
 #zen-summary{
-	background-color: red;
+	background-color: blue;
+}
+
+.danger{
+	color: red;
+	font-size: 30px
+
 }
