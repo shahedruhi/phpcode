@@ -5,3 +5,8 @@
 div[role="main"]{
 	background-color: yellow;
 }
+
+/*select all the elements that are second child of their parents */
+li:nth-child(2){
+	background-color: red;
+}
