@@ -3,7 +3,7 @@
 	<title>roles of margin html normal flow</title>
 	<style type="text/css">
 			body{
-				margin: 0;
+				
 			}
 			h1{
 				background-color: green;		
@@ -12,29 +12,61 @@
 			div{
 
 				background-color: red;
-				margin: 0;
+				
 			}
 			
 			strong{
 
 				background-color: orange;
-				margin-right: 20px;
+				/*margin-right: 20px;*/
 			}
 			
 			span{
 				background-color: pink;
-				margin-left: 50px;
+				/*margin-left: 50px;*/
 			}
 			
+		    /*
+		    CSSP
+		    static = no positioning
+		    relative = from his current position no get out from normal flow, also keep his orginal space
+		    absolute = from his position parent get out from normal flow 
+		    float (clear)
+		    fixed //your task
+		    */
+
+		    /*strong{
+
+				position: relative;
+				top:10px;
+				left: 20px;
+			}
+			*/
+			strong{
+
+				position: absolute;
+				top:10px;
+				left: 10px;
+			}
+			div{
+
+				position: relative;
+			}
+
+
+
+
+
 
 
 	</style>
 </head>
 <body>
+	<div>
 	<h1> Hi, FTFL</h1>
 	<div>
 		<strong>BATCH</strong><span>FTFL01</span> 
     </div>
-
+</div>
 </body>		
 </html>
