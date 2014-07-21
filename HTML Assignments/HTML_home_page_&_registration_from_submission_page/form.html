@@ -29,7 +29,7 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</td>
 		<td>
-			<img alt="header" width=100% align="center" src="image/header.jpg" />
+			<img alt="header" width=90% align="center" src="image/header.jpg" />
 		</td>
 	</tr>
 	<tr>
@@ -117,6 +117,16 @@
 		<td>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</td>
+		<td>
+			
+		<label>Upload Your Picture: <input type="file" name="imagefile" accept="image/jpeg, image/png"></label>
+		<input type="submit" value="upload">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
 		<td>	
 		Write why should we select you:  <textarea cols="40" name="comments" rows="6">please enter your comments...
 		</textarea>
@@ -140,9 +150,9 @@
 		<td>	
 		<fieldset style="margin: 1em; text-align: center;">
 		<legend>Select how you know about FTFL: </legend>
-		<input type="radio" name="hero"  value="Newspaper" onclick="displayHero(this)" /> Agamemnon
-		<input type="radio" name="hero"  value="Seminar" onclick="displayHero(this)" /> Achilles
-		<input type="radio" name="hero"  value="Website" onclick="displayHero(this)" /> Hector
+		<input type="radio" name="hero"  value="Newspaper" onclick="displayHero(this)" /> Newspaper
+		<input type="radio" name="hero"  value="Seminar" onclick="displayHero(this)" /> Seminar
+		<input type="radio" name="hero"  value="Website" onclick="displayHero(this)" /> Website
 		<div style="height: 1em;" />
 		</fieldset>
 		</td>
@@ -243,6 +253,23 @@
 		<td>
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		</td>
+		<td>
+		Select Your Preferable Track	
+		<input list="tracks" name="track">
+		<datalist id="tracks">
+		  <option value="ITS">
+		  <option value="ITES">
+		  <option value="ITSS">
+		  <option value="Management">
+		  <option value="SEO">
+		</datalist>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
 		<td>	
 		<input type="submit" name="_Previous" value="&nbsp;&lt;&nbsp;" alt="Previous" title="Previous"/>
 		<input type="submit" name="_Next" value=">" />
@@ -259,8 +286,34 @@
 		<input type="submit" name="submitbutton" value="submit" />
 
 		</td>
-	</tr>														
+	</tr>
+	<tr>
+		<td>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+		<td>	
+		compeletion Progress: <progress value="22" max="100"></progress> 
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+		<td>	
+
+		</td>
+	</tr>
+	<tr>
+		<td>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		</td>
+		<td>	
+
+		</td>
+	</tr>																
 </table>
+</form>
 
 
 </body> 
