@@ -183,7 +183,7 @@
 	console.log(car);
 	console.log(car[1][1]);
 	console.log(car[0][1]);
-	*/
+	
 	//array constructor
 	var anArray = new Array('apple',
 							'banana',
@@ -205,6 +205,39 @@
 	console.log(aDiffArr);
 	console.log(aDiffArr.length);
 	console.log(typeof aDiffArr);
+	*/
+
+	//Object Literal
+	
+	//var fruits = {};
+	var fruits = {
+		name :'apple',
+		color:'red',
+		taste:'Sweet',
+		
+		satisfy:function(){
+			console.log('Satisfying Hunger');
+		}		
+	};
+	console.log(typeof fruits);
+	console.log(fruits.name);
+	console.log(fruits.satisfy());
+	
+	var student = {
+		name:'bappa',
+		id:'FTFL007',
+		email:'bappa@ftfl.com',
+		tools:{
+			laptop:false,
+			desktop:{
+				monitor:'17inch',
+				cpu:'Cori5'
+			}
+		}
+	}
+	
+	console.log(student.tools.desktop.monitor);
+	console.log(student['tools']['desktop']['monitor']);
 
 	
 </script>Hello World
