@@ -238,7 +238,7 @@
 	
 	console.log(student.tools.desktop.monitor);
 	console.log(student['tools']['desktop']['monitor']);
-	*/
+	
 	//Defining an Object using Object Constructor
 	var Car = new Object();
 	Car.name = 'Audi';
@@ -251,6 +251,26 @@
 	console.log(Car.wheel);
 	console.log(Car.drive());
 	console.log(typeof Car);
+	*/
+
+	//Defining Object using a Constructor Function
+	
+	function Cars(make, model, year) {
+		  this.make = make;
+		  this.model = model;
+		  this.year = year;
+		  this.drive = function (){
+			return "I am driving "+this.make;
+		  }
+	}	
+	
+	var mycar1 = new Cars("Eagle", "Talon TSi", 1993);
+	var mycar2 = new Cars("Mazda", "Miata", 1990);
+	console.log(typeof mycar1);
+	console.log(mycar1.make);
+	console.log(mycar2.make);
+	console.log(mycar2.drive());
+	
 
 	
 </script>Hello World
