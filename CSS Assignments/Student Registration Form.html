@@ -400,26 +400,6 @@ ITSS
 </td>
 </tr>
 
-/*
-
-				
-
-				<div>
-					<label>Training (if any): </label>
-					<input type="week" name="week"/>
-				</div>
-
-				<div>
-					<label>Are you doing any job? </label>
-					<input type="checkbox" name="job" value="yes">Yes
-					<input type="checkbox" name="job" value="no">No
-				</div>
-
-				<div>
-					<label>Year(s) of experience(0-10; step-1): </label>
-					<input type="number" name="numberText" placeholder="Enter year" min="0" max="10" step="1" value="1"/>
-				</div>
-*/
 
 <!-- SubTrack -->
 <tr>
@@ -469,11 +449,19 @@ ITSS
 </td>
 </tr>
 
+<!-- Experience -->
+<tr>
+<td>EXPERIENCE</td>
+<td>
+<input type="number" name="numberText" placeholder="Enter year" step="1" value="0"/>
+</td>
+</tr>
+
 <!-- How know about FTFL -->
 <tr>
 <td>HOW DID YOU KNOW ABOUT FTFL?</td>
 <td><fieldset style="margin: 1em; text-align: center;">
-		<legend>Select how you know about FTFL: </legend>
+		<legend>SOURCE</legend>
 		<input type="radio" name="hero"  value="Newspaper" onclick="displayHero(this)" /> Newspaper
 		<input type="radio" name="hero"  value="Seminar" onclick="displayHero(this)" /> Seminar
 		<input type="radio" name="hero"  value="Website" onclick="displayHero(this)" /> Internet
