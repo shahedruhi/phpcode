@@ -143,5 +143,38 @@
 	//bullet proof self executing
 	//;(function(){alert('hello')})();
 
+	//closure
+	function add() {
+		var counter = 0;		
+		
+		function plus() {
+			counter += 1;
+		}		
+		plus(); 
+		
+		return counter;
+	}
+	console.log(add());
+
+	var aSampleFunction = function(){
+	
+	}	
+	//bullet proof self executing
+	//;(function(){alert('hello')})();
+	//console.log(aSampleFunction());
+
+	//function Constructor
+	
+	var func = new Function("x",
+							"y",
+							"z",
+							"return x*y*z"
+							);
+	console.log(func(2,3,4));
+	//same as
+	/*function func(x,y,z){
+		return x*y*z;
+	}*/
+
 	
 </script>Hello World
