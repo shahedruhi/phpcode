@@ -306,9 +306,9 @@ Female <input type="radio" name="Gender" value="Female" />
  
 
  
-<!-- Qualification-->
+<!-- EDUCATIONAL Qualification-->
 <tr>
-<td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
+<td>EDUCATIONAL QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
  
 <td>
 <table>
@@ -317,30 +317,34 @@ Female <input type="radio" name="Gender" value="Female" />
 <td align="center"><b>Sl.No.</b></td>
 <td align="center"><b>Examination</b></td>
 <td align="center"><b>Board</b></td>
-<td align="center"><b>Percentage</b></td>
+<td align="center"><b>Subject</b></td>
+<td align="center"><b>Grade</b></td>
 <td align="center"><b>Year of Passing</b></td>
 </tr>
  
 <tr>
 <td>1</td>
-<td>Class X</td>
-<td><input type="text" name="ClassX_Board" maxlength="30" /></td>
-<td><input type="text" name="ClassX_Percentage" maxlength="30" /></td>
-<td><input type="text" name="ClassX_YrOfPassing" maxlength="30" /></td>
+<td>S.S.C</td>
+<td><input type="text" name="ssc_Board" maxlength="30" /></td>
+<td><input type="text" name="ssc_Subject" maxlength="30" /></td>
+<td><input type="text" name="ssc_Grade" maxlength="30" /></td>
+<td><input type="text" name="ssc_YrOfPassing" maxlength="30" /></td>
 </tr>
  
 <tr>
 <td>2</td>
-<td>Class XII</td>
-<td><input type="text" name="ClassXII_Board" maxlength="30" /></td>
-<td><input type="text" name="ClassXII_Percentage" maxlength="30" /></td>
-<td><input type="text" name="ClassXII_YrOfPassing" maxlength="30" /></td>
+<td>H.S.C</td>
+<td><input type="text" name="hsc_Board" maxlength="30" /></td>
+<td><input type="text" name="hsc_Subject" maxlength="30" /></td>
+<td><input type="text" name="hsc_Grade" maxlength="30" /></td>
+<td><input type="text" name="hsc_YrOfPassing" maxlength="30" /></td>
 </tr>
  
 <tr>
 <td>3</td>
 <td>Graduation</td>
 <td><input type="text" name="Graduation_Board" maxlength="30" /></td>
+<td><input type="text" name="Graduation_Subject" maxlength="30" /></td>
 <td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
 <td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
 </tr>
@@ -349,6 +353,7 @@ Female <input type="radio" name="Gender" value="Female" />
 <td>4</td>
 <td>Masters</td>
 <td><input type="text" name="Masters_Board" maxlength="30" /></td>
+<td><input type="text" name="Masters_Subject" maxlength="30" /></td>
 <td><input type="text" name="Masters_Percentage" maxlength="30" /></td>
 <td><input type="text" name="Masters_YrOfPassing" maxlength="30" /></td>
 </tr>
@@ -364,18 +369,34 @@ Female <input type="radio" name="Gender" value="Female" />
 </td>
 </tr>
  
-<!-- Course -->
+<!-- Track -->
 <tr>
-<td>COURSES<br />APPLIED FOR</td>
+<td>TRACKS<br />APPLIED FOR</td>
 <td>
-BCA
-<input type="radio" name="Course_BCA" value="BCA">
-B.Com
-<input type="radio" name="Course_BCom" value="B.Com">
-B.Sc
-<input type="radio" name="Course_BSc" value="B.Sc">
-B.A
-<input type="radio" name="Course_BA" value="B.A">
+ITS
+<input type="radio" name="Track_ITS" value="ITS">
+MANAGEMENT
+<input type="radio" name="Track_Management" value="MANAGEMENT">
+ITES
+<input type="radio" name="Track_ITES" value="ITES">
+ITSS
+<input type="radio" name="Track_ITSS" value="ITSS">
+</td>
+</tr>
+
+<!-- Track -->
+<tr>
+<td>STRONG AREA</td>
+
+<td>
+<select name="computerbrands" multiple="multiple">
+		   <option value="DELL" selected="selected">Mamagement</option>
+		   <option value="IBM">Computer Science</option>
+		   <option value="HP">IT Support</option>
+		   <option value="Compaq">Networking</option>
+		   <option value="Sony">Programming Language</option>
+		</select>
+ (YOU CAN SELECT MULTIPLE PRESSING CTRL)		
 </td>
 </tr>
 
