@@ -205,7 +205,7 @@
 	console.log(aDiffArr);
 	console.log(aDiffArr.length);
 	console.log(typeof aDiffArr);
-	*/
+	
 
 	//Object Literal
 	
@@ -238,6 +238,19 @@
 	
 	console.log(student.tools.desktop.monitor);
 	console.log(student['tools']['desktop']['monitor']);
+	*/
+	//Defining an Object using Object Constructor
+	var Car = new Object();
+	Car.name = 'Audi';
+	Car.wheel = 4;
+	Car.drive = function (){
+		console.log('I am driving');
+	}	
+	
+	//using the car object
+	console.log(Car.wheel);
+	console.log(Car.drive());
+	console.log(typeof Car);
 
 	
 </script>Hello World
