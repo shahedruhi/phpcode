@@ -8,7 +8,7 @@
 	//prompt("What is your name","e.g Jahangir");
 
 	//defining variable
-	 var aVariable = 12;
+	/* var aVariable = 12;
 	anothervariable = 10;
 	var aStringVariable = "Hello FTFL";
 	var anStringVar = ', how are you?';
@@ -94,7 +94,7 @@
 	console.log(parseInt('afds123'));
 	console.log(parseInt('123afds'));
 	console.log(parseInt('123.72'));
-	*/
+	
 
 	var aVar; //undefined = false
 	var aVar = 0;//false
@@ -112,7 +112,20 @@
 	}else{
 		console.log('I am treated as false');
 	}
+	*/
 
+	//regular declaration of a function	
+	function addTwoumbers(){		
+		//var sum = num1+num2;
+		sum = arguments[0]+arguments[1];
+		return sum;
+	}
+	//function call
+	var result = addTwoumbers(4,2);
+	console.log(result);
+
+	var addNumbers = addTwoumbers;
+	console.log(addNumbers(5,6));
 
 
 
