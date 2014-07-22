@@ -29,7 +29,7 @@
 <!-- First Name -->
 <tr>
 <td>FIRST NAME</td>
-<td><input type="text" name="First_Name" autofocus maxlength="30"/>
+<td><input type="text" name="First_Name" required="required" autofocus maxlength="30"/>
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
@@ -163,7 +163,7 @@
 <!-- Age -->
 <tr>
 <td>ENTER YOUR AGE (RANGE 25-30)</td>					
-<td><input type="range" min="25" max="30" step="1" value="25" name="rangeValue"/></td>
+<td><input type="range" min="25" max="30" step="1" value="25" name="rangeValue" required="required"/></td>
 </tr>
  
 <!-- Email Id -->
@@ -176,20 +176,20 @@
 <!-- Password -->
 <tr>
 <td>PASSWORD</td>
-<td><input type="password" name="password" id="pw" placeholder="Enter password"/></td>
+<td><input type="password" name="password" required="required" id="pw" placeholder="Enter password"/></td>
 </tr>
 
 <!-- Confirm Password -->
 <tr>
 <td>CONFIRM PASSWORD</td>
-<td><input type="password" name="confirmPassword" id="confirm-pw" placeholder="Confirm your password"/></td>
+<td><input type="password" name="confirmPassword" required="required" id="confirm-pw" placeholder="Confirm your password"/></td>
 </tr>					
 
 <!-- Mobile Number -->
 <tr>
 <td>MOBILE NUMBER</td>
 <td>
-<input type="text" name="Mobile_Number" maxlength="11" />
+<input type="text" name="Mobile_Number" required="required" maxlength="11" />
 (11 digit number)
 </td>
 </tr>
@@ -208,6 +208,7 @@
 <td>NID IMAGE UPLOAD:</td>
 <td>
 <input type="file" name="fileName"/>
+<input type="submit" value="Upload">
 </td>
 </tr>
  
@@ -228,6 +229,23 @@ Female <input type="radio" name="Gender" value="Female" />
 <input type="url" name="urlText" id="url" placeholder="www.example.com"/>
 </td>
 </tr>
+
+<!-- WHY SHOULD WE SELECT YOU -->
+<tr>
+<td>WHY SHOULD WE SELECT YOU:</td>
+<td>
+<textarea rows="10" cols="30" name="textArea" placeholder="Why should we select you...."></textarea>
+</td>
+</tr>
+
+<!-- upload PHOTO -->
+<tr>
+<td>UPLOAD PHOTO (MIN 30 KB MAX 300KB)</td>
+<td>
+<input type="file" name="fileName"/>
+<input type="submit" value="Upload">
+</td>
+</tr>
  
 <!-- Address -->
 <tr>
@@ -242,30 +260,51 @@ Female <input type="radio" name="Gender" value="Female" />
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
- 
-<!-- Pin Code -->
+
+<!-- POSTAL CODE -->
 <tr>
-<td>PIN CODE</td>
-<td><input type="text" name="Pin_Code" maxlength="6" />
-(6 digit number)
-</td>
-</tr>
- 
-<!-- State -->
-<tr>
-<td>STATE</td>
-<td><input type="text" name="State" maxlength="30" />
+<td>POSTAL CODE</td>
+<td><input type="number" name="City" maxlength="30" />
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
- 
-<!-- Country -->
+
+<!-- District -->
 <tr>
-<td>COUNTRY</td>
-<td><input type="text" name="Country" value="India" readonly="readonly" /></td>
+<td>District</td>
+<td>	
+	<select name="districts" size="4">
+		<option value="0" selected="selected">Dhaka</option>
+		<option value="1">Pabna</option>
+		<option value="2">Gazipur</option>
+		<option value="3">Commila</option>
+		<option value="4">Norshindi</option>
+		<option value="1">Sathkhira</option>
+		<option value="2">Bandarban</option>
+		<option value="3">Magura</option>
+		<option value="4">Khulna</option>
+		</select>		
+</td>
+</tr>
+
+<!-- DIVISION -->
+<tr>
+<td>DIVISION</td>
+<td>	
+	<select name="divisions">
+		<option>Dhaka</option>
+		<option>Khulna</option>
+		<option>Sylhet</option>
+		<option>Chittagong</option>
+		<option>Rajshahi</option>
+		<option>Barisal</option>
+		<option>Rangpur</option>
+	</select>		
+</td>
 </tr>
  
-<!----- Hobbies -->
+ 
+<!-- Hobbies -->
  
 <tr>
 <td>HOBBIES <br /><br /><br /></td>
