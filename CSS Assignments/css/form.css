@@ -16,6 +16,16 @@ h3
 	text-decoration: underline; 
 }
 
+h2
+{
+	font-family: Calibri; 
+	font-size: 22pt; 
+	font-style: normal; 
+	font-weight: bold; 
+	color:red;
+	text-align: center; 
+	
+}
 table
 {
 	font-family: Calibri; 

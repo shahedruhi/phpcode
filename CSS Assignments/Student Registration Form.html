@@ -1,22 +1,35 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
 
-<title>Student Registration Form</title>
+<meta charset="utf-8">
+<meta name="description" content="HTML5 registration form">
+<meta name="author" content="Shahed Ruhi">	
+<title>FTFL Student Registration Form</title>
 <link rel="stylesheet" type="text/css" href="css/form.css" />
 
 </head>
  
 <body>
 <img alt="header" width=100% align="center" src="image/header.jpg" />
-<h3>STUDENT REGISTRATION FORM</h3>
+<h3>FTFL STUDENT REGISTRATION FORM</h3>
+<h2> PLEASE FILL UP AL THE REQUIRED INFORMATION.</h2>
 <form action="form.php" method="POST">
  
 <table align="center" cellpadding = "10">
+
+<!-- Registration Number -->
+<tr>
+<td><label>REGISTRATION NUMBER #: </label></td>
+<td><input type="text" disabled="disabled" name="disabledText" value="2014000023"/>
+</td>
+</tr>	
  
 <!-- First Name -->
 <tr>
 <td>FIRST NAME</td>
-<td><input type="text" name="First_Name" maxlength="30"/>
+<td><input type="text" name="First_Name" autofocus maxlength="30"/>
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
@@ -28,7 +41,23 @@
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
+
+<!-- Father Name -->
+<tr>
+<td>FATHER NAME</td>
+<td><input type="text" name="Father_Name" maxlength="30"/>
+(max 30 characters a-z and A-Z)
+</td>
+</tr>
  
+<!-- Mother Name -->
+<tr>
+<td>MOTHER NAME</td>
+<td><input type="text" name="Mother_Name" maxlength="30"/>
+(max 30 characters a-z and A-Z)
+</td>
+</tr> 
+
 <!-- Date Of Birth -->
 <tr>
 <td>DATE OF BIRTH</td>
@@ -130,14 +159,33 @@
 </select>
 </td>
 </tr>
- 
-<!----- Email Id ---------------------------------------------------------->
+
+<!-- Age -->
 <tr>
-<td>EMAIL ID</td>
-<td><input type="text" name="Email_Id" maxlength="100" /></td>
+<td>ENTER YOUR AGE (RANGE 25-30)</td>					
+<td><input type="range" min="25" max="30" step="1" value="25" name="rangeValue"/></td>
 </tr>
  
-<!----- Mobile Number ---------------------------------------------------------->
+<!-- Email Id -->
+<tr>
+<td>EMAIL ID</td>
+<td><input type="text" name="Email_Id" required="required" placeholder="name@example.com" maxlength="100" /></td>
+</tr>
+ 
+
+<!-- Password -->
+<tr>
+<td>PASSWORD</td>
+<td><input type="password" name="password" id="pw" placeholder="Enter password"/></td>
+</tr>
+
+<!-- Confirm Password -->
+<tr>
+<td>CONFIRM PASSWORD</td>
+<td><input type="password" name="confirmPassword" id="confirm-pw" placeholder="Confirm your password"/></td>
+</tr>					
+
+<!-- Mobile Number -->
 <tr>
 <td>MOBILE NUMBER</td>
 <td>
@@ -146,7 +194,7 @@
 </td>
 </tr>
  
-<!----- Gender ----------------------------------------------------------->
+<!-- Gender -->
 <tr>
 <td>GENDER</td>
 <td>
