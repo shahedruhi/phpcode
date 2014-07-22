@@ -189,8 +189,25 @@
 <tr>
 <td>MOBILE NUMBER</td>
 <td>
-<input type="text" name="Mobile_Number" maxlength="10" />
-(10 digit number)
+<input type="text" name="Mobile_Number" maxlength="11" />
+(11 digit number)
+</td>
+</tr>
+
+
+<!-- NID NO -->
+<tr>
+<td>NID NO:</td>
+<td>
+<input type="text" name="nidNumber" id="nid-no"/>
+</td>
+</tr>
+
+<!-- NID IMAGE -->
+<tr>
+<td>NID IMAGE UPLOAD:</td>
+<td>
+<input type="file" name="fileName"/>
 </td>
 </tr>
  
@@ -202,14 +219,23 @@ Male <input type="radio" name="Gender" value="Male" />
 Female <input type="radio" name="Gender" value="Female" />
 </td>
 </tr>
+
+
+<!-- Website -->
+<tr>
+<td>WEBSITE (IF ANY):</td>
+<td>
+<input type="url" name="urlText" id="url" placeholder="www.example.com"/>
+</td>
+</tr>
  
-<!----- Address ---------------------------------------------------------->
+<!-- Address -->
 <tr>
 <td>ADDRESS <br /><br /><br /></td>
 <td><textarea name="Address" rows="4" cols="30"></textarea></td>
 </tr>
  
-<!----- City ---------------------------------------------------------->
+<!-- City -->
 <tr>
 <td>CITY</td>
 <td><input type="text" name="City" maxlength="30" />
@@ -217,7 +243,7 @@ Female <input type="radio" name="Gender" value="Female" />
 </td>
 </tr>
  
-<!----- Pin Code ---------------------------------------------------------->
+<!-- Pin Code -->
 <tr>
 <td>PIN CODE</td>
 <td><input type="text" name="Pin_Code" maxlength="6" />
@@ -225,7 +251,7 @@ Female <input type="radio" name="Gender" value="Female" />
 </td>
 </tr>
  
-<!----- State ---------------------------------------------------------->
+<!-- State -->
 <tr>
 <td>STATE</td>
 <td><input type="text" name="State" maxlength="30" />
@@ -233,13 +259,13 @@ Female <input type="radio" name="Gender" value="Female" />
 </td>
 </tr>
  
-<!----- Country ---------------------------------------------------------->
+<!-- Country -->
 <tr>
 <td>COUNTRY</td>
 <td><input type="text" name="Country" value="India" readonly="readonly" /></td>
 </tr>
  
-<!----- Hobbies ---------------------------------------------------------->
+<!----- Hobbies -->
  
 <tr>
 <td>HOBBIES <br /><br /><br /></td>
@@ -260,7 +286,7 @@ Others
 </td>
 </tr>
  
-<!----- Qualification---------------------------------------------------------->
+<!-- Qualification-->
 <tr>
 <td>QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
  
@@ -318,7 +344,7 @@ Others
 </td>
 </tr>
  
-<!----- Course ---------------------------------------------------------->
+<!-- Course -->
 <tr>
 <td>COURSES<br />APPLIED FOR</td>
 <td>
@@ -333,7 +359,7 @@ B.A
 </td>
 </tr>
  
-<!----- Submit and Reset ------------------------------------------------->
+<!-- Submit and Reset -->
 <tr>
 <td colspan="2" align="center">
 <input type="submit" value="Submit">
