@@ -12,12 +12,12 @@
 </head>
  
 <body>
-<img alt="header" width=100% align="center" src="image/header.jpg" />
+<img alt="header" src="image/header.jpg" />
 <h3>FTFL STUDENT REGISTRATION FORM</h3>
 <h2> PLEASE FILL UP AL THE REQUIRED INFORMATION.</h2>
 <form action="form.php" method="POST">
  
-<table align="center" cellpadding = "10">
+<table class="center">
 
 <!-- Registration Number -->
 <tr>
@@ -163,7 +163,7 @@
 <!-- Age -->
 <tr>
 <td>ENTER YOUR AGE (RANGE 25-30)</td>					
-<td><input type="age" min="25" max="30" step="1" value="25" name="ageValue" required="required"/></td>
+<td><input type="age" min="25" max="30" step="1" name="ageValue" required="required"/></td>
 </tr>
  
 <!-- Email Id -->
@@ -189,7 +189,7 @@
 <tr>
 <td>MOBILE NUMBER</td>
 <td>
-<input type="text" name="Mobile_Number" required="required" maxlength="11" />
+<input type="tel" name="Mobile_Number" required="required" maxlength="11" />
 (11 digit number)
 </td>
 </tr>
@@ -264,7 +264,7 @@ Female <input type="radio" name="Gender" value="Female" />
 <!-- POSTAL CODE -->
 <tr>
 <td>POSTAL CODE</td>
-<td><input type="number" name="City" maxlength="30" />
+<td><input type="number" name="postcode" min="1000" max="1500" />
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
@@ -454,7 +454,7 @@ ITSS
 <tr>
 <td>EXPERIENCE</td>
 <td>
-<input type="number" name="numberText" placeholder="Enter year" step="1" value="0"/>
+<input type="number" name="numberText" placeholder="Enter year" min="1" max="10"/>
 </td>
 </tr>
 
