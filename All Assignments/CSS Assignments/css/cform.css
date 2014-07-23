@@ -182,6 +182,11 @@ font-size:200%;
 color:#8A2BE2;
 }
 
+div ol>li p
+{
+color:#439F31;
+}
+
 body 
 {
 	
