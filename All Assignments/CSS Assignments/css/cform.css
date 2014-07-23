@@ -166,6 +166,11 @@ p::after
 content:"- Remember this";
 }
 
+.pastoral 
+{ 
+	color: green; 
+} 
+
 body 
 {
 	
