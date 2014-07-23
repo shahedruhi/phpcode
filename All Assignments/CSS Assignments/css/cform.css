@@ -139,6 +139,12 @@ input[type=text]:disabled {
     background: #dddddd;
 }
 
+
+:checked {
+  width: 50px;
+  height: 50px;
+}
+
 body 
 {
 	
