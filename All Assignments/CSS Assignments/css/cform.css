@@ -78,6 +78,11 @@ dl dt:first-of-type
 	color: red; 
 }
 
+tr > td:last-of-type
+{ 
+	color: orange; 
+}
+
 
 body 
 {
