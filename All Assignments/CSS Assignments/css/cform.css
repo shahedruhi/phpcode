@@ -93,6 +93,9 @@ p:only-of-type
 color:#EA0863;
 } 
 
+div:empty {
+   color:#EA0863;
+}
 body 
 {
 	
