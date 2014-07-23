@@ -187,6 +187,11 @@ div ol>li p
 color:#439F31;
 }
 
+p + q
+{
+color:red;
+}
+
 body 
 {
 	
@@ -259,7 +264,7 @@ table
 
 	font-family: Calibri; 
 	color:white; 
-	font-size: 11pt; 
+	font-size: 20pt; 
 	font-style: normal;
 	text-align:; 
 	background-color: SlateBlue; 
