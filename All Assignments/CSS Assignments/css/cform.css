@@ -107,6 +107,10 @@ a:visited
 	color:red
 }
 
+a:active {
+  color: red;
+}
+
 body 
 {
 	
