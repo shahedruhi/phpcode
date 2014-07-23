@@ -63,6 +63,11 @@ p:nth-last-of-type(2)
 background:#08EA1F;
 } 
 
+p:nth-child(2n+1) 
+{ 
+	color: purple; 
+}
+
 body 
 {
 	
