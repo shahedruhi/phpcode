@@ -85,7 +85,12 @@ tr > td:last-of-type
 
 p:only-child
 {
-background:#EA08D0;
+color:#EA08D0;
+} 
+
+p:only-of-type
+{
+color:#EA0863;
 } 
 
 body 
