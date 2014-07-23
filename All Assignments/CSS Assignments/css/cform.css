@@ -38,6 +38,11 @@ a[href~="/html/"]
     background: green;
 }
 
+:root
+{
+background:#7F6940;
+}
+
 body 
 {
 	
