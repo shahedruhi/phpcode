@@ -115,6 +115,11 @@ a:hover {
   color: green;
 }
 
+input:focus
+{
+background-color:yellow;
+}
+
 body 
 {
 	
