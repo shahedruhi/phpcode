@@ -150,6 +150,12 @@ p::first-line
 background-color:yellow;
 }
 
+p::first-letter
+{
+font-size:200%;
+color:#8A2BE2;
+}
+
 body 
 {
 	
