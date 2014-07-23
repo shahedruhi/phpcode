@@ -17,6 +17,11 @@ col[class="column1"]
     background-color: red;
 } 
 
+a[href~="/html/"] 
+{  
+	background-color: white;
+}
+
 body 
 {
 	
