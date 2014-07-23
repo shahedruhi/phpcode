@@ -31,7 +31,11 @@ a[href~="/html/"]
 }
 
 [class*="te"] {
-    background: blue;
+    background: ;
+}
+
+[class|=top] {
+    background: green;
 }
 
 body 
