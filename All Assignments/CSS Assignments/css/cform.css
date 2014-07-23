@@ -30,6 +30,10 @@ a[href~="/html/"]
     background: pink;
 }
 
+[class*="te"] {
+    background: blue;
+}
+
 body 
 {
 	
