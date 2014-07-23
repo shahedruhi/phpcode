@@ -131,6 +131,14 @@ p:lang(it)
 background:yellow;
 }
 
+input[type=text]:enabled {
+    background: #ffff00;
+}
+
+input[type=text]:disabled {
+    background: #dddddd;
+}
+
 body 
 {
 	
