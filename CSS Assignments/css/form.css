@@ -11,6 +11,12 @@ body
     background-color: SlateBlue;
 }
 
+td#td1 {
+    
+    text-align:'center';
+
+}
+
 img 
 {
 	
@@ -55,7 +61,11 @@ table
 
 td {
     padding: 10px;
+
 }
+
+
+
 
 table.inner
 {
