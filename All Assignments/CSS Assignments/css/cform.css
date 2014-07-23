@@ -22,6 +22,10 @@ a[href~="/html/"]
 	background-color: white;
 }
 
+[class^="top"] {
+    background: yellow;
+}
+
 body 
 {
 	
