@@ -176,6 +176,12 @@ content:"- Remember this";
 color:#ff0000;
 }
 
+h1 em
+{
+font-size:200%;
+color:#8A2BE2;
+}
+
 body 
 {
 	
