@@ -83,6 +83,10 @@ tr > td:last-of-type
 	color: orange; 
 }
 
+p:only-child
+{
+background:#EA08D0;
+} 
 
 body 
 {
