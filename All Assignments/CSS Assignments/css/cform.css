@@ -12,6 +12,11 @@ acronym[title]
     background-color: black;
 } 
 
+col[class="column1"]
+{
+    background-color: red;
+} 
+
 body 
 {
 	
@@ -30,7 +35,12 @@ body
     width:80%; 
     margin-left:10%; 
     margin-right:15%;
-    background-color: #b0e0e6
+    background-color: #b0e0e6;
+    font-family: Calibri; 
+	color:white; 
+	font-size: 11pt; 
+	font-style: normal;
+	text-align:; 
 }
 
 .center1 {
