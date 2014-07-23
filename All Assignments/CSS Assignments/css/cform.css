@@ -96,6 +96,12 @@ color:#EA0863;
 div:empty {
    color:#EA0863;
 }
+
+a:link
+{
+background-color:#EA0863;
+}
+
 body 
 {
 	
