@@ -68,6 +68,14 @@ p:nth-child(2n+1)
 	color: purple; 
 }
 
+tr:nth-last-child(-n+2) 
+{ 
+	color: navy; 
+}
+
+
+
+
 body 
 {
 	
