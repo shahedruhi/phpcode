@@ -192,6 +192,11 @@ p + q
 color:red;
 }
 
+h1 ~ pre
+{
+color:red;
+}
+
 body 
 {
 	
