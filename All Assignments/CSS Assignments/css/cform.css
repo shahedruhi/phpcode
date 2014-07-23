@@ -171,6 +171,11 @@ content:"- Remember this";
 	color: green; 
 } 
 
+:not(p)
+{
+color:#ff0000;
+}
+
 body 
 {
 	
