@@ -73,7 +73,10 @@ tr:nth-last-child(-n+2)
 	color: navy; 
 }
 
-
+dl dt:first-of-type
+{ 
+	color: red; 
+}
 
 
 body 
