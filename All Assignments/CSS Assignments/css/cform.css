@@ -145,6 +145,11 @@ input[type=text]:disabled {
   height: 50px;
 }
 
+p::first-line
+{
+background-color:yellow;
+}
+
 body 
 {
 	
