@@ -102,6 +102,11 @@ a:link
 background-color:#EA0863;
 }
 
+a:visited
+{
+	color:red
+}
+
 body 
 {
 	
