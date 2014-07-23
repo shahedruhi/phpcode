@@ -111,6 +111,10 @@ a:active {
   color: red;
 }
 
+a:hover {
+  color: green;
+}
+
 body 
 {
 	
