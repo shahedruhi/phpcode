@@ -2,12 +2,12 @@
 <head>
 <title>Understanding event & Event handler registration</title>
 <style>
-	img{
+	/*img{
 		display:none;
 	}
 	img[alt='game']{
 		display:block;
-	}
+	}*/
 
 
 </style>
@@ -21,12 +21,13 @@
 </div>
 <div>
 <img alt="game" src="image/photo-1.jpg" width="200" height="100" />
-<img alt="abstruct" src="image/photo-2.jpg" width="200" height="100" />
+<!--<img alt="abstruct" src="image/photo-2.jpg" width="200" height="100" />
 <img alt="people" src="image/photo-3.jpg" width="200" height="100" />
+-->
 </div>
 <nav role="gallery navigator">
-<ul>
-<li><a href="http://www.yahoo.com" onclick = "alert('Hi, this link is activated')">Game</a></li>
+<ul id ="galleryNavigator">
+<li><a href="#">Game</a></li>
 <li><a href="#">Abstruct</a> </li>
 <li><a href="#">People</a> </li>	
 </ul>
@@ -36,16 +37,23 @@
 <button id ="btnToClick" name ="btnToClick"> Click Me</button>
 </form>
 <script>
-function validateName(){
+function loadimg(imgName){
+		var iph = document.getElementById('imgPlaceHolder'); 
+		iph.setAttribute('src', 'image/'+imgName+'.jpg');
+		retirn false;
+
+
+function validateName(evt){
 	var fullName = document.getElementById('fullName').value; 
 	if(fullName == ""){
 		alert("please enter name");
+		evt.preventDefault();
 		return false;
 	}
 	else
 	{
 		alert("thank you"+fullName+", for name.");
-		return false;
+		return true;
 	}
 
 	//return false; 
@@ -54,6 +62,14 @@ function validateName(){
 
 		var btnToClick = document.getElementById('btnToClick');
 		btnToClick.addEventListener('click', validateName, false);
+
+		var galleryNavigator = document.getElementById('galleryNavigator');
+		var lis = galleryNavigator.childNodes;
+		for(i=0; i<lis.length;i++)
+		{
+			var anchor = lis[i].childNode;
+			anchor.addEventListener('click',loadimg, false)
+		}
 })();
 </script>
 </body>
