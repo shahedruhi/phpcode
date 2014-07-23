@@ -53,6 +53,12 @@ p:nth-last-child(2)
 background:#CEA75D;
 }
 
+p:nth-of-type(2)
+{
+background:#EAC808;
+}
+
+
 body 
 {
 	
