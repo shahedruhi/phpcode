@@ -10,26 +10,38 @@
 <link rel="stylesheet" type="text/css" href="css/form.css" />
 
 </head>
+
+
  
 <body>
 <img alt="header" src="image/header.jpg" />
+<table style= "float:right; font-size:20px" border="1" >
+<tr>
+<td>
+<a href="company_profile.html" ><label>COMPANY PROFILE SETTING</label></a><br>
+<a href="a.html"><label>SIGN OUT</label></a>
+</td>
+</tr>
+</table>
+<br>
 <h3>Company Profile</h3>
 <h2> PLEASE FILL UP AL THE REQUIRED INFORMATION.</h2>
-<form>
+
+<form action="company_dashboard.html">
  
 <table class="center">
 
 <!-- Registration Number -->
 <tr>
 <td><label>REGISTRATION NUMBER #: </label></td>
-<td><input type="text" disabled="disabled" name="disabledText" value="888572916000023"/>
+<td><input type="text" name="text" value="888572916000023"/>
 </td>
 </tr>	
  
 <!-- First Name -->
 <tr>
 <td>COMPANY NAME</td>
-<td><input type="text" name="First_Name" value="Gorzon Solutions PVT. Limited" required="required" autofocus maxlength="30"/>
+<td><input type="text" name="First_Name" value="Gorzon Solutions PVT. Limited" autofocus maxlength="30"/>
 (max 30 characters a-z and A-Z)
 </td>
 </tr>
@@ -68,7 +80,7 @@
 <option value="21">21</option>
  
 <option value="22">22</option>
-<option value="23">23</option>
+<option value="23" selected="selected">23</option>
 <option value="24">24</option>
 <option value="25">25</option>
 <option value="26">26</option>
@@ -84,7 +96,7 @@
 <option value="-1">Month:</option>
 <option value="January">Jan</option>
 <option value="February">Feb</option>
-<option value="March">Mar</option>
+<option value="March" selected="selected">Mar</option>
 <option value="April">Apr</option>
 <option value="May">May</option>
 <option value="June">Jun</option>
@@ -129,7 +141,7 @@
 <option value="1987">1987</option>
 <option value="1986">1986</option>
 <option value="1985">1985</option>
-<option value="1984">1984</option>
+<option value="1984" selected="selected">1984</option>
 <option value="1983">1983</option>
 <option value="1982">1982</option>
 <option value="1981">1981</option>
@@ -138,92 +150,67 @@
 </td>
 </tr>
 
-<!-- Age -->
-<tr>
-<td>ENTER YOUR AGE (RANGE 25-30)</td>					
-<td><input type="text" name="agenumberText"/></td>
-</tr>
+
  
 <!-- Email Id -->
 <tr>
 <td>EMAIL ID</td>
-<td><input type="text" name="Email_Id" required="required" placeholder="name@example.com" maxlength="100" /></td>
+<td><input type="text" name="Email_Id" value="info@gorzonprivt.com"  maxlength="100" /></td>
 </tr>
  
 
 <!-- Password -->
 <tr>
 <td>PASSWORD</td>
-<td><input type="password" name="password" required="required" id="pw" placeholder="Enter password"/></td>
+<td><input type="password" name="password" id="pw" placeholder="Enter password"/></td>
 </tr>
 
 <!-- Confirm Password -->
 <tr>
 <td>CONFIRM PASSWORD</td>
-<td><input type="password" name="confirmPassword" required="required" id="confirm-pw" placeholder="Confirm your password"/></td>
+<td><input type="password" name="confirmPassword" id="confirm-pw" placeholder="Confirm your password"/></td>
 </tr>					
 
 <!-- Mobile Number -->
 <tr>
-<td>MOBILE NUMBER</td>
+<td>CONTACT NUMBER</td>
 <td>
-<input type="tel" name="Mobile_Number" required="required" maxlength="11" />
+<input type="tel" name="Mobile_Number" value="01712156566" maxlength="11" />
 (11 digit number)
 </td>
 </tr>
 
-
-<!-- NID NO -->
-<tr>
-<td>NID NO:</td>
-<td>
-<input type="text" name="nidNumber" id="nid-no"/>
-</td>
-</tr>
-
-<!-- NID IMAGE -->
-<tr>
-<td>NID IMAGE UPLOAD:</td>
-<td>
-<input type="file" name="fileName"/>
-<input type="submit" value="Upload">
-</td>
-</tr>
- 
-<!-- Gender -->
-<tr>
-<td>GENDER</td>
-<td>
-Male <input type="radio" name="Gender" value="Male" />
-Female <input type="radio" name="Gender" value="Female" />
-</td>
-</tr>
-
-
 <!-- Website -->
 <tr>
-<td>WEBSITE (IF ANY):</td>
+<td>WEBSITE </td>
 <td>
-<input type="url" name="urlText" id="url" placeholder="www.example.com"/>
+<input type="text" name="urlText" value="www.gorzonsolution.com"/>
 </td>
 </tr>
 
 <!-- WHY SHOULD WE SELECT YOU -->
 <tr>
-<td>WHY SHOULD WE SELECT YOU:</td>
+<td>VISION OF THE COMPANY </td>
 <td>
-<textarea rows="10" cols="30" name="textArea" placeholder="Why should we select you...."></textarea>
+<textarea rows="10" cols="30" name="textArea" placeholder="our vision is...."></textarea>
 </td>
 </tr>
 
-<!-- upload PHOTO -->
 <tr>
-<td>UPLOAD PHOTO (MIN 30 KB MAX 300KB)</td>
+<td>MISSION OF THE COMPANY </td>
 <td>
-<input type="file" name="fileName"/>
-<input type="submit" value="Upload">
+<textarea rows="10" cols="30" name="textArea" placeholder="our mission is...."></textarea>
 </td>
 </tr>
+
+
+<tr>
+<td>OUR EXPECTATIONS </td>
+<td>
+<textarea rows="10" cols="30" name="textArea" placeholder="our expectations is...."></textarea>
+</td>
+</tr>
+
  
 <!-- Address -->
 <tr>
@@ -281,75 +268,11 @@ Female <input type="radio" name="Gender" value="Female" />
 </td>
 </tr>
  
- 
 
- 
-<!-- EDUCATIONAL Qualification-->
-<tr>
-<td>EDUCATIONAL QUALIFICATION <br /><br /><br /><br /><br /><br /><br /></td>
- 
-<td>
-<table>
- 
-<tr>
-<td style="text-align: center;"<b>Sl.No.</b></td>
-<td style="text-align: center;"><b>Examination</b></td>
-<td style="text-align: center;"><b>Board</b></td>
-<td style="text-align: center;"><b>Subject</b></td>
-<td style="text-align: center;"><b>Grade</b></td>
-<td style="text-align: center;"><b>Year of Passing</b></td>
-</tr>
- 
-<tr>
-<td>1</td>
-<td>S.S.C</td>
-<td><input type="text" name="ssc_Board" maxlength="30" /></td>
-<td><input type="text" name="ssc_Subject" maxlength="30" /></td>
-<td><input type="text" name="ssc_Grade" maxlength="30" /></td>
-<td><input type="text" name="ssc_YrOfPassing" maxlength="30" /></td>
-</tr>
- 
-<tr>
-<td>2</td>
-<td>H.S.C</td>
-<td><input type="text" name="hsc_Board" maxlength="30" /></td>
-<td><input type="text" name="hsc_Subject" maxlength="30" /></td>
-<td><input type="text" name="hsc_Grade" maxlength="30" /></td>
-<td><input type="text" name="hsc_YrOfPassing" maxlength="30" /></td>
-</tr>
- 
-<tr>
-<td>3</td>
-<td>Graduation</td>
-<td><input type="text" name="Graduation_Board" maxlength="30" /></td>
-<td><input type="text" name="Graduation_Subject" maxlength="30" /></td>
-<td><input type="text" name="Graduation_Percentage" maxlength="30" /></td>
-<td><input type="text" name="Graduation_YrOfPassing" maxlength="30" /></td>
-</tr>
- 
-<tr>
-<td>4</td>
-<td>Masters</td>
-<td><input type="text" name="Masters_Board" maxlength="30" /></td>
-<td><input type="text" name="Masters_Subject" maxlength="30" /></td>
-<td><input type="text" name="Masters_Percentage" maxlength="30" /></td>
-<td><input type="text" name="Masters_YrOfPassing" maxlength="30" /></td>
-</tr>
- 
-<tr>
-<td></td>
-<td></td>
-<td style="text-align: center;">(10 char max)</td>
-<td style="text-align: center;">(upto 2 decimal)</td>
-</tr>
-</table>
- 
-</td>
-</tr>
  
 <!-- Track -->
 <tr>
-<td>APPLY FOR <br />TRACKS (SELECT TWO)</td>
+<td>YOU WANT TRAINEE <br />FROM WHICH TRACK ?</td>
 <td>
 ITS
 <input type="radio" name="Track_ITS" value="ITS">
@@ -365,7 +288,7 @@ ITSS
 
 <!-- Track -->
 <tr>
-<td>STRONG AREA</td>
+<td>FROM WHICH AREA ?</td>
 
 <td>
 <select name="computerbrands" multiple="multiple">
@@ -410,31 +333,6 @@ ITSS
 </td>
 </tr>
 
-<!-- training -->
-<tr>
-<td>TRAINING (IF ANY)</td>
-<td>
-<input type="week" name="week"/>
- DURATION IN WEEK
-</td>
-</tr>
-
-<!-- Job -->
-<tr>
-<td>DO YOU HAVE JOB?</td>
-<td>
-<input type="checkbox" name="job" value="yes">Yes
-<input type="checkbox" name="job" value="no">No
-</td>
-</tr>
-
-<!-- Experience -->
-<tr>
-<td>EXPERIENCE</td>
-<td>
-<input type="number" name="numberText" placeholder="Enter year" min="1" max="10"/>
-</td>
-</tr>
 
 <!-- How know about FTFL -->
 <tr>
@@ -451,32 +349,11 @@ ITSS
 		</fieldset>
 </td>
 </tr>
-
-<!-- Hobbies -->
- 
-<tr>
-<td>HOBBIES <br /><br /><br /></td>
- 
-<td>
-Drawing
-<input type="checkbox" name="Hobby_Drawing" value="Drawing" />
-Singing
-<input type="checkbox" name="Hobby_Singing" value="Singing" />
-Dancing
-<input type="checkbox" name="Hobby_Dancing" value="Dancing" />
-Cooking
-<input type="checkbox" name="Hobby_Cooking" value="Cooking" />
-<br />
-Others
-<input type="checkbox" name="Hobby_Other" value="Other">
-<input type="text" name="Other_Hobby" maxlength="30" />
-</td>
-</tr>
  
 <!-- Submit and Reset -->
 <tr>
 <td colspan="2" style="text-align: center;">
-<input type="submit" value="Submit">
+<input type="submit" value="Update">
 <input type="reset" value="Reset">
 </td>
 </tr>
