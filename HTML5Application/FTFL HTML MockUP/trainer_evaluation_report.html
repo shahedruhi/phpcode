@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+    <head>
+        
+        <meta charset="utf-8">
+        <title>Trainer Evaluation Report</title>
+        
+        <!-- Includeing External CSS -->
+        <link rel="stylesheet" type="text/css" href="css/trainer_evaluation_report.css">
+        
+        <meta name="viewport" content="">
+	<meta name="author" content="Zahidul Hasan">
+	<meta name="description" content="">
+        
+        <style type="text/css"> 
+        </style>
+        
+    </head>
+    
+    <body>
+        
+        <div class="pageWrapper">
+            
+            
+            <div id="logo">
+            Logo
+            </div>
+        
+            <div id="socialMedia">
+            Social Media Sharing
+            </div>
+        
+            <div id="navigation">
+            Navigation Bar
+            </div>
+        
+            <div id="tweets">
+            Tweets
+            </div>
+            
+             <form  id="searchBar" method="get" action="#">
+                   
+                    <input  type="text" name="search" value="Search Here" ><input type="submit" value="Search">
+                    
+            </form>
+        
+            
+                     <div id="trainerEvaluationReport">
+            <p>Trainer Evaluation Report</p>
+            
+            <form action="#" method="GET" id="trainerSelectionForm" >
+			
+				
+				<label>From: </label>
+				<input type="date" 
+					   name="firstDate"
+					   
+					   autofocus="autofocus"
+					   />
+				<label>To: </label>
+				<input type="date" 
+					   name="secondDate"
+					   /><br/>
+				
+                                 <label> Course: </label>
+                                
+                                 <select name="assignedCourse">
+                                 <option value="PHP" selected="selected">PHP</option>
+                                 <option value="ASP.NET">ASP.NET</option>
+                                 <option value="UNITY 3D">UNITY 3D</option>
+                                 </select>
+                                 <br/>
+                                 
+                                 <label>Trainer: </label>
+                                
+                                 <select name="trainerSelection">
+                                 <option value="zamanSir" selected="selected">Zaman Sir</option>
+                                 <option value="azadSir">Azad Sir</option>
+                                 <option value="rusdidSir">Rusdid Sir</option>
+                                 </select>
+                                 <br/>
+                               
+                                 <input type="submit" name="trainerEvaluationReport" value="Show Report"/>
+                        
+				
+                </form>        
+            
+            <br/>
+            
+             <table>
+                    
+                <tr id='row1'>
+		
+                <td>sl no.
+			
+		</td>
+		
+                <td> Average Grading
+			
+		</td>
+                
+                <td> Average Grade
+			
+		</td>
+                
+		<td> Good Feedback
+			
+		</td>
+                
+                <td> Bad Feedback
+			
+		</td>
+                
+                </tr>
+                
+                <tr>
+		
+                <td>1.
+			
+		</td>
+		
+                <td>86.33
+			
+		</td>
+                
+                <td>A
+			
+		</td>
+                
+                <td> <a href="#" id="feedback">Good Feedbacks</a>
+			
+		</td>
+                
+                <td>
+                <a href="#" id="feedback">Bad Feedbacks</a>
+                </td>
+                
+                </tr>
+                
+               
+                
+             </table>
+  				
+            
+            </div>
+            
+          
+            
+            
+          
+        </div>
+        
+        <footer>
+        Footer
+        </footer>
+    
+    </body>
+       
+</html>

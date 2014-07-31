@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a{
+    background-color: yellow;
+} 
+
+acronym[title]
+{
+    background-color: black;
+} 
+
+col[class="column1"]
+{
+    background-color: red;
+} 
+
+a[href~="/html/"] 
+{  
+	background-color: white;
+}
+
+[class^="top"] {
+    background: yellow;
+}
+
+[class$="test"] {
+    background: pink;
+}
+
+[class*="te"] {
+    background: ;
+}
+
+[class|=top] {
+    background: green;
+}
+
+:root
+{
+background:#7F6940;
+}
+
+p:nth-child(2)
+{
+background:#ff0000;
+}
+
+p:nth-last-child(2)
+{
+background:#CEA75D;
+}
+
+p:nth-of-type(2)
+{
+background:#EAC808;
+}
+
+p:nth-last-of-type(2)
+{
+background:#08EA1F;
+} 
+
+p:nth-child(2n+1) 
+{ 
+	color: purple; 
+}
+
+tr:nth-last-child(-n+2) 
+{ 
+	color: navy; 
+}
+
+dl dt:first-of-type
+{ 
+	color: red; 
+}
+
+tr > td:last-of-type
+{ 
+	color: orange; 
+}
+
+p:only-child
+{
+color:#EA08D0;
+} 
+
+p:only-of-type
+{
+color:#EA0863;
+} 
+
+div:empty {
+   color:#EA0863;
+}
+
+a:link
+{
+background-color:#EA0863;
+}
+
+a:visited
+{
+	color:red
+}
+
+a:active {
+  color: red;
+}
+
+a:hover {
+  color: green;
+}
+
+input:focus
+{
+background-color:yellow;
+}
+
+:target
+{
+border: 2px solid #D4D4D4;
+background-color: #e5eecc;
+}
+
+p:lang(it)
+{ 
+background:yellow;
+}
+
+input[type=text]:enabled {
+    background: #ffff00;
+}
+
+input[type=text]:disabled {
+    background: #dddddd;
+}
+
+
+:checked {
+  width: 50px;
+  height: 50px;
+}
+
+p::first-line
+{
+background-color:yellow;
+}
+
+p::first-letter
+{
+font-size:200%;
+color:#8A2BE2;
+}
+
+p::before
+{
+content:"Read this -";
+}
+
+p::after
+{ 
+content:"- Remember this";
+}
+
+.pastoral 
+{ 
+	color: green; 
+} 
+
+:not(p)
+{
+color:#ff0000;
+}
+
+h1 em
+{
+font-size:200%;
+color:#8A2BE2;
+}
+
+div ol>li p
+{
+color:#439F31;
+}
+
+p + q
+{
+color:red;
+}
+
+h1 ~ pre
+{
+color:red;
+}
+
+body 
+{
+	
+	background-color: skyblue;
+	
+}
+
+.center2 {
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+
+  }
+
+.center {
+    width:80%; 
+    margin-left:10%; 
+    margin-right:15%;
+    background-color: #b0e0e6;
+    font-family: Calibri; 
+	color:white; 
+	font-size: 11pt; 
+	font-style: normal;
+	text-align:; 
+}
+
+.center1 {
+    float: center;
+    width: 500px;
+    background-color: #3E4946;
+}
+
+td#td1 {
+    
+    text-align:'center';
+
+}
+
+img 
+{
+	
+	margin: auto;
+    width: 100%;
+	
+}
+
+h3
+{
+	font-family: Calibri; 
+	font-size: 22pt; 
+	font-style: normal; 
+	font-weight: bold; 
+	color:SlateBlue;
+	text-align: center; 
+	text-decoration: underline; 
+}
+
+h2
+{
+	font-family: Calibri; 
+	font-size: 22pt; 
+	font-style: normal; 
+	font-weight: bold; 
+	color:red;
+	text-align: center; 
+	
+}
+table
+{
+
+	font-family: Calibri; 
+	color:white; 
+	font-size: 20pt; 
+	font-style: normal;
+	text-align:; 
+	background-color: SlateBlue; 
+	border-collapse: collapse; 
+	border: 2px solid navy;
+	 
+}
+
+td {
+    padding: 10px;
+
+}
+
+
+
+
+table.inner
+{
+	border: 0px;
+}
