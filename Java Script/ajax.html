@@ -19,16 +19,46 @@ xmlhttp.onreadystatechange=function()
     {
     //document.getElementById("myDiv").innerHTML=xmlhttp.responseText;
     //alert(xmlhttp.responseText);
-    var jsonDataAsText  = xmlhttp.responseText;
+    //var jsonDataAsText  = xmlhttp.responseText;
     //var jsonData = eval("(" + jsonDataAsText + ")");
-    var jsonData = JSON.parse(jsonDataAsText);
+    //var jsonData = JSON.parse(jsonDataAsText);
 
-    alert(typeof(jsonData));
+    //alert(typeof(jsonData));
+
+    var countryDataAsText  = xmlhttp.responseText;
+    //var jsonData = eval("(" + jsonDataAsText + ")");
+    var Countries = JSON.parse(countryDataAsText);
+    //alert(Countries.countries[0].country.country_name);
+
+    /* var divsHTML = ''
+        for(var i= 0; i < Countries.countries.length; i++){
+          divsHTML += '<div>'+Countries.countries[i].country.country_name+'</div>';
+        }
+    */
+    
+     var optionsHTML = "<select>";
+        for(var i= 0; i < Countries.countries.length; i++)
+        {
+          optionsHTML += "<option value = " + Countries.countries[i].country.country_id + ">"
+                     + Countries.countries[i].country.country_name + "</option>";
+
+          //alert(optionsHTML);  
+          document.write(optionsHTML);         
+                     
+        }
+
+    optionsHTML = "</select>"
 
     }
+
+
   }
+
+
 xmlhttp.open("GET","country.txt",true);
 xmlhttp.send();
+
+
 }
 </script>
 
