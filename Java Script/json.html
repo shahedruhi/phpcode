@@ -1,0 +1,58 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<script>
+
+function loadData(dataUrl, rootElement, target) {
+  var xhr = new XMLHttpRequest();
+  //xhr.overrideMimeType("application/json");
+  xhr.open('GET', dataUrl, true);
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState == 4) {
+      if (xhr.status == 200) {
+
+        //parse jsoon data
+        var jsonData = JSON.parse(xhr.responseText);
+
+        var optionsHTML = ''
+        for(var i= 0; i < jsonData[rootElement].length; i++){
+          optionsHTML+='<option value="'+jsonData[rootElement][i].country.country_id+'">'
+                     + jsonData[rootElement][i].country.country_name+'</option>'
+        }
+
+        var targetCurrentHtml = target.innerHTML;
+        target.innerHTML = targetCurrentHtml + optionsHTML;
+
+      } else {
+        console.log(xhr.statusText);
+
+        // Show the error on the Web page
+        tempContainer.innerHTML += '<p class="error">Error getting ' +
+          target.name + ": "+ xhr.statusText + ",code: "+ xhr.status + "</p>";
+      }
+    }
+  }
+  xhr.send();
+}
+
+
+loadData('country.txt', 'countries', counriesList);
+
+</script>
+
+</head>
+<body>
+
+
+select name="state" id="state">
+    
+  <select name="country" id="counriesList">
+    <option value="" selected="selected"> - Country - </option>
+
+  </select>
+</body>
+</html>
+
+
+ 
