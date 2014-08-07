@@ -1,0 +1,60 @@
+body,div
+{
+    margin: 0;
+}
+
+.container
+{
+    width: 800px;
+    height: 900px;
+    margin: auto;
+}
+
+header
+{
+    width: 800px;
+    height: 200px;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+menu
+{
+    width: 759px;
+    height: 24px;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+.left_nev
+{
+    width: 200px;
+    height: 600px;
+    background-color: cadetblue;
+    float: left;
+}
+
+.right_nev
+{
+    width: 200px;
+    height: 600px;
+    background-color: cadetblue;
+    float: right;
+}
+
+.body
+{
+    width: 400px;
+    height: 600px;
+    background-color: cadetblue;
+    float: left;
+}
+
+footer
+{
+    width: 800px;
+    height: 20px;
+    background-color: cadetblue;
+    text-align: center;
+    clear: both;
+}

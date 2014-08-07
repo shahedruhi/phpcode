@@ -1,0 +1,81 @@
+body,div
+{
+    margin: 0;
+}
+
+.container
+{
+    width: 950px;
+    height: 900px;
+    margin: auto;
+}
+
+header
+{
+    width: 950px;
+    height: 100px;
+    background-color: cadetblue;
+    text-align: center;
+}
+
+menu
+{
+    width: 910px;
+    height: 24px;
+    background-color: cadetblue;
+}
+
+menu select, img
+{
+    float: right;
+}
+
+menu button
+{
+    float: inherit;
+    margin: 0;
+}
+
+menu button
+{
+    float: left;
+}
+
+.left_nev
+{
+    width: 130px;
+    height: 1035px;
+    background-color: cadetblue;
+    padding-top: 15px;
+    padding-left: 20px;
+    float: left;
+}
+
+a
+{
+    text-align: center;
+    text-decoration: none;
+}
+
+.body
+{
+    width: 800px;
+    height: 1050px;
+    background-color: cornsilk;
+    float: left;
+}
+
+th, td
+{
+    border: 2px solid black;
+    width: auto;
+}
+
+footer
+{
+    width: 950px;
+    height: 20px;
+    background-color: cadetblue;
+    text-align: center;
+    clear: both;
+}
