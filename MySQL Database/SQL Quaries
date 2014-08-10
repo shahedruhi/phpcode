@@ -1,0 +1,35 @@
+
+Foreign Key setting:
+ALTER TABLE results
+ADD FOREIGN KEY (student_id)
+REFERENCES students(id)
+
+1. 
+SELECT * FROM `students` 
+WHERE name = 'Sajia' 
+
+2. 
+SELECT gpa FROM `final_results` 
+INNER JOIN `students` 
+ON final_results.student_id=students.id 
+where students.name = 'Sajia' 
+
+3. 
+SELECT education_level,gpa FROM `results` 
+INNER JOIN `students` 
+ON results.student_id=students.id 
+where students.name = 'Sajia' 
+
+4. 
+SELECT AVG(gpa) FROM `results` 
+INNER JOIN `students` 
+ON results.student_id=students.id 
+where students.name = 'Sajia'
+
+5.
+SELECT new_students.name,courses.title FROM `courses`
+INNER JOIN `map_students_courses` 
+ON map_students_courses.course_id = courses.id 
+INNER JOIN `new_students` 
+ON map_students_courses.student_id = new_students.id 
+where new_students.name = 'TANJIM' 
