@@ -33,3 +33,19 @@ ON map_students_courses.course_id = courses.id
 INNER JOIN `new_students` 
 ON map_students_courses.student_id = new_students.id 
 where new_students.name = 'TANJIM' 
+
+LEFT JOIN:
+SELECT * FROM `new_students` 
+LEFT JOIN `map_students_courses` 
+on new_students.id = map_students_courses.student_id
+
+RIGHT JOIN:
+SELECT * FROM `new_students` 
+RIGHT JOIN `map_students_courses` 
+on new_students.id = map_students_courses.student_id
+
+SELECT * FROM `new_students` 
+INNER JOIN `map_students_courses` 
+on new_students.id = map_students_courses.student_id
+LEFT JOIN courses
+on map_students_courses.course_id = courses.id
