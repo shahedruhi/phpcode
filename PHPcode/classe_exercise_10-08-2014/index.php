@@ -29,11 +29,11 @@
 			<?php
 			$connect = mysql_connect('localhost','root','');
 			$db = mysql_select_db('ftfl',$connect);
-			$query = "SELECT title from courses";
+			$query = "SELECT id,title from courses";
 			$result = mysql_query($query);
 			while($row = mysql_fetch_array($result))
 			{
-				echo "<option value=".$row['title'].">".$row['title']."</option>";
+				echo "<option value=".$row['id'].">".$row['title']."</option>";
 			}
 			?>
 
