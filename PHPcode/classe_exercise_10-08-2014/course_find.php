@@ -19,7 +19,7 @@ $query = "SELECT courses.title
 	 
 $result = mysql_query($query);
 
-echo '<select name="bname" multiple>';
+echo '<select name="course_title" multiple>';
 	while ($row = mysql_fetch_assoc($result)) 
 	{
 	    echo "<option value='" . $row['title'] ."'>" . $row['title'] ."</option>";

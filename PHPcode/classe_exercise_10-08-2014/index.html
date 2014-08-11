@@ -9,17 +9,38 @@
 <h3>FTFL STUDENT INSERT FORM</h3>
 
 
-<form action="student_insert.php" method="POST">
+<form action="data_insert.php" method="POST">
 	<fieldset>
 		<legend>FTFL Batch</legend>
 		<br>
 		<br>
+		
 		<label>
 			<span>Student Name</span>
 			<input type="text" name="student_name"/>
 		</label>
 		<br>
 		<br>
+
+		<label>
+			<span>Select Course</span>
+			<select name="course_title">
+			<option value="Laravel">Laravel</option>
+			<option value="Photoshop">Photoshop</option>
+			<option value="Unity 3D">Unity 3D</option>
+			<option value="ASP .Net">ASP .Net</option>
+		</select>
+		</label>
+		<br>
+		<br>
+
+		<label>
+			<span>Course Code</span>
+			<input type="text" name="course_code"/>
+		</label>
+		<br>
+		<br>
+
 		<label>
 			<input type="submit" value="Submit"/>
 		</label>
