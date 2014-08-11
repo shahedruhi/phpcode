@@ -25,13 +25,21 @@
 		<label>
 			<span>Select Course</span>
 			<select name="course_title">
-			<option value="Laravel">LARAVEL</option>
-			<option value="Photoshop">PHOTOSHOP</option>
-			<option value="Unity 3D">UNITY 3D</option>
-			<option value="Laravel">ITES</option>
-			<option value="Photoshop">MGMT</option>
-			<option value="ASP .Net">ASP .NET</option>
-		</select>
+			
+			<?php
+			$connect = mysql_connect('localhost','root','');
+			$db = mysql_select_db('ftfl',$connect);
+			$query = "SELECT title from courses";
+			$result = mysql_query($query);
+			while($row = mysql_fetch_array($result))
+			{
+				echo "<option value=".$row['title'].">".$row['title']."</option>";
+			}
+			?>
+
+			</select>
+
+
 		</label>
 		<br>
 		<br>

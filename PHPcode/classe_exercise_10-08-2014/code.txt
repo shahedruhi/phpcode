@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<title>Student Entry</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<div>
+<form method="post" action="assaign1.php">
+Student Name:
+<select>
+<?php
+$connect = mysql_connect('localhost','root','');
+$db = mysql_select_db('ftfl',$connect);
+$query = "select name from students";
+$result = mysql_query($query);
+while($row = mysql_fetch_array($result))
+{
+echo "<option value=".$row['name'].">".$row['name']."</option>";
+}
+echo "<br/>";
+?>
+</select>
+<br/>
+Course Name:
+<select multiple>
+<?php
+$connect = mysql_connect('localhost','root','');
+$db = mysql_select_db('ftfl',$connect);
+$query = "select title from courses";
+$result = mysql_query($query);
+while($row = mysql_fetch_array($result))
+{
+echo "<option value=".$row['name'].">".$row['title']."</option>";
+}
+?>
+</select>
+<br/>
+<input type="submit" value="Submit" >
+</form>
+</div>
+</body>
+</html>
+
+
+<select name="course_title">
+			<option value="Laravel">LARAVEL</option>
+			<option value="Photoshop">PHOTOSHOP</option>
+			<option value="Unity 3D">UNITY 3D</option>
+			<option value="Laravel">ITES</option>
+			<option value="Photoshop">MGMT</option>
+			<option value="ASP .Net">ASP .NET</option>
+			</select>
