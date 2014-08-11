@@ -25,9 +25,9 @@ $input_course_id = $course_id->id;
 
 
 
-$data = mysql_query("INSERT into map_students_courses (student_id,course_id) values ('$input_student_id','$input_course_id')");
+$insert_check = mysql_query("INSERT into map_students_courses (student_id,course_id) values ('$input_student_id','$input_course_id')");
 
-if($data)
+if($insert_check)
 {
 	echo "Data inserted";
 }	

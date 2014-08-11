@@ -24,7 +24,7 @@
 
 		<label>
 			<span>Select Course</span>
-			<select name="course_title">
+			<select name="course_title" multiple>
 			
 			<?php
 			$connect = mysql_connect('localhost','root','');
