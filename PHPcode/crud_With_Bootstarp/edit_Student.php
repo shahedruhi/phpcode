@@ -1,17 +1,16 @@
 <?php
-
-$student_id = $_GET["student_id"];
+$student_Id = $_GET["student_Id"];
 mysql_connect('localhost','root','');
 mysql_select_db('ftfl');
 
-$qury = mysql_query("SELECT * from students WHERE id=$student_id");
+$qury = mysql_query("SELECT * from students WHERE id=$student_Id");
 
 $data = mysql_fetch_object($qury);
 
 if(isset($_POST["student_Name"])){
   $student_Name = $_POST["student_Name"];
 
-  mysql_query("UPDATE students SET name='$student_Name' WHERE id=$student_id");
+  mysql_query("UPDATE students SET name='$student_Name' WHERE id=$student_Id");
   header('location: student_List.php?msg=edit');
 }
 ?>
