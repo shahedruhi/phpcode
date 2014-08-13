@@ -70,6 +70,7 @@
     <!-- Default panel contents -->
       <div class="panel-heading"><h4>What Do You Want to Do?</h4></div>
         <div class="panel-body">
+          
               <div class="list-group">
                 <a href="#" class="list-group-item list-group-item-success"><b>ADD NEW STUDENT WITH COURSES</b></a>
                 <a href="student_List.php" class="list-group-item list-group-item-info"><b>SHOW STUDENT LIST WITH COURSES</b></a>

@@ -70,37 +70,50 @@
     <!-- Default panel contents -->
       <div class="panel-heading"><h4>LIST OF STUDENTS WITH COURSES</h4></div>
         <div class="panel-body">
-              <!--table-->
-        <table class="table table-condensed">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Username</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td colspan="2">Larry the Bird</td>
-                    <td>@twitter</td>
-                </tr>
-            </tbody>
-        </table>
-        <!--end of table-->
+          <?php
+
+mysql_connect('localhost','root','');
+
+mysql_select_db('ftfl');
+
+$qury = mysql_query("SELECT students.id,students.name,courses.title 
+                    from courses
+                    INNER JOIN map_students_courses
+                    ON map_students_courses.course_id = courses.id
+                    INNER JOIN students 
+                    ON map_students_courses.student_id = students.id");
+
+echo "<table class='table table-condensed'>";
+  echo "<thead>";
+        echo "<tr>";
+                echo "<th>ID</th>";
+                echo "<th>Student Name</th>";
+                echo "<th>Courses Assigned</th>";
+                echo "<th>Action</th>";
+              echo "</tr>";
+  echo "</thead>";
+while ($data = mysql_fetch_object($qury)) {
+  echo "<tr>";
+  echo "<td>".$data->id."</td>";
+  echo "<td>".$data->name."</td>";
+  echo "<td>".$data->title."</td>";
+  echo "<div class='btn-group btn-group-justified'>";
+  echo "<td><a href='view.php?id=".$data->id."' class='btn btn-primary' role='button'>EDIT</a></td>";
+  echo "<td><a href='edit.php?id=".$data->id."' class='btn btn-primary' role='button'>DELETE</a></td>";
+  echo "<td><a href='delete.php?id=".$data->id."' class='btn btn-primary' role='button'>ASSIGN COURSE</a></td>";
+  echo "</div>";
+  //echo "<td><a href='view.php?id=".$data->id."'>View</a></td>";
+  //echo "<td><a href='edit.php?id=".$data->id."'>Edit</a></td>";
+  //echo "<td><a href='delete.php?id=".$data->id."'>Delete</a></td>";
+  echo "</tr>";
+}
+echo "</table>";
+
+
+
+?>
+
+
         
         </div>
     </div>
