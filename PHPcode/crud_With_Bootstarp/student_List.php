@@ -63,9 +63,7 @@
     <br>
     <br>
     <br>        
-   
-
-                    <!--panel-->
+                       <!--panel-->
     <div class="panel panel-primary">
     <!-- Default panel contents -->
       <div class="panel-heading"><h4>LIST OF STUDENTS WITH COURSES</h4></div>
@@ -98,9 +96,9 @@ while ($data = mysql_fetch_object($qury)) {
   echo "<td>".$data->name."</td>";
   echo "<td>".$data->title."</td>";
   echo "<div class='btn-group btn-group-justified'>";
-  echo "<td><a href='view.php?id=".$data->id."' class='btn btn-primary' role='button'>EDIT</a></td>";
-  echo "<td><a href='edit.php?id=".$data->id."' class='btn btn-primary' role='button'>DELETE</a></td>";
-  echo "<td><a href='delete.php?id=".$data->id."' class='btn btn-primary' role='button'>ASSIGN COURSE</a></td>";
+  echo "<td><a href='edit_Student.php?id=".$data->id."' class='btn btn-primary' role='button'>EDIT</a></td>";
+  echo "<td><a href='delete_Student.php?id=".$data->id."' class='btn btn-primary' role='button'>DELETE</a></td>";
+  echo "<td><a href='assign_Course.php?id=".$data->id."' class='btn btn-primary' role='button'>ASSIGN COURSE</a></td>";
   echo "</div>";
   //echo "<td><a href='view.php?id=".$data->id."'>View</a></td>";
   //echo "<td><a href='edit.php?id=".$data->id."'>Edit</a></td>";
