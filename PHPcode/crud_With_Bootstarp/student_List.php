@@ -68,14 +68,39 @@
                     <!--panel-->
     <div class="panel panel-primary">
     <!-- Default panel contents -->
-      <div class="panel-heading"><h4>What Do You Want to Do?</h4></div>
+      <div class="panel-heading"><h4>LIST OF STUDENTS WITH COURSES</h4></div>
         <div class="panel-body">
-              <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-success"><b>ADD NEW STUDENT WITH COURSES</b></a>
-                <a href="student_List.php" class="list-group-item list-group-item-info"><b>SHOW STUDENT LIST WITH COURSES</b></a>
-                <a href="#" class="list-group-item list-group-item-warning"><b>ACTION</b></a>
-                <a href="#" class="list-group-item list-group-item-danger"><b>ACTION</b></a>
-              </div>
+              <!--table-->
+        <table class="table table-condensed">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jacob</td>
+                    <td>Thornton</td>
+                    <td>@fat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td colspan="2">Larry the Bird</td>
+                    <td>@twitter</td>
+                </tr>
+            </tbody>
+        </table>
+        <!--end of table-->
         
         </div>
     </div>
