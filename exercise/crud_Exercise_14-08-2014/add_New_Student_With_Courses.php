@@ -1,15 +1,26 @@
 <?php
-$student_Id = $_GET["student_Id"];
+
+//$student_Name = $_GET["student_Name"];
 mysql_connect('localhost','root','');
 mysql_select_db('ftfl');
 
-$qury = mysql_query("SELECT * from students WHERE id=$student_Id");
-
-$data = mysql_fetch_object($qury);
-
-//$qury = mysql_query("SELECT * from students WHERE id!=$student_Id");
+//$insert_Query = mysql_query("INSERT into students (name) values ('$student_Name')");
 
 //$data = mysql_fetch_object($qury);
+
+if(isset($_POST["student_Name"])){
+    $student_Name = $_POST["student_Name"];
+
+    mysql_query("INSERT into students (name) values ('$student_Name')");
+    $student_Id_Query = mysql_query("SELECT * from students WHERE name = $student_Name");
+
+    $data = mysql_fetch_object($student_Id_Query);
+
+    $input_student_Id = $data->id;
+    //header('location: view_All_Students.php?msg=add');
+}
+
+
 
 /*if(isset($_POST["course_Title"])){
   $student_Name = $_POST["student_Name"];
@@ -25,7 +36,7 @@ if(isset($_POST["course_Title"]))
         $result = mysql_query("SELECT id from courses where title = '$course_Title' ");
         $course_Id = mysql_fetch_array($result);
         $input_course_Id = $course_Id['id'];
-        mysql_query("insert into map_students_courses (student_id,course_id) values ('$student_Id','$input_course_Id')");
+        mysql_query("insert into map_students_courses (student_id,course_id) values ('$input_student_Id','$input_course_Id')");
         //$insert_Check = mysql_query($query);
     }
     header('location: view_All_Students.php?msg=assign');
@@ -107,13 +118,10 @@ if(isset($_POST["course_Title"]))
             <form action="" method="POST">
                 <div class="form-group">
 
-
-                    <label for="student_Name">Student Name:</label>
-                    <br>
-                    <label>
-                        <?php echo $data->name; ?>
-                    </label>
-                    <br>
+                    <div class="form-group">
+                        <label for="inputName">Student Name</label>
+                        <input type="name" name="student_Name" class="form-control" id="inputName" placeholder="Name">
+                    </div>
 
                     <label for="course_Name">Select Course Title</label>
 

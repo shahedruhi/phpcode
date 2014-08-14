@@ -1,36 +1,3 @@
-<?php
-$student_Id = $_GET["student_Id"];
-mysql_connect('localhost','root','');
-mysql_select_db('ftfl');
-
-$qury = mysql_query("SELECT * from students WHERE id=$student_Id");
-
-$data = mysql_fetch_object($qury);
-
-//$qury = mysql_query("SELECT * from students WHERE id!=$student_Id");
-
-//$data = mysql_fetch_object($qury);
-
-/*if(isset($_POST["course_Title"])){
-  $student_Name = $_POST["student_Name"];
-
-  mysql_query("UPDATE students SET name='$student_Name' WHERE id=$student_Id");
-  header('location: student_List.php?msg=edit');
-}*/
-if(isset($_POST["course_Title"]))
-{
-    foreach($_POST['course_Title'] as $course_Title)
-    {
-
-        $result = mysql_query("SELECT id from courses where title = '$course_Title' ");
-        $course_Id = mysql_fetch_array($result);
-        $input_course_Id = $course_Id['id'];
-        mysql_query("insert into map_students_courses (student_id,course_id) values ('$student_Id','$input_course_Id')");
-        //$insert_Check = mysql_query($query);
-    }
-    header('location: view_All_Students.php?msg=assign');
-}
-?>
 <!DOCTYPE html>
 <html lang="en"><head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -66,8 +33,6 @@ if(isset($_POST["course_Title"]))
 
 <body>
 
-
-
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -97,50 +62,47 @@ if(isset($_POST["course_Title"]))
     <br>
     <br>
 
-
     <!--panel-->
     <div class="panel panel-primary">
         <!-- Default panel contents -->
-        <div class="panel-heading"><h4>SELECT COURSE</h4></div>
+        <div class="panel-heading"><h4>LIST OF COURSES</h4></div>
         <div class="panel-body">
+            <?php
 
-            <form action="" method="POST">
-                <div class="form-group">
+            mysql_connect('localhost','root','');
+
+            mysql_select_db('ftfl');
+
+            $qury = mysql_query("SELECT *
+                    from courses
+                    Order by id");
+
+            echo "<table class='table table-condensed'>";
+            echo "<thead>";
+            echo "<tr>";
+            echo "<th>ID</th>";
+            echo "<th>COURSE TITLE</th>";
+            echo "<th>COURSE CODE</th>";
+            echo "</tr>";
+            echo "</thead>";
+            while ($data = mysql_fetch_object($qury)) {
+                echo "<tr>";
+                echo "<td>".$data->id."</td>";
+                echo "<td>".$data->title."</td>";
+                echo "<td>".$data->code."</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
 
 
-                    <label for="student_Name">Student Name:</label>
-                    <br>
-                    <label>
-                        <?php echo $data->name; ?>
-                    </label>
-                    <br>
 
-                    <label for="course_Name">Select Course Title</label>
+            ?>
 
-                    <select class="form-control" name="course_Title[]" multiple="multiple">
-                        <?php
-                        //$connect = mysql_connect('localhost','root','');
-                        //$db = mysql_select_db('ftfl',$connect);
-                        $result = mysql_query("SELECT title from courses");
-                        while($row = mysql_fetch_array($result))
-                        {
-                            echo "<option>".$row['title']."</option>";
-                        }
-                        ?>
-                    </select>
-
-                </div>
-                <button type="submit" class="btn btn-primary">Assign</button>
-            </form>
 
 
         </div>
     </div>
     <!--end of panel-->
-
-
-
-
 
 
 </div><!-- /.container -->

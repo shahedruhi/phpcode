@@ -33,7 +33,7 @@
 
 <body>
 
-
+<div class="header">
 
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
@@ -56,6 +56,7 @@
     </div>
 </div>
 
+</div>
 <div class="container">
 
     <img class="img-responsive" alt="Responsive image" src="image/banner.jpg" />
@@ -105,7 +106,7 @@
                             <div class="list-group">
                                 <a href="view_All_Students.php" class="list-group-item list-group-item-success"><b>VIEW ALL STUDENTS</b></a>
                                 <a href="add_New_Student.php" class="list-group-item list-group-item-info"><b>ADD NEW STUDENT</b></a>
-                                <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN STUDENT WITH COURSES</b></a>
+                                <a href="add_New_Student_With_Courses.php" class="list-group-item list-group-item-warning"><b>ASSIGN STUDENT WITH COURSES</b></a>
                             </div>
 
                         </div>
@@ -121,9 +122,9 @@
                         <div class="panel-body">
 
                             <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-success"><b>VIEW ALL COURSES</b></a>
-                                <a href="student_List.php" class="list-group-item list-group-item-info"><b>ADD NEW COURSES</b></a>
-                                <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN COURSES TO STUDENTS</b></a>
+                                <a href="view_All_Courses.php" class="list-group-item list-group-item-success"><b>VIEW ALL COURSES</b></a>
+                                <a href="add_New_Course.php" class="list-group-item list-group-item-info"><b>ADD NEW COURSE</b></a>
+                                <a href="add_Courses_To_Students.php" class="list-group-item list-group-item-warning"><b>ASSIGN COURSES TO STUDENTS</b></a>
                             </div>
 
                         </div>
@@ -137,7 +138,11 @@
 
 </div><!-- /.container -->
 
+<div class="footer">
 
+
+
+</div>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->

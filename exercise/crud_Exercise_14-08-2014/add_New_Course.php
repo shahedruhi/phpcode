@@ -1,34 +1,18 @@
 <?php
-$student_Id = $_GET["student_Id"];
+//$student_Id = $_GET["student_Id"];
 mysql_connect('localhost','root','');
 mysql_select_db('ftfl');
 
-$qury = mysql_query("SELECT * from students WHERE id=$student_Id");
-
-$data = mysql_fetch_object($qury);
-
-//$qury = mysql_query("SELECT * from students WHERE id!=$student_Id");
+//$qury = mysql_query("SELECT * from students WHERE id=$student_Id");
 
 //$data = mysql_fetch_object($qury);
 
-/*if(isset($_POST["course_Title"])){
-  $student_Name = $_POST["student_Name"];
+if(isset($_POST["course_Title"]) && isset($_POST["course_Code"])){
+    $course_Title = $_POST["course_Title"];
+    $course_Code = $_POST["course_Title"];
 
-  mysql_query("UPDATE students SET name='$student_Name' WHERE id=$student_Id");
-  header('location: student_List.php?msg=edit');
-}*/
-if(isset($_POST["course_Title"]))
-{
-    foreach($_POST['course_Title'] as $course_Title)
-    {
-
-        $result = mysql_query("SELECT id from courses where title = '$course_Title' ");
-        $course_Id = mysql_fetch_array($result);
-        $input_course_Id = $course_Id['id'];
-        mysql_query("insert into map_students_courses (student_id,course_id) values ('$student_Id','$input_course_Id')");
-        //$insert_Check = mysql_query($query);
-    }
-    header('location: view_All_Students.php?msg=assign');
+    mysql_query("INSERT into courses (title,code) values ('$course_Title','$course_Code')");
+    header('location: view_All_Courses.php?msg=add');
 }
 ?>
 <!DOCTYPE html>
@@ -101,36 +85,18 @@ if(isset($_POST["course_Title"]))
     <!--panel-->
     <div class="panel panel-primary">
         <!-- Default panel contents -->
-        <div class="panel-heading"><h4>SELECT COURSE</h4></div>
+        <div class="panel-heading"><h4>ADD NEW COURSE</h4></div>
         <div class="panel-body">
-
             <form action="" method="POST">
                 <div class="form-group">
-
-
-                    <label for="student_Name">Student Name:</label>
-                    <br>
-                    <label>
-                        <?php echo $data->name; ?>
-                    </label>
-                    <br>
-
-                    <label for="course_Name">Select Course Title</label>
-
-                    <select class="form-control" name="course_Title[]" multiple="multiple">
-                        <?php
-                        //$connect = mysql_connect('localhost','root','');
-                        //$db = mysql_select_db('ftfl',$connect);
-                        $result = mysql_query("SELECT title from courses");
-                        while($row = mysql_fetch_array($result))
-                        {
-                            echo "<option>".$row['title']."</option>";
-                        }
-                        ?>
-                    </select>
-
+                    <label for="inputName">COURSE TITLE</label>
+                    <input type="title" name="course_Title" class="form-control" id="inputCourseTitle" placeholder="Course Title">
                 </div>
-                <button type="submit" class="btn btn-primary">Assign</button>
+                <div class="form-group">
+                    <label for="inputName">COURSE CODE</label>
+                    <input type="code" name="course_Code" class="form-control" id="inputCourseCode" placeholder="Course Code">
+                </div>
+                <button type="submit" class="btn btn-primary">ADD</button>
             </form>
 
 
