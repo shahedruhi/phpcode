@@ -1,3 +1,36 @@
+<?php
+$student_Id = $_GET["student_Id"];
+mysql_connect('localhost','root','');
+mysql_select_db('ftfl');
+
+$qury = mysql_query("SELECT * from students WHERE id=$student_Id");
+
+$data = mysql_fetch_object($qury);
+
+//$qury = mysql_query("SELECT * from students WHERE id!=$student_Id");
+
+//$data = mysql_fetch_object($qury);
+
+/*if(isset($_POST["course_Title"])){
+  $student_Name = $_POST["student_Name"];
+
+  mysql_query("UPDATE students SET name='$student_Name' WHERE id=$student_Id");
+  header('location: student_List.php?msg=edit');
+}*/
+if(isset($_POST["course_Title"]))
+{
+    foreach($_POST['course_Title'] as $course_Title)
+    {
+
+        $result = mysql_query("SELECT id from courses where title = '$course_Title' ");
+        $course_Id = mysql_fetch_array($result);
+        $input_course_Id = $course_Id['id'];
+        mysql_query("insert into map_students_courses (student_id,course_id) values ('$student_Id','$input_course_Id')");
+        //$insert_Check = mysql_query($query);
+    }
+    header('location: view_All_Students.php?msg=assign');
+}
+?>
 <!DOCTYPE html>
 <html lang="en"><head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -33,6 +66,8 @@
 
 <body>
 
+
+
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -62,69 +97,46 @@
     <br>
     <br>
 
+
     <!--panel-->
     <div class="panel panel-primary">
         <!-- Default panel contents -->
-        <div class="panel-heading"><h4></h4></div>
+        <div class="panel-heading"><h4>SELECT COURSE</h4></div>
         <div class="panel-body">
 
-            <div class="list-group">
-                <a href="add_New_Student.php" class="list-group-item list-group-item-success"><b>ADD NEW STUDENT</b></a>
-            </div>
+            <form action="" method="POST">
+                <div class="form-group">
 
-        </div>
-    </div>
-    <!--end of panel-->
-    <!--panel-->
-    <div class="panel panel-primary">
-        <!-- Default panel contents -->
-        <div class="panel-heading"><h4>LIST OF STUDENTS</h4></div>
-        <div class="panel-body">
-            <?php
+                    <label for="student_Name">Student Name: <?php echo $data->name; ?></label>
 
-            mysql_connect('localhost','root','');
+                    <br>
 
-            mysql_select_db('ftfl');
+                    <label for="course_Name">Select Course Title</label>
 
-            $qury = mysql_query("SELECT *
-                    from students
-                    Order by students.id");
+                    <select class="form-control" name="course_Title[]" multiple="multiple">
+                        <?php
+                        //$connect = mysql_connect('localhost','root','');
+                        //$db = mysql_select_db('ftfl',$connect);
+                        $result = mysql_query("SELECT title from courses");
+                        while($row = mysql_fetch_array($result))
+                        {
+                            echo "<option>".$row['title']."</option>";
+                        }
+                        ?>
+                    </select>
 
-            echo "<table class='table table-condensed'>";
-            echo "<thead>";
-            echo "<tr>";
-            echo "<th>ID</th>";
-            echo "<th>STUDENT NAME</th>";
-            echo "<th>ACTION</th>";
-            echo "</tr>";
-            echo "</thead>";
-            while ($data = mysql_fetch_object($qury)) {
-                echo "<tr>";
-                echo "<td>".$data->id."</td>";
-                echo "<td>".$data->name."</td>";
-                //echo "<td>".$data->title."</td>";
-                echo "<div class='btn-group btn-group-justified'>";
-                echo "<td><a href='view_Student.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>VIEW</a></td>";
-                echo "<td><a href='edit_One_Student.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>EDIT</a></td>";
-                echo "<td><a href='delete_One_Student.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>DELETE</a></td>";
-                echo "<td><a href='assign_Student_Course.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>ASSIGN COURSE</a></td>";
-                echo "</div>";
-                //echo "<td><a href='view.php?id=".$data->id."'>View</a></td>";
-                //echo "<td><a href='edit.php?id=".$data->id."'>Edit</a></td>";
-                //echo "<td><a href='delete.php?id=".$data->id."'>Delete</a></td>";
-                echo "</tr>";
-            }
-            echo "</table>";
-
-
-
-            ?>
-
+                </div>
+                <button type="submit" class="btn btn-primary">Assign</button>
+            </form>
 
 
         </div>
     </div>
     <!--end of panel-->
+
+
+
+
 
 
 </div><!-- /.container -->

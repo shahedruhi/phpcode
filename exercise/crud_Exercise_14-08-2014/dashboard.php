@@ -67,12 +67,30 @@
     <div class="row">
         <div class="col-md-4" style="background-color: #D8F6CE; box-shadow: inset 0px -0px 0px #444, inset 0px 0px 0px #444;">
             <p>
-                MENU
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                    OUR PRODUCTS <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation" class="dropdown-header">
+                        SOFTWARE SOLUTIONS
+                    </li>
+                    <li role="presentation" >
+                        <a role="menuitem" tabindex="-1" href="#">Java</a>
+                    </li>
+                    <li role="presentation"> <a role="menuitem" tabindex="-1" href="#">Data Mining</a>
+                    </li> <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#"> Data Communication/Networking </a>
+                    </li>
+                    <li role="presentation" class="divider"></li>
+                    <li role="presentation" class="dropdown-header">
+                        HARDWARE SOLUTIONS
+                    </li>
+                    <li role="presentation">
+                        <a role="menuitem" tabindex="-1" href="#">Networking</a>
+                    </li>
+                </ul>
+            </div>
             </p>
         </div>
         <div class="col-md-8" style="background-color: #D8F6CE;box-shadow: inset 0px 0-px 0px #444, inset 0px 0px 0px #444;">
@@ -86,7 +104,7 @@
 
                             <div class="list-group">
                                 <a href="view_All_Students.php" class="list-group-item list-group-item-success"><b>VIEW ALL STUDENTS</b></a>
-                                <a href="student_List.php" class="list-group-item list-group-item-info"><b>ADD NEW STUDENT</b></a>
+                                <a href="add_New_Student.php" class="list-group-item list-group-item-info"><b>ADD NEW STUDENT</b></a>
                                 <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN STUDENT WITH COURSES</b></a>
                             </div>
 
