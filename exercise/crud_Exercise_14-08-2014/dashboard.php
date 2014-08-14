@@ -136,23 +136,35 @@
 
         </div> </div>
 
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
 </div><!-- /.container -->
 
-<div class="footer">
-
-
-
-</div>
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.js"></script>
 <script src="js/bootstrap.js"></script>
-
-
 </body>
-<br>
-<br>
-<br>
-<br>
 </html>
+<div class="footer text-center">
+    <div class="container">
+        <p class="text-muted"><address>
+            <a href="mailto:gorzon@it.com">mail@gorzonsolutions.com</a><br>
+            BCC, Agargaon, Dhaka, Bangladesh.
+            <p>Company's Web Page: Please Type <kbd>www.gorzonsoutions.com</kbd> into your browser.</p>
+        </address></p>
+    </div>
+</div>
+</body></html>
+
+
+
