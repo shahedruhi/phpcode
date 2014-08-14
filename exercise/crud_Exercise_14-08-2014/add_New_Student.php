@@ -1,3 +1,19 @@
+<?php
+//$student_Id = $_GET["student_Id"];
+mysql_connect('localhost','root','');
+mysql_select_db('ftfl');
+
+//$qury = mysql_query("SELECT * from students WHERE id=$student_Id");
+
+//$data = mysql_fetch_object($qury);
+
+if(isset($_POST["student_Name"])){
+    $student_Name = $_POST["student_Name"];
+
+    mysql_query("INSERT into students (name) values ('$student_Name')");
+    header('location: view_All_Students.php?msg=add');
+}
+?>
 <!DOCTYPE html>
 <html lang="en"><head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
@@ -64,58 +80,29 @@
     <br>
     <br>
 
-    <div class="row">
-        <div class="col-md-4" style="background-color: #D8F6CE; box-shadow: inset 0px -0px 0px #444, inset 0px 0px 0px #444;">
-            <p>
-                MENU
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </p>
+
+    <!--panel-->
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><h4>ADD NEW STUDENT</h4></div>
+        <div class="panel-body">
+            <form action="" method="POST">
+                <div class="form-group">
+                    <label for="inputName">Student Name</label>
+                    <input type="name" name="student_Name" class="form-control" id="inputName" placeholder="Name">
+                </div>
+                <button type="submit" class="btn btn-primary">ADD</button>
+            </form>
+
+
         </div>
-        <div class="col-md-8" style="background-color: #D8F6CE;box-shadow: inset 0px 0-px 0px #444, inset 0px 0px 0px #444;">
-            <div class="row">
-                <div class="col-md-6" style="background-color: #D8F6CE; box-shadow: inset 0px -0px 0px #444, inset -0px 0px 0px #444;">
-                    <!--panel-->
-                    <div class="panel panel-primary">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading"><h4>4 STUDENTS HAVE REGISTERED</h4></div>
-                        <div class="panel-body">
-
-                            <div class="list-group">
-                                <a href="view_All_Students.php" class="list-group-item list-group-item-success"><b>VIEW ALL STUDENTS</b></a>
-                                <a href="student_List.php" class="list-group-item list-group-item-info"><b>ADD NEW STUDENT</b></a>
-                                <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN STUDENT WITH COURSES</b></a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--end of panel-->
-                </div>
-
-            <div class="col-md-6" style="background-color: #D8F6CE;box-shadow: inset 0px -0px 0px #444, inset -0px 0px 0px #444;">
-                    <!--panel-->
-                    <div class="panel panel-primary">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading"><h4>5 COURSES ARE AVAILABLE</h4></div>
-                        <div class="panel-body">
-
-                            <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-success"><b>VIEW ALL COURSES</b></a>
-                                <a href="student_List.php" class="list-group-item list-group-item-info"><b>ADD NEW COURSES</b></a>
-                                <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN COURSES TO STUDENTS</b></a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--end of panel-->
-                </div>
-            </div>
+    </div>
+    <!--end of panel-->
 
 
-        </div> </div>
+
+
+
 
 </div><!-- /.container -->
 

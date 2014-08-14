@@ -26,7 +26,7 @@
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
@@ -61,6 +61,20 @@
     <br>
     <br>
     <br>
+
+    <!--panel-->
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><h4></h4></div>
+        <div class="panel-body">
+
+            <div class="list-group">
+                <a href="add_New_Student.php" class="list-group-item list-group-item-success"><b>ADD NEW STUDENT</b></a>
+            </div>
+
+        </div>
+    </div>
+    <!--end of panel-->
     <!--panel-->
     <div class="panel panel-primary">
         <!-- Default panel contents -->
@@ -80,8 +94,8 @@
             echo "<thead>";
             echo "<tr>";
             echo "<th>ID</th>";
-            echo "<th>Student Name</th>";
-            echo "<th>Action</th>";
+            echo "<th>STUDENT NAME</th>";
+            echo "<th>ACTION</th>";
             echo "</tr>";
             echo "</thead>";
             while ($data = mysql_fetch_object($qury)) {
@@ -90,7 +104,7 @@
                 echo "<td>".$data->name."</td>";
                 //echo "<td>".$data->title."</td>";
                 echo "<div class='btn-group btn-group-justified'>";
-                echo "<td><a href='edit_Student.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>VIEW</a></td>";
+                echo "<td><a href='view_Student.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>VIEW</a></td>";
                 echo "<td><a href='edit_Student.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>EDIT</a></td>";
                 echo "<td><a href='delete_Student.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>DELETE</a></td>";
                 echo "<td><a href='assign_Course.php?student_Id=".$data->id."' class='btn btn-primary' role='button'>ASSIGN COURSE</a></td>";

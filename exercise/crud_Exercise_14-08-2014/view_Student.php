@@ -33,8 +33,6 @@
 
 <body>
 
-
-
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -64,58 +62,52 @@
     <br>
     <br>
 
-    <div class="row">
-        <div class="col-md-4" style="background-color: #D8F6CE; box-shadow: inset 0px -0px 0px #444, inset 0px 0px 0px #444;">
-            <p>
-                MENU
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            </p>
+    <div class="panel panel-primary">
+        <!-- Default panel contents -->
+        <div class="panel-heading"><h4>STUDENT INFORMATION</h4></div>
+        <div class="panel-body">
+            <?php
+            $student_Id = $_GET["student_Id"];
+
+            mysql_connect('localhost','root','');
+
+            mysql_select_db('ftfl');
+
+            $qury = mysql_query("SELECT students.id,students.name,courses.title
+                    from courses
+                    INNER JOIN map_students_courses
+                    ON map_students_courses.course_id = courses.id
+                    INNER JOIN students
+                    ON map_students_courses.student_id = students.id
+                    where students.id = '$student_Id'");
+
+            echo "<table class='table table-condensed'>";
+            echo "<thead>";
+            echo "<tr>";
+            echo "<th>ID</th>";
+            echo "<th>STUDENT NAME</th>";
+            echo "<th>COURSES</th>";
+            echo "</tr>";
+            echo "</thead>";
+            while ($data = mysql_fetch_object($qury)) {
+                echo "<tr>";
+                echo "<td>".$data->id."</td>";
+                echo "<td>".$data->name."</td>";
+                echo "<td>".$data->title."</td>";
+                echo "</tr>";
+            }
+            echo "</table>";
+
+
+
+            ?>
+
+
+
         </div>
-        <div class="col-md-8" style="background-color: #D8F6CE;box-shadow: inset 0px 0-px 0px #444, inset 0px 0px 0px #444;">
-            <div class="row">
-                <div class="col-md-6" style="background-color: #D8F6CE; box-shadow: inset 0px -0px 0px #444, inset -0px 0px 0px #444;">
-                    <!--panel-->
-                    <div class="panel panel-primary">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading"><h4>4 STUDENTS HAVE REGISTERED</h4></div>
-                        <div class="panel-body">
+    </div>
+    <!--end of panel-->
 
-                            <div class="list-group">
-                                <a href="view_All_Students.php" class="list-group-item list-group-item-success"><b>VIEW ALL STUDENTS</b></a>
-                                <a href="student_List.php" class="list-group-item list-group-item-info"><b>ADD NEW STUDENT</b></a>
-                                <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN STUDENT WITH COURSES</b></a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--end of panel-->
-                </div>
-
-            <div class="col-md-6" style="background-color: #D8F6CE;box-shadow: inset 0px -0px 0px #444, inset -0px 0px 0px #444;">
-                    <!--panel-->
-                    <div class="panel panel-primary">
-                        <!-- Default panel contents -->
-                        <div class="panel-heading"><h4>5 COURSES ARE AVAILABLE</h4></div>
-                        <div class="panel-body">
-
-                            <div class="list-group">
-                                <a href="#" class="list-group-item list-group-item-success"><b>VIEW ALL COURSES</b></a>
-                                <a href="student_List.php" class="list-group-item list-group-item-info"><b>ADD NEW COURSES</b></a>
-                                <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN COURSES TO STUDENTS</b></a>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!--end of panel-->
-                </div>
-            </div>
-
-
-        </div> </div>
 
 </div><!-- /.container -->
 
