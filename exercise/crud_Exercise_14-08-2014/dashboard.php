@@ -26,7 +26,7 @@
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <!--<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
@@ -48,7 +48,7 @@
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="index.php">Home</a></li>
+                <li class="active"><a href="dashboard.php">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -65,49 +65,57 @@
     <br>
 
     <div class="row">
-        <div class="col-md-4" style="background-color: #dedef8; box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
-            <p>MENU </p>
+        <div class="col-md-4" style="background-color: #D8F6CE; box-shadow: inset 0px -0px 0px #444, inset 0px 0px 0px #444;">
+            <p>
+                MENU
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+            </p>
         </div>
-        <div class="col-md-8" style="background-color: #dedef8;box-shadow: inset 1px -1px 1px #444, inset -1px 1px 1px #444;">
-            <!--panel-->
-            <div class="panel panel-primary">
-                <!-- Default panel contents -->
-                <div class="panel-heading"><h4>What Do You Want to Do?</h4></div>
-                <div class="panel-body">
+        <div class="col-md-8" style="background-color: #D8F6CE;box-shadow: inset 0px 0-px 0px #444, inset 0px 0px 0px #444;">
+            <div class="row">
+                <div class="col-md-6" style="background-color: #D8F6CE; box-shadow: inset 0px -0px 0px #444, inset -0px 0px 0px #444;">
+                    <!--panel-->
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading"><h4>4 STUDENTS HAVE REGISTERED</h4></div>
+                        <div class="panel-body">
 
-                    <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-success"><b>ADD NEW STUDENT WITH COURSES</b></a>
-                        <a href="student_List.php" class="list-group-item list-group-item-info"><b>SHOW STUDENT LIST WITH COURSES</b></a>
-                        <a href="#" class="list-group-item list-group-item-warning"><b>ACTION</b></a>
-                        <a href="#" class="list-group-item list-group-item-danger"><b>ACTION</b></a>
+                            <div class="list-group">
+                                <a href="view_All_Students.php" class="list-group-item list-group-item-success"><b>VIEW ALL STUDENTS</b></a>
+                                <a href="student_List.php" class="list-group-item list-group-item-info"><b>ADD NEW STUDENT</b></a>
+                                <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN STUDENT WITH COURSES</b></a>
+                            </div>
+
+                        </div>
                     </div>
+                    <!--end of panel-->
+                </div>
 
+            <div class="col-md-6" style="background-color: #D8F6CE;box-shadow: inset 0px -0px 0px #444, inset -0px 0px 0px #444;">
+                    <!--panel-->
+                    <div class="panel panel-primary">
+                        <!-- Default panel contents -->
+                        <div class="panel-heading"><h4>5 COURSES ARE AVAILABLE</h4></div>
+                        <div class="panel-body">
+
+                            <div class="list-group">
+                                <a href="#" class="list-group-item list-group-item-success"><b>VIEW ALL COURSES</b></a>
+                                <a href="student_List.php" class="list-group-item list-group-item-info"><b>ADD NEW COURSES</b></a>
+                                <a href="#" class="list-group-item list-group-item-warning"><b>ASSIGN COURSES TO STUDENTS</b></a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--end of panel-->
                 </div>
             </div>
-            <!--end of panel-->
+
+
         </div> </div>
-
-    <!--panel-->
-    <div class="panel panel-primary">
-        <!-- Default panel contents -->
-        <div class="panel-heading"><h4>What Do You Want to Do?</h4></div>
-        <div class="panel-body">
-
-            <div class="list-group">
-                <a href="#" class="list-group-item list-group-item-success"><b>ADD NEW STUDENT WITH COURSES</b></a>
-                <a href="student_List.php" class="list-group-item list-group-item-info"><b>SHOW STUDENT LIST WITH COURSES</b></a>
-                <a href="#" class="list-group-item list-group-item-warning"><b>ACTION</b></a>
-                <a href="#" class="list-group-item list-group-item-danger"><b>ACTION</b></a>
-            </div>
-
-        </div>
-    </div>
-    <!--end of panel-->
-
-
-
-
-
 
 </div><!-- /.container -->
 
